@@ -1,0 +1,97 @@
+/**Geral**/
+@import "sass-files/moldura";
+
+/**Titulo**/
+.cabecalio{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: #0076ce;
+    color: white;
+    text-align: center;
+}
+.cabecalio-titulo{
+	flex-grow: 1;
+}
+a{
+    color: white;
+	font-weight: bold;
+}
+.cabecalio i{
+    color: #222d32;
+}
+svg{
+    color: #222d32;
+    vertical-align: middle;
+    margin: 0 5px;
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-style: italic;
+}
+.cabecalio ul, .cabecalio li{
+    list-style: none;
+	padding: 0;
+}
+.cabecalio-titulo{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.cabecalio-nav{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: .5em;
+    background: transparent;
+    padding: .5em;
+}
+#lista-atalhos {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    flex-flow: row wrap;
+}
+#lista-atalhos li {
+    border-right-style: dotted;
+    border-left-style: dotted;
+}
+#lista-config{
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+	width: 100%;
+}
+#lista-config input{
+	color: #222d32;
+	text-align: center;
+	font-weight: bold;
+	
+}
+/**Principal**/
+.principal{
+	flex-grow: 1;
+}
+.frame{
+	width: 100%;
+	height: 100%;
+}
+/**Rodape**/
+.rodape{
+	background: #222d32;
+	color: white;
+	text-align: center;
+	padding: .5em;
+	border-top: 1px solid black;
+}

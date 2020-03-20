@@ -1,0 +1,39 @@
+body{
+	padding: 1em;
+	max-width: 1000px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column nowrap;
+}
+button{
+	width: 100%;
+	border-radius: 10px;
+}
+.selecionar-copiar-tabela{
+	border-radius: 0 0 10px 10px;
+	display: none;
+}
+.formulario-sem-dps{
+	display: flex;
+	flex-flow: column nowrap;
+}
+.linha{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: .1em;
+}
+textarea{
+	border-radius: 10px;
+	width: 50%;
+	padding: .5em;
+}
+.tabela-registros, td{
+	border: 1px solid black;
+}
+.tabela-registros{
+	display: none;
+}
+th{
+	text-align: center;
+}

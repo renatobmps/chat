@@ -1,0 +1,48 @@
+﻿/***********************************************************************************
+@media (min-width: 650px){
+/*Geral*
+body{
+	max-width: 1400px;
+	margin: 0 auto;
+	border: 0;
+}
+.material-icons{
+	font-size: medium;
+}
+/*título*
+.cabecalio{
+	justify-content: space-between;
+	margin: 0;
+	margin-bottom: 2%;
+	padding: 2%;
+	border: 2px solid black;
+	flex-direction: row;
+}
+.cabecalio #listas{
+	width: auto;
+}
+#lista-indice{
+	display: none;
+}
+#lista-configuracoes{
+	width: 15rem;
+}
+#lista-config{
+	flex-direction: column;
+}
+
+/*conteúdo*
+main{
+	margin: 9em 0 4em 0;
+}
+#textos-de-script{
+	justify-content: space-around;
+	flex-direction: row;
+}
+#textos-de-script fieldset{
+	width: 30%;
+}
+
+/*rodapé*
+}
+***********************************************************************************/

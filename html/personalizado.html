@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Scrips de Chat</title>
+	<link rel="icon" href="icone_sitel.png" />
+	<link rel="shortcut icon" href="icone_sitel.png"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/bootstrap/css/bootstrap.min.css" />
+	<link href="http://us145k12web02/app/conteudo/font.awesome.4.4.0/Content/Content/font-awesome.min.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/font-awesome-animation.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/css/skins/_all-skins.min.css" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" href="../css/iframe.css" />
+</head>
+<body>
+<main>
+	<section id="textos-de-script">
+		<fieldset class="borda" id="cont_1">
+			<legend id="inicio">Scrips iniciais</legend>
+				<h3>Saudação inicial</h3>
+				<div class="sub">Sem TAG:</div>
+				 <textarea  id="frase-sem-tag" readonly="readonly" class="frase">Olá, xxxxxx! Obrigado pelo contato com o Suporte Dell Brasil. Meu nome é xxxxxx e estarei lhe auxiliando durante o suporte do seu equipamento. Poderia me informar a TAG do equipamento, por gentileza?</textarea>
+				<div class="sub">Com TAG:</div>
+				 <textarea id="frase-com-tag" readonly="readonly" class="frase">Olá, xxxxxx! Obrigado pelo contato com o Suporte Dell Brasil. Meu nome é xxxxxx e estarei lhe auxiliando durante o suporte do seu equipamento. Apenas para confirmar, o código do seu produto é xxxxxx?</textarea>
+				
+				<h3>Sem máquina em mãos</h3>
+				<div class="sub">Sem máquina em mãos:</div>
+				 <textarea readonly="readonly" class="frase">Neste caso, peço que retorne o contato com a máquina em mãos para podermos seguir com os testes necessários. Reforço que o horário de atendimento é das 08:00 às 20:00 de segunda a sexta. Aguardaremos o seu retorno e até a próxima!</textarea>
+				
+				<h3>Captura de dados (VDI)</h3>
+				<div class="sub">Caso existente:</div>
+				 <textarea id="frase-caso-existente" readonly="readonly" class="frase">Obrigado pelas confirmações. Gostaria de informar que, caso tenha dúvidas sobre o protocolo xxxxxx, por favor, responda aos e-mails do suporte técnico. Ao nos contatar pelo 0800 ou por chat, outros técnicos poderão atendê-lo e eles precisarão compreender todo o caso novamente. Como posso ajudar no momento?</textarea> 
+				<div class="sub">Sem caso existente CPF:</div>
+				 <textarea readonly="readonly" class="frase">Obrigado pelas confirmações iniciais. Antes de começar com os testes, vou precisar de mais alguns dados para um breve cadastro, assim, se for necessário abrir um chamado técnico, já terei todos os seus dados necessários em mãos para agilizar o seu atendimento. Por favor, me informe os seguintes dados abaixo: 
+
+Melhor horário no dia a dia para que possamos te ligar: 
+CPF: 
+Data de nascimento: 
+CEP: 
+Rua: 
+Número: 
+Complemento (se existir): 
+Bairro: 
+Cidade: 
+Estado: </textarea>
+				<div class="sub">Sem caso existente CNPJ:</div>
+				 <textarea readonly="readonly" class="frase">Obrigado pelas confirmações iniciais. Antes de começar com os testes, vou precisar de mais alguns dados para um breve cadastro, assim, se for necessário abrir um chamado técnico, já terei todos os dados necessários da empresa em mãos para agilizar o seu atendimento. Por favor, me informe os seguintes dados abaixo:
+
+Melhor horário no dia a dia para que possamos te ligar: 
+CNPJ: 
+Inscrição estadual (se existir): 
+CEP: 
+Rua: 
+Número: 
+Complemento (se existir): 
+Bairro: 
+Cidade: 
+Estado: </textarea>
+				<div class="sub">Caso cliente não possua/não queira informar dados:</div>
+				 <textarea readonly="readonly" class="frase">Tudo bem! Vamos seguir sem os dados por ora, mas esteja ciente de que eles serão obrigatários caso identifiquemos a necessidade de abertura de um chamado, sendo assim, peço que me informe os dados completos assim que houver a possibilidade.</textarea>
+				
+				<h3>Retail</h3>
+				<div class="sub">Máquina com mais de 1 ano:</div>
+				 <textarea readonly="readonly" class="frase">Verifico no sistema que o seu equipamento está cadastrado com mais de 1 ano de compra. Poderia me confirmar a data de compra para validarmos se a informação está correta, por favor?</textarea>
+				<div class="sub">Se age maior de 1 ano:</div>
+				 <textarea readonly="readonly" class="frase">Neste caso, o seu equipamento já se encontra fora do prazo de garantia, visto que este prazo é de 1 ano, de acordo com o termo de garantia básica ( https://www.dell.com/learn/br/pt/brbsdt1/services/termo-garantia-basica ), neste cenário, deixarei registrada as informações de seu contato para conhecimento da Dell, mas oriento que siga com o atendimento no canal Fora de Garantia (0800 970 3355 - opção 4).</textarea>
+				<div class="sub">Se age menor de 1 ano:</div>
+				 <textarea readonly="readonly" class="frase">Neste caso, vamos precisar realizar a atualização de sua garantia no sistema e para isto, é necessário que me envie uma cópia da nota fiscal. Se estiver com ela em mãos no momento, pode me enviar através deste chat mesmo, mas se não estiver, pode me enviar em até 24 horas úteis através do e-mail que lhe enviarei.</textarea>
+				
+				<h3>Continuidade</h3>
+				<div class="sub">Após confirmar dados e garantia:</div>
+				 <textarea id="frase-continuidade" readonly="readonly" class="frase">Obrigado pelas informações! Ao final da nossa conversa, caso haja necessidade de seguirmos em tratativa, tudo será feito via email. Por lá te manteremos atualizado sobre qualquer processo e enviaremos procedimentos para dar continuidade, portanto, fique atento à sua caixa de entrada do email xxxxxx, por favor. Meu horário de trabalho é das xx:xx às xx:xx de segunda a sexta, então, dentro desse período, após o envio do seu email, responderei o mais rápido possível. :)</textarea>
+			</fieldset>
+			<fieldset class="borda">
+				<legend id="meio">Scripts de atendimento</legend>
+				
+				<h3>Troubleshootings</h3>
+				<div class="sub">Sondagem:</div>
+				 <textarea readonly="readonly" class="frase">Algumas perguntas de sondagem:
+
+Como posso ajudar?
+O que está ocorrendo com o equipamento?
+Quais sintomas o equipamento apresenta?
+Em qual situação o problema ocorre?
+Desde quando ocorre o problema?
+Houve algum dano acidental?
+O problema é intermitente?</textarea> 
+				
+				<h3>Cliente não responde</h3>
+				<div class="sub">Depois de 3 minutos sem resposta:</div>
+				 <textarea readonly="readonly" class="frase">A fim de garantir a qualidade deste atendimento, necessito que tenhamos fluência em nossa conversação. Caso persista o elevado tempo de resposta, essa sessão será finalizada por inatividade.</textarea>
+				<div class="sub">Antes de sondagem e depois de 1 minuto:</div>
+				 <textarea readonly="readonly" class="frase">Como não recebemos o seu retorno, estou encerrando este chat, mas continuamos a disposição das 08:00 às 20:00 de segunda-feira a sexta-feira. Atendemos também no telefone 0800 970 3355. Por agora, a Dell agradece o contato e até a próxima!</textarea>
+				<div class="sub">Depois de sondagem de depois de 2 minutos:</div>
+				 <textarea readonly="readonly" class="frase">Como não recebemos o seu retorno, estou encerrando este chat, mas tentarei contato com através do telefone e caso não seja possível, peço que responda o e-mail que lhe enviarei. Por agora, a Dell agradece o seu contato!</textarea>
+				<div class="sub">Script de ePSA:</div>
+				 <textarea readonly="readonly" class="frase">Para realizar o teste de ePSA, peço que siga os seguintes passos:
+Conecta o carregador e desliga o equipamento, quando apagar todas as luzes faz o seguinte: Aperta o botão de ligar e assim que aparecer o logo da Dell, aperta e solta várias vezes a tecla F12 do seu teclado, bem rápido, precisa entrar numa tela de "boot menu".
+Localiza "Diagnóstico", vai até ele e aperta enter. Ele vai rodar um teste em todas as peças do equipamento, a princípio sua tela vai ficar colorida e ele vai te dar uma mensagem de "Yes" e "No", clica no "YES" ou aperta o "Y" no teclado, basicamente isso consiste em confirmar de que está vendo as cores na tela. Ele vai seguir o teste. Se aparecer algum erro, anote e tire uma foto, por favor.
+Quando o teste terminar, ele vai te dar uma mensagem em inglês "No Have Problem..." algo do tipo. Clique em "No" para a Mensagem, "Ok" para a segunda e depois no "Exit" no canto direito inferior ou superior.</textarea> 
+				<div class="sub">Script de Acesso remoto:</div>
+				 <textarea id="frase-acesso-remoto" readonly="readonly" class="frase">Informo que durante o acesso remoto é possível visualizar tudo o que estiver em sua tela. Dessa forma, oriento que feche documentos pessoais, bem como acesso a sites de banco, e-mail, redes sociais, etc. Para iniciar o acesso remoto, entre no link: ( https://www.dell.com/support/remoteassist/br/pt/brdhs1/ ), aceite os termos do Dell RemoteAssist no final da página, entre com o código xxxxxx, envie, faça o download da ferramenta e a execute, dando todas as permissões que lhe forem solicitadas.</textarea>
+				<div class="sub">Formatação:</div>
+				 <textarea readonly="readonly" class="frase">Será necessário realizar a formatação do equipamento e preciso que realize o backup de seus arquivos (caso tenha arquivos importantes salvos). Enviarei o processo de formatação e o link do canal no YouTube com o passo a passo de como executá-lo por email. Se houver alguma dúvida, por favor responda o email que lhe enviarei.</textarea>
+				
+				<h3>Escalações</h3>
+				<div class="sub">Fraseologia:</div>
+				 <textarea readonly="readonly" class="frase">Vimos a necessidade de escalar internamente o seu caso para buscarmos a melhor solução possível, neste cenário, como temos que acionar outros setores da Dell, pedimos que por agora aguarde um retorno via e-mail ou telefone em atá 72 horas úteis. Me informe se tiver algum telefone ou e-mail adicional para que eu inclua em seu cadastro e tenhamos mais assertividade no retorno.</textarea>
+ 				<div class="sub">Templates de escalações:</div>
+				<a href="templates.html" target="_blank" class="gerar-log">
+					<button><i class="material-icons">dashboard</i>Clique aqui</button>
+				</a>
+
+						<!--5 good lines-->
+				<h3 id="goodLines">5 good lines</h3>
+				<div class="goodLines" >
+					<section>
+						<div class="rowGoodLines">
+							<label for="inp_diag" id="lbl_diag">Diag: </label>
+							<select id="inp_diag" name="diagnostico" class="campoGoodLines" required title="Ferramenta de diagnóstico">
+								<option value="ePSA">Epsa</option>
+								<option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
+								<option value="Alien Autopsy">Alien Autopsy</option>
+								<option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
+								<option value="FPD Bist">FPD Bist</option>
+								<option value="LCD Bist">LCD Bist</option>
+								<option value="Led Indicators">Led Indicators</option>
+								<option value="MemRX">MemRX</option>
+								<option value="MpMemory">MpMemory</option>
+								<option value="PC Doctor">PC Doctor</option>
+								<option value="PSA">PSA</option>
+								<option value="PSU Bist">PSU Bist</option>
+								<option value="Quad-Pack Leds">Quad-Pack Leds</option>
+								<option value="Tools not Needed">Tools not Needed</option>
+							</select>
+						</div>
+						<div class="rowGoodLines">
+							<label for="inp_code" id="lbl_code">Code: </label>
+							<input id="inp_code" name="codigo" class="campoGoodLines" required title="Entrar com o código de erro ou PASS" placeholder="Validation em caso de EPSA">
+						</div>
+						<div class="rowGoodLines">
+							<label for="inp_dps" id="lbl_dps">DPS: </label>
+							<select id="inp_dps" name="dps" class="campoGoodLines" required title="Quantidade de DPS da SR">
+								<option value="1°">1</option>
+								<option value="2°">2</option>
+								<option value="3°">3</option>
+								<option value="4°">4</option>
+								<option value="5°">5</option>
+							</select>
+						</div>
+						<div class="rowGoodLines">
+							<label for="inp_sintoma" id="lbl_sintoma">Sintoma: </label>
+							<input id="inp_sintoma" name="sintoma" class="campoGoodLines" required title="No post, No video, No boot, No power, No audio..." placeholder="Sintoma do equipamento Ex: No Power, No Post">
+						</div>
+					</section>
+					<section class="sectionGoodLines">
+						<div>
+							<label for="opcao-federal">Federal</label>
+							<input type="radio" name="especial-opcao" id="opcao-federal">
+						</div>
+						<div>
+							<label for="opcao-parts-only">Parts Only</label>
+							<input type="radio" name="especial-opcao" id="opcao-parts-only">
+						</div>
+						<div>
+							<label for="opcao-hd">HD</label>
+							<input type="radio" name="especial-opcao" id="opcao-hd">
+						</div>
+						<div>
+							<label for="opcao-nenhum">Nada</label>
+							<input type="radio" name="especial-opcao" id="opcao-nenhum">
+						</div>
+					</section>
+					<section class="invisivel" id="secao-federal">
+						<div class="rowGoodLines">
+							<label for="opcao-federal-cpf">CPF</label>
+							<input type="radio" name="federal-opcao" id="opcao-federal-cpf">
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-federal-cnpj">CNPJ</label>
+							<input type="radio" name="federal-opcao" id="opcao-federal-cnpj">
+						</div>
+					</section>
+					<section class="invisivel" id="secao-parts-only">
+						<div class="rowGoodLines">
+							<label for="opcao-parts-only-cpf">CPF</label>
+							<input type="radio" name="parts-only-opcao" id="opcao-parts-only-cpf">
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-parts-only-cnpj">CNPJ</label>
+							<input type="radio" name="parts-only-opcao" id="opcao-parts-only-cnpj">
+						</div>
+					</section>
+					<section class="invisivel" id="secao-hd">
+						<div class="rowGoodLines">
+							<label for="opcao-arquitetura">Arquitetura: </label>
+							<select id="opcao-arquitetura">
+								<option value="32-bit">32</option>
+								<option value="64-bit">64</option>
+							</select>
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-idioma">Idioma: </label>
+							<select id="opcao-idioma">
+								<option value="Brazilian Portuguese">Português</option>
+								<option value="English">English</option>
+								<option value="Spanish">Español</option>
+							</select>
+						</div>
+						<div class="rowGoodLines"
+							<label for="opcao-sistema">Sistema: </label>
+							<select id="opcao-sistema">
+								<option value="Windows 7 Home">Win 7 Home</option>
+								<option value="Windows 7 Professional">Win 7 Pro</option>
+								<option value="Windows 7 Ultimate">Win 7 Ultimate</option>
+								<option value="Windows 8 Home">Win 8 Home</option>
+								<option value="Windows 8 Professional">Win 8 Pro</option>
+								<option value="Windows 8.1 Home">Win 8.1 Home</option>
+								<option value="Windows 8.1 Single Language">Win 8.1 SingLang</option>
+								<option value="Windows 8.1 Professional">Win 8.1 Pro</option>
+								<option value="Windows 10 Home">Win 10 Home</option>
+								<option value="Windows 10 Home Single Language">Win 10 SingLang</option>
+								<option value="Windows 10 Professional">Win 10 Pro</option>
+							</select>
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-modelo">Modelo: </label>
+							<input id="opcao-modelo" placeholder="Inspiron 5566">
+						</div>
+					</section>
+					<section class="invisivel" id="secao-federal-cpf">
+						<div class="rowGoodLines">
+							<label for="opcao-numero-federal-cpf">Número: </label>
+							<input id="opcao-numero-federal-cpf" type="number" placeholder="00011122233">
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-data-federal-nascimento">Data de nascimento: </label>
+							<input id="opcao-data-federal-nascimento" placeholder="01/01/1990"><!--type="date"-->
+						</div>
+					</section>
+					<section class="invisivel" id="secao-federal-cnpj">
+						<div class="rowGoodLines">
+							<label for="opcao-numero-federal-cnpj">Número: </label>
+							<input type="number" id="opcao-numero-federal-cnpj" maxlength="14" placeholder="00000000000000">
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-inscricao-federal-estadual">Inscrição estadual</label>
+							<input type="number" id="opcao-inscricao-federal-estadual" placeholder="Não preencher se isento">
+						</div>
+					</section>
+					<section class="invisivel" id="secao-parts-only-cpf">
+						<div class="rowGoodLines">
+							<label for="opcao-numero-parts-only-cpf">Número: </label>
+							<input id="opcao-numero-parts-only-cpf" type="number" placeholder="00011122233">
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-data-parts-only-nascimento">Data de nascimento: </label>
+							<input id="opcao-data-parts-only-nascimento" placeholder="01/01/1990"><!--type="date"-->
+						</div>
+					</section>
+					<section class="invisivel" id="secao-parts-only-cnpj">
+						<div class="rowGoodLines">
+							<label for="opcao-numero-parts-only-cnpj">Número: </label>
+							<input type="number" id="opcao-numero-parts-only-cnpj" maxlength="14" placeholder="00000000000000">
+						</div>
+						<div class="rowGoodLines">
+							<label for="opcao-inscricao-parts-only-estadual">Inscrição estadual</label>
+							<input type="number" id="opcao-inscricao-parts-only-estadual" placeholder="Não preencher se isento">
+						</div>
+					</section>
+					<section>
+						<div class="rowGoodLines">
+							<label for="inp_federal" id="lbl_federal">Instrução especial: </label>
+							<input readonly="readonly" id="inp_federal" name="federal" class="campoGoodLines" title="CPF:xxxxxxxxxxx-BDATE:xx/xx/xxxx- // OS Download: XX bits, Language: xxxxxx, Model: xxxxxx, OS: xxxxxx">
+						</div>
+					</section>
+					<section>
+						<ul>
+							<li class="rowGoodLines">
+								<a href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp" target="_blank">Consultar CPF</a>
+							</li>
+							<li class="rowGoodLines">
+								<a href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp" target="_blank">Consultar CNPJ</a>
+							</li>
+							<li class="rowGoodLines">
+								<a href="http://www.sintegra.gov.br/" target="_blank">Consultar Sintegra</a>
+							</li>
+							<li class="rowGoodLines">
+								<a href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV51.pdf" target="_blank">Consultar processo 320</a>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<div class="rowGoodLines">
+							<label for="inp_instrucao" id="lbl_instrucao">Instrução: <br></label>
+							<textarea id="inp_instrucao" name="instrucao" class="frase" required title="O que deve ser feito pelo Tech" placeholder="Senhor tecnico, por favor trocar parts e garantir funcionalidade">Senhor tecnico, por favor trocar ...</textarea>
+						</div>
+					</section>
+					<section>
+						<div class="rowGoodLines">
+							<button id="btnGerarGoodLines" name="gerar_GoodLines" class="gerar-log">Gerar e copiar</button>
+						</div>
+					</section>
+					<section>
+						<div class="rowGoodLines">
+							<textarea readonly="readonly" id="inp_resultado" class="frase invisivel" name="resultado"></textarea>
+						</div>
+					</section>
+				</div>
+						<!--fim 5 good lines-->
+			</fieldset>
+			<fieldset class="borda">
+				<legend id="fim">Scripts de encerramento</legend>
+				
+				<h3>Encerramento Ri1</h3>
+				<div class="sub">Fechamento em R1:</div>
+				 <textarea readonly="readonly" class="frase">Espero ter ajudado. Eu vou te enviar um email de fechamento e fico com o seu caso por 10 dias para que siga com testes, se estiver com dificuldades ou alguma dúvida, basta responder o email que eu te posiciono. Em até 2 dias você poderá receber uma pesquisa sobre o meu atendimento. Se puder responder, eu agradeço. Por ora, a Dell agradece o contato e tenha um ótimo dia.</textarea>
+				
+				<h3>Encerramento de atendimento</h3>
+				<div class="sub">NBD:</div>
+				 <textarea id="frase-dps-rtd" readonly="readonly" class="frase">Obrigado por aguardar. Fiz a abertura do chamado DPS xxxxxx para atendimento onsite (em seu endereço), e peço que aguarde um prazo de até 5 dias úteis para receber um contato para agendamento. Irei te enviar um e-mail com mais detalhes e caso fique alguma dúvida ou precise verificar o andamento do chamado, não deixe de responder o email. No momento, ajudo em algo mais?</textarea>
+ 				<div class="sub">RTD CIS:</div>
+				 <textarea id="frase-dps-cis" readonly="readonly" class="frase">Obrigado por aguardar. Fiz a abertura do chamado DPS xxxxxx para atendimento e preciso que encaminhe o equipamento ao centro de reparos em até 10 dias no endereço xxxxxx para que a máquina seja reparada. Irei te enviar um e-mail com mais detalhes e caso fique alguma dúvida ou precise verificar o andamento do chamado, não deixe de responder o e-mail. No momento, ajudo em algo mais?</textarea>
+				<div class="sub">RTD MIS:</div>
+				 <textarea id="frase-dps-mis" readonly="readonly" class="frase">Obrigado por aguardar. Fiz a abertura do chamado DPS xxxxxx para atendimento e preciso que encaminhe o equipamento para postagem em uma agencia dos Correios em até 15 dias para que a máquina seja reparada. Irei te enviar um e-mail com mais detalhes, incluindo o código para postagem gratuita e caso fique alguma dúvida ou precise verificar o andamento do chamado, não deixe de responder o e-mail. No momento, ajudo em algo mais?</textarea>
+				<div class="sub">Antes de sondagem e depois de 1 minuto:</div>
+				 <textarea readonly="readonly" class="frase">Como não recebemos o seu retorno, estou encerrando este chat, mas continuamos a disposição das 08:00 às 20:00 de segunda-feira a sexta-feira. Atendemos também no telefone 0800 970 3355. Por agora, a Dell agradece o contato e até a próxima!</textarea>
+				<div class="sub">Inatividade depois de sondagem e depois de 2 minutos do script:</div>
+				 <textarea readonly="readonly" class="frase">Como não recebemos o seu retorno, estou encerrando este chat, mas tentarei contato com através do telefone e caso não seja possível, peço que responda o e-mail que lhe enviarei. Por agora, a Dell agradece o seu contato!</textarea>
+				<div class="sub">Encerramento:</div>
+				 <textarea readonly="readonly" class="frase">A Dell agradece sua colaboração e contato, até mais!</textarea>
+				<div class="sub">Falha na ferramenta:</div>
+				 <textarea readonly="readonly" class="frase">Prezado cliente, no momento estamos com problema na nossa ferramenta, por isso não conseguiremos dar sequência ao seu atendimento. Por favor, volte o contato daqui 2h.</textarea>
+				
+				<h3>Direcionamento para outro setor</h3>
+				<div class="sub">Direcionar para CTS.Sitel.BRA.V.OOP.AMER.LA.PT:</div>
+				 <textarea readonly="readonly" class="frase">Como pelo chat atendemos exclusivamente máquinas com a garantia vigente, para que o suporte seja fornecido com mais qualidade, por favor entre em contato via 0800 970 3355 é opção 4 (Seg. a Sex., das 08:00 às 20:00), para atendimento fora de garantia.</textarea>
+ 				<div class="sub">Para funcionários retail:</div>
+				 <textarea readonly="readonly" class="frase">Este atendimento é destinado apenas a consumidores. Para atendimento ao revendedor, solicito que faça o contato com o time específico. Estou encerrando este contato, mas continuamos a disposição através do canal correto.</textarea>
+				<div class="sub">Social media:</div>
+				 <textarea readonly="readonly" class="frase">Caro cliente, verifiquei que o time de mídias sociais foi acionado e possui um protocolo de atendimento em andamento. Portanto, peço por gentileza que aguarde o contato do responsável para seguir com o caso. De qualquer forma, deixarei registrado no sistema o seu contato para que retornem o mais rápido possível, mas não poderemos interferir no atendimento deste setor, por isso, agradecemos o contato por agora e tenha um ótimo dia.</textarea>
+			</fieldset>
+		</section>
+	</main>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+<!--<script>
+var btnConfigAnalistaP = document.querySelector("#botao-config-analistaP");
+var btnConfigClienteP = document.querySelector("#botao-config-clienteP");
+var btnConfigAtendimentoP = document.querySelector("#botao-config-atendimentoP");
+
+var analista = localStorage.getItem('analista');
+var entrada = localStorage.getItem('entrada');
+var saida = localStorage.getItem('saida');
+
+var cliente = localStorage.getItem('cliente');
+var tag = localStorage.getItem('tag');
+var email = localStorage.getItem('email');
+
+var caso = localStorage.getItem('caso');
+var remoto = localStorage.getItem('remoto');
+var dps = localStorage.getItem('dps');
+var endereco = localStorage.getItem('endereco');
+
+configuraDadosP();
+
+var fraseSemTag = document.querySelector("#frase-sem-tag");
+var fraseComTag = document.querySelector("#frase-com-tag");
+var fraseContinuidade = document.querySelector("#frase-continuidade");
+var fraseCasoExistente = document.querySelector("#frase-caso-existente");
+var fraseAcessoRemoto = document.querySelector("#frase-acesso-remoto");
+var fraseDpsRtd = document.querySelector("#frase-dps-rtd");
+var fraseDpsCis = document.querySelector("#frase-dps-cis");
+var fraseDpsMis = document.querySelector("#frase-dps-mis");
+
+scriptAberturaSessao = document.querySelector("#frase-abertura-sessao");
+scriptQuedaSessao = document.querySelector("#frase-queda-sessao");
+scriptOwnership = document.querySelector("#frase-ownership");
+scriptRetornoViaEmail = document.querySelector("#frase-retorno-via-email");
+scriptDpsMis = document.querySelector("#frase-dps-mis");
+scriptDpsCis = document.querySelector("#frase-dps-cis");
+scriptQuedaSessao = document.querySelector("#frase-queda-sessao");
+scriptRetornoViaEmail = document.querySelector("#frase-retorno-via-email");
+scriptOwnership = document.querySelector("#frase-ownership");
+
+/*
+analista = window.prompt("Nome de analista:");
+entrada = window.prompt("Horário de entrada");
+saida = window.prompt("Horário de saída");
+configuraDadosP();
+*/
+
+btnConfigAnalistaP.addEventListener("click", function(){
+	analista = window.prompt("Nome de analista:", analista);
+	entrada = window.prompt("Horário de entrada", entrada);
+	saida = window.prompt("Horário de saída", saida);
+	
+	configuraDadosP()
+
+	removeFadeIn();
+});
+btnConfigClienteP.addEventListener("click", function(){
+	cliente = window.prompt("Nome do cliente:", cliente);
+	tag = window.prompt("TAG:", tag);
+	email = window.prompt("E-mail:", email);
+
+	configuraDadosP()
+
+	removeFadeIn();
+});
+btnConfigAtendimentoP.addEventListener("click", function(){
+	caso = window.prompt("Número do caso: (se não necessário, pressione 'ok' ou tecla 'Enter')", caso);
+	remoto = window.prompt("Código de acesso remoto: (se não necessário, pressione 'ok' ou tecla 'Enter')", remoto);
+	dps = window.prompt("Número de DPS: (se não necessário, pressione 'ok' ou tecla 'Enter')", dps);
+	endereco = window.prompt("Endereço CIS: (se não necessário, pressione 'ok' ou tecla 'Enter')", endereco);
+
+	configuraDadosP()
+
+	removeFadeIn();
+});
+
+function configuraDadosP(){
+	fraseSemTag.textContent = 		"Olá, "+cliente+"! Obrigado pelo contato com o Suporte Dell Brasil. Meu nome é "+analista+" e estarei lhe auxiliando durante o suporte do seu equipamento. Poderia me informar a TAG do equipamento, por gentileza?"
+	fraseComTag.textContent = 		"Olá, "+cliente+"! Obrigado pelo contato com o Suporte Dell Brasil. Meu nome é "+analista+" e estarei lhe auxiliando durante o suporte do seu equipamento. Apenas para confirmar, o código do seu produto é "+tag+"?"
+	fraseContinuidade.textContent = 	"Obrigado pelas informações! Ao final da nossa conversa, caso haja necessidade de seguirmos em tratativa, tudo será feito via email. Por lá te manteremos atualizado sobre qualquer processo e enviaremos procedimentos para dar continuidade, portanto, fique atento à sua caixa de entrada do email "+email+", por favor. Meu horário de trabalho é das "+entrada+" às "+saida+" de segunda a sexta, então, dentro desse período, após o envio do seu email, responderei o mais rápido possível. :)"
+	fraseCasoExistente.textContent =	"Obrigado pelas confirmações. Gostaria de informar que, caso tenha dúvidas sobre o protocolo "+caso+", por favor, responda aos e-mails do suporte técnico. Ao nos contatar pelo 0800 ou por chat, outros técnicos poderão atendê-lo e eles precisarão compreender todo o caso novamente. Como posso ajudar no momento?"
+	fraseAcessoRemoto.textContent =		"Informo que durante o acesso remoto é possível visualizar tudo o que estiver em sua tela. Dessa forma, oriento que feche documentos pessoais, bem como acesso a sites de banco, e-mail, redes sociais, etc. Para iniciar o acesso remoto, entre no link: ( https://www.dell.com/support/remoteassist/br/pt/brdhs1/ ), aceite os termos do Dell RemoteAssist no final da página, entre com o código "+remoto+", envie, faça o download da ferramenta e a execute, dando todas as permissões que lhe forem solicitadas."
+	fraseDpsRtd.textContent =		"Obrigado por aguardar. Fiz a abertura do chamado DPS "+dps+" para atendimento onsite (em seu endereço), e peço que aguarde um prazo de até 5 dias úteis para receber um contato para agendamento. Irei te enviar um e-mail com mais detalhes e caso fique alguma dúvida ou precise verificar o andamento do chamado, não deixe de responder o email. No momento, ajudo em algo mais?"
+	fraseDpsCis.textContent =		"Obrigado por aguardar. Fiz a abertura do chamado DPS "+dps+" para atendimento e preciso que encaminhe o equipamento ao centro de reparos em até 10 dias no endereço "+endereco+" para que a máquina seja reparada. Irei te enviar um e-mail com mais detalhes e caso fique alguma dúvida ou precise verificar o andamento do chamado, não deixe de responder o e-mail. No momento, ajudo em algo mais?"
+	fraseDpsMis.textContent =		"Obrigado por aguardar. Fiz a abertura do chamado DPS "+dps+" para atendimento e preciso que encaminhe o equipamento para postagem em uma agencia dos Correios em até 15 dias para que a máquina seja reparada. Irei te enviar um e-mail com mais detalhes, incluindo o código para postagem gratuita e caso fique alguma dúvida ou precise verificar o andamento do chamado, não deixe de responder o e-mail. No momento, ajudo em algo mais?"
+
+	return;
+}
+function removeFadeIn(){
+	textos.forEach(function(texto){
+		texto.classList.remove("fadeIn");
+	});
+};
+
+var textos = document.querySelectorAll(".frase");
+
+var diagnostico = document.querySelector("#inp_diag");
+var codigo = document.querySelector("#inp_code");
+var qtddps = document.querySelector("#inp_dps");
+var sintoma = document.querySelector("#inp_sintoma");
+var federal = document.querySelector("#inp_federal");
+var instrucao = document.querySelector("#inp_instrucao");
+var gerar_GoodLines = document.querySelector("#btnGerarGoodLines");
+var resultado = document.querySelector("#inp_resultado");
+
+textos.forEach(function(texto){
+	texto.addEventListener("dblclick", function(){
+		this.classList.add("fadeIn");
+		this.select();
+		document.execCommand('copy');
+	});
+});
+function limpaCampos(){
+	$("#opcao-numero-federal-cpf").val("");
+	$("#opcao-data-federal-nascimento").val("");
+	$("#opcao-numero-federal-cnpj").val("");
+	$("#opcao-inscricao-federal-estadual").val("");
+	$("#opcao-numero-parts-only-cpf").val("");
+	$("#opcao-data-parts-only-nascimento").val("");
+	$("#opcao-numero-parts-only-cnpj").val("");
+	$("#opcao-inscricao-parts-only-estadual").val("");
+	$("#opcao-modelo").val("");
+	$("#inp_federal").val("");
+}
+function escondeCampos(){
+	$("#secao-federal").slideUp(500);
+	$("#secao-parts-only").slideUp(500);
+	$("#secao-hd").slideUp(500);
+	$("#secao-federal-cpf").slideUp(500);
+	$("#secao-federal-cnpj").slideUp(500);
+	$("#secao-parts-only-cpf").slideUp(500);
+	$("#secao-parts-only-cnpj").slideUp(500);
+}
+	//primeiro nível
+$("#opcao-federal").click(function(){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-federal").slideDown(500);	
+	$("#inp_federal").val("Padrão Federal selecionado");
+});
+$("#opcao-parts-only").click(function(){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-parts-only").slideDown(500);
+	$("#inp_federal").val("Padrão Parts-Only selecionado");
+});
+$("#opcao-hd").click(function(){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-hd").slideDown(500);
+	$("#inp_federal").val("OS Download: <ARQUITETURA>, Language <IDIOMA>, Model <MODELO>, OS: <SISTEMA OPERACIONAL><VERSAO>");
+	$("#opcao-arquitetura").focus();
+});
+$("#opcao-nenhum").click(function(){
+	limpaCampos();
+	escondeCampos();
+});
+	//segundo nível
+		//cpf federal
+$("#opcao-federal-cpf").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-federal-cpf").slideDown(500);
+	$("#inp_federal").val("CPF:12345678910-BDATE:01/01/0101-");
+	$("#opcao-numero-federal-cpf").focus();
+
+	$("#opcao-numero-federal-cpf").focusout(function (){
+		atualizaFederalCPF();
+	});
+	$("#opcao-data-federal-nascimento").focusout(function (){
+		atualizaFederalCPF();
+	});
+	function atualizaFederalCPF(){
+		$("#inp_federal").val("CPF:"+$("#opcao-numero-federal-cpf").val()+"-BDATE:"+$("#opcao-data-federal-nascimento").val()+"-");
+	}
+});
+		//cnpj federal
+$("#opcao-federal-cnpj").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-federal-cnpj").slideDown(500);
+	$("#inp_federal").val("CNPJ:123456789123456789-STATE:1234567891234567-");
+	$("#opcao-numero-federal-cnpj").focus();
+
+	$("#opcao-numero-federal-cnpj").focusout(function (){
+		atualizaFederalCNPJ();
+	});
+	$("#opcao-inscricao-federal-estadual").focusout(function (){
+		atualizaFederalCNPJ();
+	});
+	function atualizaFederalCNPJ(){
+		var estadual = $("#opcao-inscricao-federal-estadual").val();
+		if(!$("#opcao-inscricao-federal-estadual").val() != ""){
+			$("#inp_federal").val("CNPJ:"+$("#opcao-numero-federal-cnpj").val()+"-STATE:ISENTO-");
+		}else{
+			$("#inp_federal").val("CNPJ:"+$("#opcao-numero-federal-cnpj").val()+"-STATE:"+estadual+"-");
+		}
+	}
+});
+
+		//cpf parts-only
+$("#opcao-parts-only-cpf").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-parts-only-cpf").slideDown(500);
+	$("#inp_federal").val("FEDERAL:123456789012345678-STATE:ISENTO-BDATE:01/01/0101");
+	$("#opcao-numero-parts-only-cpf").focus();
+
+	$("#opcao-numero-parts-only-cpf").focusout(function (){
+		atualizaPartsOnlyCPF();
+	});
+	$("#opcao-data-parts-only-nascimento").focusout(function (){
+		atualizaPartsOnlyCPF();
+	});
+	function atualizaPartsOnlyCPF(){
+		$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cpf").val()+"-STATE:ISENTO-BDATE:"+$("#opcao-data-parts-only-nascimento").val());
+	}
+});
+		//cnpj parts-only
+$("#opcao-parts-only-cnpj").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-parts-only-cnpj").slideDown(500);
+	$("#inp_federal").val("FEDERAL:123456789123456789-STATE:1234567891234567-");
+	$("#opcao-numero-parts-only-cnpj").focus();
+
+	$("#opcao-numero-parts-only-cnpj").focusout(function (){
+		atualizaPartsOnlyCNPJ();
+		$("#opcao-inscricao-parts-only-estadual").focus();
+	});
+	$("#opcao-inscricao-parts-only-estadual").focusout(function (){
+		atualizaPartsOnlyCNPJ();
+	});
+	function atualizaPartsOnlyCNPJ(){
+		var estadual = $("#opcao-inscricao-parts-only-estadual").val();
+		if(!$("#opcao-inscricao-parts-only-estadual").val() != ""){
+			$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cnpj").val()+"-STATE:ISENTO-");
+		}else{
+			$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cnpj").val()+"-STATE:"+estadual+"-");
+		}
+	}
+});
+		//OS image
+$("#opcao-arquitetura").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-idioma").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-sistema").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-modelo").focusout(function(){
+	atualizaOSImage();
+});
+function atualizaOSImage() {
+	$("#inp_federal").val("OS Download: "+$("#opcao-arquitetura").val()+", Language "+$("#opcao-idioma").val()+", Model "+$("#opcao-modelo").val()+", OS: "+$("#opcao-sistema").val())
+};
+
+//gerar texto
+$("#btnGerarGoodLines").click(function(event){
+	event.preventDefault();
+	
+
+	
+	if(federal.value.length > 0){
+		resultado.textContent = federal.value+"\n"+"\nDiag: "+diagnostico.value+"\nCode: "+codigo.value+"\nDPS: "+qtddps.value+"\nSintoma: "+sintoma.value+"\nInstrução: "+instrucao.value;
+	}else{
+		resultado.textContent = "Diag: "+diagnostico.value+"\nCode: "+codigo.value+"\nDPS: "+qtddps.value+"\nSintoma: "+sintoma.value+"\nInstrução: "+instrucao.value;
+	}
+	federal.value = "", codigo.value = "", dps.value = "1°", sintoma.value = "", instrucao.value = "Senhor tecnico, por favor trocar ...";
+	$("#inp_resultado").slideDown(1000);
+	//resultado.classList.remove("invisivel");
+	//campo-resultado.slideDown();
+
+	resultado.select();
+	document.execCommand('copy');
+
+	setTimeout(
+		function(){
+			$("#inp_resultado").slideUp(1000)
+		},15000
+	)
+	});
+gerar_GoodLines.addEventListener("dblclick", function(){
+	resultado.classList.add("fadeOut");
+	console.log("bdlclick")
+})
+</script>-->
+</body>
+</html>

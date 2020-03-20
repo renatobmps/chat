@@ -1,0 +1,274 @@
+<!DOCUMENT html>
+<html lang="pt_BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Sem DPS</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+	<link rel="icon" href="../img/logo.png" />
+	<link rel="shortcut icon" href="../img/logo.png" />
+	<link rel="stylesheet" href="../css/estilo.css" />
+</head>
+<body>
+	<form class="formulario-sem-dps">
+		<div class="linha">
+			<label for="input-owner">Owner: </label>
+			<input id="input-owner" required name="owner" class="input-texto" placeholder="Fulano_XX" pattern=["A-Za-z0-9_"]{5,20} title="login de Citrix">
+		</div>
+		<div class="linha">
+			<label for="input-caso">Número da Case#: </label>
+			<input id="input-caso" required name="caso" class="input-texto" placeholder="XXXXXXXX" pattern=["0-9"]{8} title="8 dígitos" maxlength="8">
+		</div>
+		<div class="linha">
+			<label for="input-data">Data de abertura de SR: </label>
+			<input id="input-data" required name="data" class="input-texto" placeholder="XX/XX/XXXX" type="date" maxlength="8">
+		</div>
+		<div class="linha">
+			<label for="input-okb">Oracle ID: </label>
+			<input id="input-okb" required name="okb" class="input-texto" placeholder="SLNXXXXXX" pattern=["A-Z0-9"]{9} title="SLN, PNP, HOW, LNK... usado" maxlength="9">
+		</div>
+		<div class="linha">
+			<label for="input-motivo">Motivo da não abertura do DPS: </label>
+			<textarea id="input-motivo" required name="motivo" class="input-texto" placeholder="Cliente fazendo as atualizações pendentes do windows update"></textarea>
+		</div>
+		<div class="linha">
+			<label for="input-problema">Problema: </label>
+			<select id="input-problema" required name="problema" class="input-texto" placeholder="Teclado numérico não funciona">
+				<option value="3rd Party Hardware">3rd Party Hardware</option>
+				<option value="3rd Party Software">3rd Party Software</option>
+				<option value="Audio Issues">Audio Issues</option>
+				<option value="Battery Related">Battery Related</option>
+				<option value="BIOS Issues">BIOS Issues</option>
+				<option value="BIOS or HDD Passwords">BIOS or HDD Passwords</option>
+				<option value="Bluetooth">Bluetooth</option>
+				<option value="BSOD &amp; Random Shutdown">BSOD &amp; Random Shutdown</option>
+				<option value="Dell Applications">Dell Applications</option>
+				<option value="Dell Mobile Connect">Dell Mobile Connect</option>
+				<option value="Dell SupportAssist">Dell SupportAssist</option>
+				<option value="Dell SupportAssist / AWCC">Dell SupportAssist / AWCC</option>
+				<option value="Docking Stations">Docking Stations</option>
+				<option value="Driver Issues">Driver Issues</option>
+				<option value="Exception Request (TM &amp; Above)">Exception Request (TM &amp; Above)</option>
+				<option value="Gaming Related">Gaming Related</option>
+				<option value="HDD Issues">HDD Issues</option>
+				<option value="Input Devices">Input Devices</option>
+				<option value="Keyboard">Keyboard</option>
+				<option value="Monitor Issues">Monitor Issues</option>
+				<option value="MS Office Issues">MS Office Issues</option>
+				<option value="Networking Issues">Networking Issues</option>
+				<option value="No Boot">No Boot</option>
+				<option value="No Post">No Post</option>
+				<option value="No Power">No Power</option>
+				<option value="No Video">No Video</option>
+				<option value="Noise Issues">Noise Issues</option>
+				<option value="ODD Issues">ODD Issues</option>
+				<option value="OS Issues">OS Issues</option>
+				<option value="Other - General">Other - General</option>
+				<option value="Other - Dell Hardware">Other - Dell Hardware</option>
+				<option value="Other Dell Applications">Other Dell Applications</option>
+				<option value="Performance Issues">Performance Issues</option>
+				<option value="Sleep/Hibernation Issues">Sleep/Hibernation Issues</option>
+				<option value="Thermal Issues">Thermal Issues</option>
+				<option value="Touchpad">Touchpad</option>
+				<option value="Video Issues">Video Issues</option>
+				<option value="Webcam Related">Webcam Related</option>
+				<option value="Windows Hello">Windows Hello</option>
+				<option value="Windows Update">Windows Update</option>
+			</select>
+		</div>
+		<div class="linha">
+			<button type="submit">Gerar registro</button>
+		</div>
+	</form>
+	<div class="linha">
+		<label>Assunto do e-mail: SEM DPS</label>
+	</div>
+	<table class="tabela-registros">
+		<thead>
+			<tr>
+				<th>Owner</th>
+				<th>Case</th>
+				<th>Data</th>
+				<th>OKB</th>
+				<th>Motivo</th>
+				<th>Problema</th>
+			</tr>
+		</thead>
+		<tbody>
+			
+		</tbody>
+	</table>
+	<button class="selecionar-copiar-tabela" onclick="(copiarTabela())">Selecionar e copiar</button>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script>
+		$(function() {
+			hoje = new Date();
+			dataAmericana = hoje.getFullYear()+"-"+("00"+(hoje.getMonth()+1)).slice(-2)+"-"+("00"+hoje.getDate()).slice(-2);
+			$("#input-data").val(dataAmericana);
+			var botao = document.querySelector("button");
+			botao.style.background = "#"+localStorage.getItem('cor-principal')
+			botao.style.color = "#fff"
+		});		
+		
+		$(".formulario-sem-dps").submit(
+		
+		(event) => {
+			
+			event.preventDefault()
+			
+			console.log("Funcionou");
+			
+			guardaValores($("#input-owner").val(), $("#input-caso").val(), $("#input-data").val(), $("#input-okb").val(), $("#input-motivo").val(), $("#input-problema").val())
+			
+			montaLinha();
+			
+			limpaLinha();
+			
+			$(".tabela-registros").slideDown(500);
+			
+		}
+		
+		)
+		
+		
+		
+		function padraoBrasil(dataAmericana){
+			
+			dataBrasileira = dataAmericana.split("-").reverse().join("/");
+			
+			
+			
+			return dataBrasileira;
+			
+		}
+		
+		
+		
+		function guardaValores(owner, caso, data, oracle, motivo, problema){
+			
+			registro.owner = owner;
+			
+			registro.caso = caso;
+			
+			registro.data = data;
+			
+			registro.oracle = oracle;
+			
+			registro.motivo = motivo;
+			
+			registro.problema = problema;
+			
+		}
+		
+		function montaLinha(owner, caso, data, oracle, motivo, problema){
+			
+			linha = $("<tr>");
+				
+				montaCelula();
+				
+				$("tbody").append(linha);
+				
+			}
+			
+			function montaCelula(){
+				
+				celulaOwner = $("<td>").text(registro.owner);
+					
+					linha.append(celulaOwner);
+					
+					celulaCaso = $("<td>").text(registro.caso);
+						
+						linha.append(celulaCaso);
+						
+						dataFormatada = padraoBrasil(registro.data)
+						
+						celulaData = $("<td>").text(dataFormatada);
+							
+							linha.append(celulaData);
+							
+							celulaOracle = $("<td>").text(registro.oracle);
+								
+								linha.append(celulaOracle);
+								
+								celulaMotivo = $("<td>").text(registro.motivo);
+									
+									linha.append(celulaMotivo);
+									
+									celulaProblema = $("<td>").text(registro.problema);
+										
+										linha.append(celulaProblema);
+										
+									}
+									
+									
+									
+									function limpaLinha(){
+										
+										$("input").val("");
+										
+										$("textarea").val("");
+										
+										$("#input-data").val(dataAmericana);
+										
+										$("#input-owner").val(registro.owner);
+										
+										$("#input-owner").focus();
+										
+										$("#input-problema").val("");
+										
+									}
+									
+									registro = []
+									
+									//////////////////////////////////////////////////////////////////
+									
+									function copiarTabela(){
+										
+										$(".tabela-registros tbody").select();
+										
+										document.execCommand('copy');
+										
+									};
+									
+									
+									
+									function selectElementContents(el) {
+										
+										var body = document.body, range, sel;
+										
+										if (document.createRange && window.getSelection) {
+											
+											range = document.createRange();
+											
+											sel = window.getSelection();
+											
+											sel.removeAllRanges();
+											
+											try {
+												
+												range.selectNodeContents(el);
+												
+												sel.addRange(range);
+												
+											} catch (e) {
+												
+												range.selectNode(el);
+												
+												sel.addRange(range);
+												
+											}
+											
+										} else if (body.createTextRange) {
+											
+											range = body.createTextRange();
+											
+											range.moveToElementText(el);
+											
+											range.select();
+											
+										}
+										
+									}
+								</script>
+							</body>
+							</html>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+	<title>Teste de filtro</title>
+<style>
+td, th{
+	border: 1px solid black;
+}
+.invisivel{
+	display: none;
+}
+</style>
+</head>
+<body>
+
+<input id="filtrar-tabela" placeholder="Busca...">
+
+<table>
+	<thead>
+		<tr>
+			<th>Nome</th>
+			<th>Número</th>
+			<th>Texto</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="paciente">
+			<td class="info-nome">Maria Barbosa</td>
+			<td>0001</td>
+			<td>Dell CM</td>
+		</tr>
+		<tr class="paciente">
+			<td class="info-nome">Renato Brandão</td>
+			<td>0002</td>
+			<td>Dell CM OOP</td>
+		</tr>
+		<tr class="paciente">
+			<td class="info-nome">Stephany Ortiz</td>
+			<td>0003</td>
+			<td>Dell CM</td>
+		</tr>
+		<tr class="paciente">
+			<td class="info-nome">Robson Isamu</td>
+			<td>0004</td>
+			<td>Dell CM</td>
+		</tr>
+		<tr class="paciente">
+			<td class="info-nome">Diego</td>
+			<td>0005</td>
+			<td>Qualidade</td>
+		</tr>
+		<tr class="paciente">
+			<td class="info-nome">Vitor</td>
+			<td>0006</td>
+			<td>Qualidade</td>
+		</tr>
+		<tr class="paciente">
+			<td class="info-nome">Wanderley</td>
+			<td>0007</td>
+			<td>Qualidade</td>
+		</tr>
+	</tbody>
+</table>
+
+<script>
+var campoFiltro = document.querySelector("#filtrar-tabela");
+
+campoFiltro.addEventListener("input", function(){
+var pacientes = document.querySelectorAll(".paciente");
+if(this.value.length > 0){
+for (var i = 0; i < pacientes.length; i++) {
+var paciente = pacientes[i];
+
+var tdNome = paciente.querySelector(".info-nome");
+var nome = tdNome.textContent;
+
+var expressao = new RegExp(this.value, "i");
+if(expressao.test(nome)){
+paciente.classList.remove("invisivel");
+}else{
+paciente.classList.add("invisivel");
+}
+}
+}else{
+for (var i = 0; i < pacientes.length; i++) {
+var paciente = pacientes[i];
+paciente.classList.remove("invisivel");
+}
+}
+});
+</script>
+</body>
+</html>

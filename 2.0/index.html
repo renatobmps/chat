@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/icone_sitel.png"/>
+    <title>Scrips de Chat</title>
+    
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css">
+    
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="css/libs/font-awesome/all.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/all.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/brands.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/brands.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/fontawesome.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/fontawesome.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/regular.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/regular.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/solid.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/solid.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/svg-with-js.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/svg-with-js.min.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/v4-shims.css">
+    <link rel="stylesheet" href="css/libs/font-awesome/v4-shims.min.css">
+    
+    <!--Projeto-->
+    <link rel="stylesheet" href="css/output.css">
+</head>
+<body>
+    <noscript>JavaScript precisa estar ativado para o correto funcionamento</noscript>
+    <header class="cabecalio">
+        <h1 class="cabecalio-titulo">Scripts</h1>
+        <nav id="lista-config" class="cabecalio-nav-lista-configuracoes">
+            <li>
+                <a href="#" id="botao-config-analistaS" title="Dados de analista"><i class="fas fa-user-circle"></i>Analista</a>
+                <ul class="entradas-analista invisivel">
+                    <li><p>Nome: </p><input class="lista-analista-nome"></li>
+                    <li><p>Entrada: </p><input class="lista-analista-entrada"></li>
+                    <li><p>Saída: </p><input class="lista-analista-saida"></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="botao-config-clienteS" title="Dados de cliente"><i class="fas fa-comment-dots"></i>Cliente</a>
+                <ul class="entradas-cliente invisivel">
+                    <li><p>Nome: </p><input class="lista-cliente-nome"></li>
+                    <li><p>TAG: </p><input class="lista-cliente-tag"></li>
+                    <li><p>Telefone: </p><input class="lista-cliente-telefone"></li>
+                    <li><p>E-mail: </p><input class="lista-cliente-email"></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" id="botao-config-atendimentoS" title="Dados de atendimento"><i class="fas fa-briefcase"></i>Atendimento</a>
+                <ul class="entradas-atendimento invisivel">
+                    <li><p>Case: </p><input class="lista-atendimento-caso"></li>
+                    <li><p>Acesso: </p><input class="lista-atendimento-remoto"></li>
+                    <li><p>DPS: </p><input class="lista-atendimento-dps"></li>
+                    <li><p>CIS: </p><input class="lista-atendimento-cis"></li>
+                </ul>
+            </li>
+            <li>
+                <a href="html/templates.html" target="_blank" class="gerar-log"><i class="fas fa-columns"></i>Escalação</a>
+            </li>
+            <li>
+                <a href href="#" class="troca-script"><i class="fad fa-angle-double-up"></i>Padrao/Personalizado</a>
+            </li>
+        </nav>
+    </header>
+    <main id="principal" class="principal container flex-shrink-0">
+        <iframe frameborder="0" marginheight="0" marginwidth="0" src="html/padrao.html" class="frame-padrao frame">
+        </iframe>
+        <iframe frameborder="0" marginheight="0" marginwidth="0" src="html/personalizado.html" class="frame-personalizado frame invisivel">
+        </iframe>
+    </main>
+    <footer id="rodape" class="footer mt-auto py-3">
+        <footer>Para mais informações, consulte o processo <a href="http://us145k12web02/app/company_new/intra/processos/default.aspx?projeto=16&cod_processo=9448" target="_blank">014_TECH_SCRIPTS PARA ATENDIMENTO</a>.</footer>
+    </footer>
+    <!--jQuery-->
+    <script src="js/jquery-3.4.1.min.js"></script>
+    
+    <!--Bootstrap-->
+    <script src="js/bootstrap/bootstrap.bundle.js"></script>
+    <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="js/bootstrap/bootstrap.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    
+    <!--Font Awesome-->
+    <script src="js/font-awesome/all.js"></script>
+    <script src="js/font-awesome/all.min.js"></script>
+    <script src="js/font-awesome/brands.js"></script>
+    <script src="js/font-awesome/brands.min.js"></script>
+    <script src="js/font-awesome/conflict-detection.js"></script>
+    <script src="js/font-awesome/conflict-detection.min.js"></script>
+    <script src="js/font-awesome/fontawesome.js"></script>
+    <script src="js/font-awesome/fontawesome.min.js"></script>
+    <script src="js/font-awesome/regular.js"></script>
+    <script src="js/font-awesome/regular.min.js"></script>
+    <script src="js/font-awesome/solid.js"></script>
+    <script src="js/font-awesome/solid.min.js"></script>
+    <script src="js/font-awesome/v4-shims.js"></script>
+    <script src="js/font-awesome/v4-shims.min.js"></script>
+    
+    <!--MVC-->
+    <script src="js/app/model/Class.js"></script>
+    <script src="js/app/view/View.js"></script>
+    <script src="js/app/controller/Controller.js"></script>
+    <script src="js/app/helper/Helper.js"></script>
+
+    <!--App-->
+    <script src="js/app/scripts.js"></script>
+</body>
+</html>

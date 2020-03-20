@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<!--T�tulo-->
+	<title>Scrips de Chat</title>
+
+	<!--icone-->
+	<link rel="icon" href="icone_sitel.png" />
+	<link rel="shortcut icon" href="icone_sitel.png"/>
+
+	<!--Viewport-->
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+
+	<!--encode-->
+	<meta charset="utf-8">
+
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!--Nimble-->
+	<link href="http://us145k12web02/app/conteudo/font.awesome.4.4.0/Content/Content/font-awesome.min.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/font-awesome-animation.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/css/skins/_all-skins.min.css" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+	<!--Editável-->
+	<link rel="stylesheet" href="../css/iframe.css" />
+</head>
+<body>
+<noscript>JavaScript precisa estar ativado para o correto funcionamento</noscript>
+<div class="cabecalio-busca invisivel">
+	<input id="campo-busca" placeholder="Buscar...">
+</div>
+<main>
+	<section id="textos-de-script">
+		<fieldset class="borda">
+			<legend>Scrips iniciais</legend>
+			<h3>Solicitação de dados</h3>
+			<div class="card">
+				<div class="card-header sub">Abertura de Sessão</div>
+				<textarea id="frase-abertura-sessao" readonly="readonly" class="card-body frase">Olá, agradeço por contatar o suporte técnico Dell. Meu nome é XXXXXX. Por favor, informe o nome do titular da compra, 2 Telefones com DDD. Está com o equipamento em mãos?</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Solicitar Service TAG</div>
+				<textarea readonly="readonly" class="frase">Por favor, poderia informar a Etiqueta de Serviço da máquina em falha? O código pode ser localizado em uma etiqueta colada no equipamento, junto ao Código de Serviço Expresso, e possui 7 dígitos.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Solicitar Express Service Code</div>
+				<textarea readonly="readonly" class="frase">A etiqueta de serviço não confere, por favor verifique se está correta ou forneça o express service code. Ele fica ao lado da service TAG, composto apenas de números e possui 11 dígitos.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Tag Divergente</div>
+				<textarea readonly="readonly" class="frase">Por favor, poderia confirmar a Etiqueta de Serviço da máquina em falha? Possui 7 caracteres entre letras e números, e pode ser localizado em uma etiqueta colada no equipamento.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Clientes com Múltiplas Tags</div>
+				<textarea readonly="readonly" class="frase">Nessa situação, é possível seguirmos com o reparo dos equipamentos pelo suporte via e-mail. A vantagem do suporte por e-mail é que o você não precisa aguardar em linha até concluirmos todas as aberturas de chamado. Darei continuidade no atendimento de 1 TAG, para as demais, por favor entre em contato via email no seguinte endereço: br_techsupport@dell.com.
+Eles o responderão em até 4 horas.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Script de endereço (Pessoa física)</div>
+				<textarea readonly="readonly" class="frase">A fim de garantir máxima eficiência e velocidade na resolução do seu problema, antes de iniciarmos os testes, pode por favor me confirmar alguns dados? Preciso das informações do endereço onde se encontra o seu equipamento Dell, como rua, número, complemento (se houver), bairro, cidade, estado e CEP.
+Preciso também do seu CPF e data de nascimento. Assim, caso haja necessidade de um chamado técnico eu já tenho seus dados em mãos.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Script de endereço (Pessoa Jurídica)</div>
+				<textarea readonly="readonly" class="frase">A fim de garantir máxima eficiência e velocidade na resolução do seu problema, antes de iniciarmos os testes, pode por favor me confirmar alguns dados? Preciso das informações do endereço onde se encontra o seu equipamento Dell, como rua, número, complemento (se houver), bairro, cidade, estado e CEP.
+Preciso também do CNPJ e Inscrição Estadual da empresa. Assim, caso haja necessidade de um chamado técnico eu já tenho seus dados em mãos.</textarea>
+			</div>
+			<h3>Continuidade</h3>
+			<div class="card">
+				<div class="card-header sub">Queda de sessão</div>
+				<textarea id="frase-queda-sessao1" readonly="readonly" class="frase">Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone XXXX, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Ownership</div>
+				<textarea id="frase-ownership1" readonly="readonly" class="frase">Durante todos os procedimentos eu serei o responsável do seu caso, caso haja dúvidas ou deseje informações é só responder o e-mail que te enviei no endereço XXXXXXX. Poderia confirmar o recebimento?</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Script de BTTR</div>
+				<textarea readonly="readonly" class="frase">Me informe uma janela de horário (2 horas) em que possua disponibilidade para o nosso contato via telefone, se necessário, ou caso não tenha disponibilidade para nos atender devido serviço, estudo e etc, vamos te enviar um link de acesso remoto, assim conseguimos acessar sua máquina na sua presença e dar continuidade ao suporte</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Retorno Via e-mail (Cliente)</div>
+				<textarea id="frase-retorno-via-email1" readonly="readonly" class="frase">Se possível de preferência das XXX até às XXX que é o meu horério de trabalho. Acompanhe sempre sua caixa de entrada, pois as atualizações sobre o seu caso se dará principalmente por e-mail ou SMS.</textarea>
+			</div>
+			<h3>Não irá continuar</h3>
+			<div class="card">
+				<div class="card-header sub">Transferência</div>
+				<textarea readonly="readonly" class="frase">Agradeço pelas informações. Verifiquei no sistema que sua garantia é atendida por outro setor. Irei transferir, mas peço que aguarde e quando aparecer a opção "Sair desta página", clique para a sessão ser transferida para o próximo agente. Agradecemos o contato.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Cliente sem maquina</div>
+				<textarea readonly="readonly" class="frase">Bom, neste caso precisamos que entre em contato com a máquina em mãos para realizarmos os testes. Reforço que nosso atendimento é de segunda a sexta-feira das 08:00 as 20:00.</textarea>
+			</div>
+		</fieldset>
+		<fieldset class="borda" id="meio">
+			<legend>Troubleshootings</legend>
+			<h3>Templates</h3>
+			<div class="card">
+				<div class="card-header sub">Templates de escalações: </div>
+				<a href="templates.html" target="_blank" class="card-body gerar-log">
+					<button><i class="material-icons">dashboard</i>Clique aqui</button>
+				</a>
+			</div>
+			<h3>Acesso remoto</h3>
+			<div class="card">
+				<div class="card-header sub">Acesso remoto I</div>
+				<textarea readonly="readonly" class="frase">Posso realizar um acesso remoto em seu equipamento, para efetuar algumas configurações? Neste período o (a) Sr. (a) deve permanecer próximo ao equipamento.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Acesso remoto II</div>
+				<textarea readonly="readonly" class="frase">Informo que durante o acesso remoto é possível visualizar tudo o que estiver em sua tela. Dessa forma, orientamos que feche documentos pessoais, bem como acesso a sites de banco, e-mail e redes sociais.</textarea>
+			</div>
+			<h3>Testes</h3>
+			<div class="card">
+				<div class="card-header sub">Drenagem de energia</div>
+				<textarea readonly="readonly" class="frase">Retire todos os periféricos conectados ao equipamentos, bateria e carregador. Pressione o botão Power por 40 segundos, após isso, conecte somente o carregador e ligue o equipamento.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">EPSA (F12)</div>
+				<textarea readonly="readonly" class="frase">Iremos rodar o teste EPSA, que verifica o hardware do seu equipamento DELL.
+Ligue o computador pressionando a tecla F12 repetidamente (quando aparece o logo da Dell). Escolha a opção DIAGNOSTICS. Quando aparecer o teste de LCD sua tela ficaré colorida, caso esteja visualizando as cores corretamente, aperte a tecla Y para continuar o teste. Caso ocorra algum erro, o equipamento apresentara um código seguido de beeps. Se ocorrer, me informe o código de erro e o validation.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">EPSA (FN+POWER)</div>
+				<textarea readonly="readonly" class="frase">Iremos rodar o teste EPSA, que verifica o hardware do seu equipamento DELL.
+Com o equipamento desligado, mantenha a Tecla FN pressionada e ligue o equipamento.
+Quando aparecer o teste de LCD sua tela ficará colorida, caso esteja visualizando as cores corretamente, aperte a tecla Y para continuar o teste. Caso ocorra algum erro, o equipamento apresentara um código seguido de beeps. Se ocorrer, me informe o código de erro e o validation.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">LCD BIST</div>
+				<textarea readonly="readonly" class="frase">Os notebooks Dell têm uma ferramenta de diagnóstico integrada que ajuda a determinar se a anormalidade na tela é um problema inerente à LCD (tela) do notebook Dell. 
+Pressione e mantenha pressionada a tecla D e ligue o equipamento para entrar no modo Teste Automático Integrado (BIST) do LCD.
+A tela exibirá várias barras coloridas e alterará as cores na tela inteira para vermelho, verde e azul.
+Me informe se nesse teste , você vê alguma anormalidade na tela, Tire uma foto e me encaminhe para análise.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Solicitar PPID</div>
+				<textarea readonly="readonly" class="frase">Por favor, poderia informar o número serial da peça? O serial esté em uma etiqueta (branca ou preta) colada na própria peça com um código de 23 dígitos começando por 2 letras e seguido de um 0. Normalmente inicia com MY, TH, BR ou CN e termina com A00, A01.</textarea>
+			</div>
+			<h3>DPS</h3>
+			<div class="card">
+				<div class="card-header sub">Abertura de Break Fix sem diagnostico</div>
+				<textarea readonly="readonly" class="frase">Levando em conta suas informações, estou abrindo o chamado técnico, mas não garanto que teremos assertividade na resolução do problema relatado. Pode ser que o caso não seja resolvido no primeiro chamado e o técnico terá que analisar o equipamento por completo, fazendo com que a máquina fique parada por um período maior.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Chamado RTD - MIS</div>
+				<textarea id="frase-dps-mis" readonly="readonly" class="frase">Agradeço por aguardar, o número do chamado é XXXXXX. O equipamento deve ser postado em uma Agencia dos Correios utilizando a Autorização de Postagem XXXXXX. O prazo para entregar o equipamento é de 7 dias a partir de hoje. Peço que tome nota de alguns procedimentos que deve tomar antes de postar a máquina nos Correios:
+- Efetue o backup de seus dados antes de entregar o equipamento
+- Devem ser enviados junto com a máquina, os CDs que foram recebidos (Sistema - Operacional, Mídia de Restauração, Drivers, Softwares, etc.)
+- Deve ser enviado o Username e Senha do Windows ou removê-la.
+- Deve ser enviado o Adaptador AC e a Bateria, mesmo se eles não apresentarem problemas.
+- Cópia da nota fiscal.
+- Deve usar a caixa original. Se você não possuir a caixa original, poderá comprar uma nos Correios e condicionar o equipamento de forma correta, para evitar danos físicos no envio. A caixa deve permanecer aberta para inspeção visual antes de ser enviado.</textarea>
+			</div>
+			<div class="card">
+				<div class="card-header sub">Chamado RTD - CIS</div>
+				<textarea id="frase-dps-cis" readonly="readonly" class="frase">Agradeço por aguardar, o número do chamado é XXXXXX. O equipamento deverá ser levado para a prestadora PROXXI no endereço:
+Peço que tome nota de alguns procedimentos que deve tomar antes de levar a máquina:
+- Efetue o backup de seus dados antes de entregar o equipamento
+- Devem ser enviados junto com a máquina, os CDs que foram recebidos (Sistema - Operacional, Mádia de Restauração, Drivers, Softwares, etc.)
+- Deve ser enviado o Username e Senha do Windows ou removê-la.
+- Deve ser enviado o Adaptador AC e a Bateria, mesmo se eles não apresentarem problemas.
+- Cópia da nota fiscal.</textarea>
+			</div>
+						<!--5 good lines-->
+			<div class="container invisivel">
+				<div class="card">
+					<div class="card-header">
+						<h3 id="goodLines">5 good lines</h3>
+					</div>
+			<div class="card-body container goodLines" >
+				<section>
+					<div class="rowGoodLines">
+						<label for="inp_diag" id="lbl_diag">Diag: </label>
+						<select id="inp_diag" name="diagnostico" class="campoGoodLines" required title="Ferramenta de diagnóstico">
+							<option value="ePSA">Epsa</option>
+							<option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
+							<option value="Alien Autopsy">Alien Autopsy</option>
+							<option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
+							<option value="FPD Bist">FPD Bist</option>
+							<option value="LCD Bist">LCD Bist</option>
+							<option value="Led Indicators">Led Indicators</option>
+							<option value="MemRX">MemRX</option>
+							<option value="MpMemory">MpMemory</option>
+							<option value="PC Doctor">PC Doctor</option>
+							<option value="PSA">PSA</option>
+							<option value="PSU Bist">PSU Bist</option>
+							<option value="Quad-Pack Leds">Quad-Pack Leds</option>
+							<option value="Tools not Needed">Tools not Needed</option>
+						</select>
+					</div>
+					<div class="rowGoodLines">
+						<label for="inp_code" id="lbl_code">Code: </label>
+						<input id="inp_code" name="codigo" class="campoGoodLines" required title="Entrar com o código de erro ou PASS" placeholder="Validation em caso de EPSA">
+					</div>
+					<div class="rowGoodLines">
+						<label for="inp_dps" id="lbl_dps">DPS: </label>
+						<select id="inp_dps" name="dps" class="campoGoodLines" required title="Quantidade de DPS da SR">
+							<option value="1°">1</option>
+							<option value="2°">2</option>
+							<option value="3°">3</option>
+							<option value="4°">4</option>
+							<option value="5°">5</option>
+						</select>
+					</div>
+					<div class="rowGoodLines">
+						<label for="inp_sintoma" id="lbl_sintoma">Sintoma: </label>
+						<input id="inp_sintoma" name="sintoma" class="campoGoodLines" required title="No post, No video, No boot, No power, No audio..." placeholder="Sintoma do equipamento Ex: No Power, No Post">
+					</div>
+				</section>
+				<section class="sectionGoodLines">
+					<div>
+						<label for="opcao-federal">Federal</label>
+						<input type="radio" name="especial-opcao" id="opcao-federal">
+					</div>
+					<div>
+						<label for="opcao-parts-only">Parts Only</label>
+						<input type="radio" name="especial-opcao" id="opcao-parts-only">
+					</div>
+					<div>
+						<label for="opcao-hd">HD</label>
+						<input type="radio" name="especial-opcao" id="opcao-hd">
+					</div>
+					<div>
+						<label for="opcao-nenhum">Nada</label>
+						<input type="radio" name="especial-opcao" id="opcao-nenhum">
+					</div>
+				</section>
+				<section class="invisivel" id="secao-federal">
+					<div class="rowGoodLines">
+						<label for="opcao-federal-cpf">CPF</label>
+						<input type="radio" name="federal-opcao" id="opcao-federal-cpf">
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-federal-cnpj">CNPJ</label>
+						<input type="radio" name="federal-opcao" id="opcao-federal-cnpj">
+					</div>
+				</section>
+				<section class="invisivel" id="secao-parts-only">
+					<div class="rowGoodLines">
+						<label for="opcao-parts-only-cpf">CPF</label>
+						<input type="radio" name="parts-only-opcao" id="opcao-parts-only-cpf">
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-parts-only-cnpj">CNPJ</label>
+						<input type="radio" name="parts-only-opcao" id="opcao-parts-only-cnpj">
+					</div>
+				</section>
+				<section class="invisivel" id="secao-hd">
+					<div class="rowGoodLines">
+						<label for="opcao-arquitetura">Arquitetura: </label>
+						<select id="opcao-arquitetura">
+							<option value="32 bits">32</option>
+							<option value="64 bits">64</option>
+						</select>
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-idioma">Idioma: </label>
+						<select id="opcao-idioma">
+							<option value="Brazilian Portuguese">Português</option>
+							<option value="English">English</option>
+							<option value="Spanish">Español</option>
+						</select>
+					</div>
+					<div class="rowGoodLines"
+						<label for="opcao-sistema">Sistema: </label>
+						<select id="opcao-sistema">
+							<option value="Windows 10 Home">Win 10 Home</option>
+							<option value="Windows 10 Home Single Language">Win 10 SingLang</option>
+							<option value="Windows 10 Professional">Win 10 Pro</option>
+
+							<option value="Windows 8 Home">Win 8 Home</option>
+							<option value="Windows 8 Professional">Win 8 Pro</option>
+							<option value="Windows 8.1 Home">Win 8.1 Home</option>
+							<option value="Windows 8.1 Single Language">Win 8.1 SingLang</option>
+							<option value="Windows 8.1 Professional">Win 8.1 Pro</option>
+
+							<option value="Windows 7 Home">Win 7 Home</option>
+							<option value="Windows 7 Professional">Win 7 Pro</option>
+							<option value="Windows 7 Ultimate">Win 7 Ultimate</option>
+
+
+						</select>
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-modelo">Modelo: </label>
+						<input id="opcao-modelo" placeholder="Inspiron 5566">
+					</div>
+				</section>
+				<section class="invisivel" id="secao-federal-cpf">
+					<div class="rowGoodLines">
+						<label for="opcao-numero-federal-cpf">Número: </label>
+						<input id="opcao-numero-federal-cpf" type="number" placeholder="00011122233">
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-data-federal-nascimento">Data de nascimento: </label>
+						<input id="opcao-data-federal-nascimento" placeholder="01/01/1990"><!--type="date"-->
+					</div>
+				</section>
+				<section class="invisivel" id="secao-federal-cnpj">
+					<div class="rowGoodLines">
+						<label for="opcao-numero-federal-cnpj">Número: </label>
+						<input type="number" id="opcao-numero-federal-cnpj" maxlength="14" placeholder="00000000000000">
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-inscricao-federal-estadual">Inscrição estadual</label>
+						<input type="number" id="opcao-inscricao-federal-estadual" placeholder="Não preencher se isento">
+					</div>
+				</section>
+				<section class="invisivel" id="secao-parts-only-cpf">
+					<div class="rowGoodLines">
+						<label for="opcao-numero-parts-only-cpf">Número: </label>
+						<input id="opcao-numero-parts-only-cpf" type="number" placeholder="00011122233">
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-data-parts-only-nascimento">Data de nascimento: </label>
+						<input id="opcao-data-parts-only-nascimento" placeholder="01/01/1990"><!--type="date"-->
+					</div>
+				</section>
+				<section class="invisivel" id="secao-parts-only-cnpj">
+					<div class="rowGoodLines">
+						<label for="opcao-numero-parts-only-cnpj">Número: </label>
+						<input type="number" id="opcao-numero-parts-only-cnpj" maxlength="14" placeholder="00000000000000">
+					</div>
+					<div class="rowGoodLines">
+						<label for="opcao-inscricao-parts-only-estadual">Inscrição estadual</label>
+						<input type="number" id="opcao-inscricao-parts-only-estadual" placeholder="Não preencher se isento">
+					</div>
+				</section>
+				<section>
+					<div class="rowGoodLines">
+						<label for="inp_federal" id="lbl_federal">Instrução especial: </label>
+						<input readonly="readonly" id="inp_federal" name="federal" class="campoGoodLines" title="CPF:xxxxxxxxxxx-BDATE:xx/xx/xxxx- // OS Download: XX bits, Language: xxxxxx, Model: xxxxxx, OS: xxxxxx">
+					</div>
+				</section>
+				<section>
+					<ul>
+						<li class="rowGoodLines">
+							<a href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp" target="_blank">Consultar CPF</a>
+						</li>
+						<li class="rowGoodLines">
+							<a href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp" target="_blank">Consultar CNPJ</a>
+						</li>
+						<li class="rowGoodLines">
+							<a href="http://www.sintegra.gov.br/" target="_blank">Consultar Sintegra</a>
+						</li>
+						<li class="rowGoodLines">
+							<a href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV54.pdf" target="_blank">Consultar processo 320</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div class="rowGoodLines">
+						<label for="inp_instrucao" id="lbl_instrucao">Instrução: <br></label>
+						<textarea id="inp_instrucao" name="instrucao" class="frase" required title="O que deve ser feito pelo Tech" placeholder="Senhor tecnico, por favor trocar parts e garantir funcionalidade">Senhor tecnico, por favor trocar ...</textarea>
+					</div>
+				</section>
+				<section>
+					<div class="rowGoodLines">
+						<button id="btnGerarGoodLines" name="gerar_GoodLines" class="gerar-log">Gerar e copiar</button>
+					</div>
+				</section>
+				<section>
+					<div class="rowGoodLines">
+						<textarea readonly="readonly" id="inp_resultado" class="frase invisivel" name="resultado"></textarea>
+					</div>
+				</section>
+			</div>
+				</div>
+			</div>
+					<!--fim 5 good lines-->
+			</fieldset>
+			<fieldset class="borda">
+				<legend>Scripts de encerramento</legend>
+				<h3>Padrão de encerramento</h3>
+				<div class="card">
+					<div class="card-header sub">Queda de sessão</div>
+					<textarea id="frase-queda-sessao2" readonly="readonly" class="frase">Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone XXXX, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Retorno Via e-mail (Cliente)</div>
+					<textarea id="frase-retorno-via-email2" readonly="readonly" class="frase">Se possível de preferência das XXX até às XXX que é o meu horário de trabalho. Acompanhe sempre sua caixa de entrada, pois as atualizações sobre o seu caso se dará principalmente por e-mail ou SMS.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Ownership</div>
+					<textarea id="frase-ownership2" readonly="readonly" class="frase">Durante todos os procedimentos eu serei o responsável do seu caso, caso haja dúvidas ou deseje informações e só responder o e-mail que te enviei no endereço XXXXXXX. Poderia confirmar o recebimento?</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Encerramento de Sessão</div>
+					<textarea readonly="readonly" class="frase">A Dell agradece, tenha um ótimo dia. 
+Dell drivers e downloads: http://www.dell.com/support/home/br/pt/brbsdt1?~ck=mn
+Canal da Dell no youtube: https://www.youtube.com/user/DellVlog
+Community Forums: https://www.dell.com/community/Comunidade-da-Dell/ct-p/Portuguese
+SupportAssist: https://www.dell.com/support/contents/br/pt/brbsdt1/article/product-support/self-support-knowledgebase/software-and-downloads/supportassist</textarea>
+				</div>
+				<h3>Cliente inativo</h3>
+				<div class="card">
+					<div class="card-header sub">3 Minuto sem resposta</div>
+					<textarea readonly="readonly" class="frase">A fim de garantir a qualidade deste atendimento, necessito que tenhamos interação em nossa conversação. Caso persista o elevado tempo de resposta, essa sessão será finalizada por inatividade.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Sem inicio de Sondagem e depois de 1 Minuto sem resposta</div>
+					<textarea readonly="readonly" class="frase">Como não temos a sua resposta, estamos encerrando essa sessão.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Com inicio de Sondagem e depois de 1 Minuto sem resposta</div>
+					<textarea readonly="readonly" class="frase">Como não temos a sua resposta, estamos encerrando essa sessão. Entrarei em contato no telefone informado na sessão.</textarea>
+				</div>
+				<h3>Outros encerramentos</h3>
+				<div class="card">
+					<div class="card-header sub">Fechamento Ri1</div>
+					<textarea readonly="readonly" class="frase">Eu vou te enviar um e-mail encerramento de protocolo, eu fico com o seu caso por 10 dias, se estiver com dificuldades ou alguma dúvida, responde o e-mail que eu te posiciono.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Fora de garantia</div>
+					<textarea readonly="readonly" class="frase">Prezado cliente, o sistema informa que sua máquina está fora de garantia, contudo pelo chat atendemos exclusivamente máquinas com a garantia vigente. Para que o suporte seja fornecido com mais qualidade, por favor entre em contato via 0800 970 3355 opção 4. Caso sua máquina possua garantia vigente e o nosso sistema esteja desatualizado, por favor informe ao suporte via telefone para atualizações devidas. Lembre-se de estar com sua Nota Fiscal e a máquina em mãos.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">CID (Equipamento sem Accidental Damage (Validar Oracle / solicitar analise L2) - Transferir para OOP)</div>
+					<textarea readonly="readonly" class="frase">Este equipamento não possui o serviço "Proteção contra danos acidentais" que cobre acidentes como derramamento de líquidos, quedas e oscilações de voltagem, cobrindo os prejuízos de danos não intencionais durante o período da garantia. Nesse caso, irei solicitar que o setor responsável entre em contato para fazer a cotação do serviço.</textarea>
+				</div>
+				<h3>Outros setores</h3>
+				<div class="card">
+					<div class="card-header sub">Social Media</div>
+					<textarea readonly="readonly" class="frase">Verifiquei que o time de mídias sociais foi acionado e possui um protocolo de atendimento em andamento. Portanto, peço por gentileza que aguarde o contato do responsável para seguir com o caso. De qualquer forma, deixarei registrado no sistema o seu contato para que retornem o mais rápido possível.</textarea>
+				</div>
+				<div class="card">
+					<div class="card-header sub">Transferência para outro setor</div>
+					<textarea readonly="readonly" class="frase">Agradeço pelas informações. Verifiquei no sistema que sua garantia é atendida por outro setor. Irei transferir, mas peço que aguarde e quando aparecer a opção "Sair desta página", clique para a sessão ser transferida para o próximo agente. Agradecemos o contato.</textarea>
+				</div>
+			</fieldset>
+		</section>
+</main>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+//Inicia scripts com informa��es preenchidas
+$(function() {
+	atualizaDados();
+})
+////////////////////////////////////////////
+
+let textos = document.querySelectorAll(".frase");
+document.querySelector("#campo-busca").addEventListener("input", function(){
+	if(this.value.length > 0){
+		cards.forEach(function(card){
+			let scripts = texto.value;
+			let expressao = new RegExp(this.value, "i");
+			if(!expressao.test(scripts)){
+				texto.classList.remove("invisivel")
+				console.log(true);
+			}else{
+				texto.classList.add("invisivel")
+				console.log(false);
+			}
+		})
+	}else{
+		textos.forEach(function(texto){
+			texto.classList.remove("invisivel");
+		})
+	}
+})
+//Atribui cor sorteada
+let templateGoodLines = document.querySelector(".goodLines");
+let titulos = document.querySelectorAll(".sub");
+let cards = document.querySelectorAll(".card");
+
+templateGoodLines.style.background = "#"+localStorage.getItem('cor-principal');
+titulos.forEach(titulo => titulo.style.color = "#"+localStorage.getItem('cor-principal'))
+//cards.forEach(card => card.style.hover:boxShadow = "0 0 10px #"+localStorage.getItem('cor-principal');
+
+textos.forEach(texto => {
+	texto.addEventListener("dblclick", function(){
+		this.classList.add("fadeIn");
+		this.select();
+		document.execCommand('copy');
+	});
+});
+document.querySelectorAll(".card").forEach(card => {
+	card.onmouseenter = function(){
+		this.style.boxShadow = "0 0 10px #"+localStorage.getItem('cor-principal');
+	};
+});
+document.querySelectorAll(".card").forEach(card => {
+	card.onmouseleave = function(){
+		this.style.boxShadow = "none";
+	};
+});
+
+
+////////////////////////////////////////////
+
+
+function atualizaDados(){
+	$("#frase-abertura-sessao").text(`Olá, agradeço por contatar o suporte técnico Dell. Meu nome é ${localStorage.getItem('analista')}. Por favor, informe o nome do titular da compra, 2 Telefones com DDD. Está com o equipamento em mãos?`)
+	$("#frase-queda-sessao1").text(`Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone ${localStorage.getItem('telefone')}, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.`)
+	$("#frase-ownership1").text(`Durante todos os procedimentos eu serei o responsável do seu caso, caso haja dúvidas ou deseje informações é só responder o e-mail que te enviei no endereço ${localStorage.getItem('email')}. Poderia confirmar o recebimento?`)
+	$("#frase-retorno-via-email1").text(`Se possível de preferência das ${localStorage.getItem('entrada')} até às ${localStorage.getItem('saida')} que é o meu horário de trabalho. Acompanhe sempre sua caixa de entrada, pois as atualizações sobre o seu caso se dará principalmente por e-mail ou SMS.`)
+	$("#frase-queda-sessao2").text(`Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone ${localStorage.getItem('telefone')}, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.`)
+	$("#frase-ownership2").text(`Durante todos os procedimentos eu serei o responsável do seu caso, caso haja dúvidas ou deseje informações é só responder o e-mail que te enviei no endereço ${localStorage.getItem('email')}. Poderia confirmar o recebimento?`)
+	$("#frase-retorno-via-email2").text(`Se possível de preferência das ${localStorage.getItem('entrada')} até às ${localStorage.getItem('saida')} que é o meu horário de trabalho. Acompanhe sempre sua caixa de entrada, pois as atualizações sobre o seu caso se dará principalmente por e-mail ou SMS.`)
+	$("#frase-dps-mis").text(`Agradeço por aguardar, o número do chamado é ${localStorage.getItem('dps')}. O equipamento deve ser postado em uma Agencia dos Correios utilizando a Autorização de Postagem ${localStorage.getItem('eticket')}. O prazo para entregar o equipamento é de 7 dias a partir de hoje. Peço que tome nota de alguns procedimentos que deve tomar antes de postar a máquina nos Correios:\n- Efetue o backup de seus dados antes de entregar o equipamento\n- Devem ser enviados junto com a máquina, os CDs que foram recebidos (Sistema Operacional, Mídia de Restauração, Drivers, Softwares, etc.)\n- Deve ser enviado o Username e Senha do Windows ou removê-la.\n- Deve ser enviado o Adaptador AC e a Bateria, mesmo se eles não apresentarem problemas.\n- Cópia da nota fiscal.\n- Deve usar a caixa original. Se você não possuir a caixa original, poderá comprar uma nos Correios e condicionar o equipamento de forma correta, para evitar danos físicos no envio. A caixa deve permanecer aberta para inspeção visual antes de ser enviado.`)
+	$("#frase-dps-cis").text(`Agradeço por aguardar, o número do chamado é ${localStorage.getItem('dps')}. O equipamento deverá ser levado para a prestadora PROXXI no endereço: ${localStorage.getItem('endereco')}.\nPeço que tome nota de alguns procedimentos que deve tomar antes de levar a máquina:\n- Efetue o backup de seus dados antes de entregar o equipamento\n- Devem ser enviados junto com a máquina, os CDs que foram recebidos (Sistema Operacional, Mádia de Restauração, Drivers, Softwares, etc.)\n- Deve ser enviado o Username e Senha do Windows ou removê-la.\n- Deve ser enviado o Adaptador AC e a Bateria, mesmo se eles não apresentarem problemas.\n- Cópia da nota fiscal.`)
+
+	return;
+};
+/***************************	Arrumar abaixo	***************************
+
+
+
+let analista = "PREENCHER";
+let entrada = "PREENCHER";
+let saida = "PREENCHER";
+let cliente = "PREENCHER";
+let tag = "PREENCHER";
+let email = "PREENCHER";
+let telefone = "PREENCHER";
+let caso = "PREENCHER";
+let remoto = "PREENCHER";
+let dps = "PREENCHER";
+let eticket = "PREENCHER";
+let endereco = "PREENCHER";
+
+$("#botao-config-analistaS").click(
+	function(){
+		$(".entradas-analista").slideToggle(100);
+		$(".lista-analista-nome").focus();
+	}
+)
+$(".lista-analista-nome").focusout(
+	function(){
+		analista = $(".lista-analista-nome").textContent();
+	}
+)
+$(".lista-analista-entrada").focusout(
+	function(){
+		configuraDados()
+	}
+)
+$(".lista-analista-saida").focusout(
+	function(){
+		configuraDados()
+		$(".entradas-analista").slideToggle(100);
+	}
+)
+
+configuraDados()
+
+$("#botao-config-analistaS").click(function(){
+
+	analista = window.prompt("Nome de analista:", analista);
+	entrada = window.prompt("Horário de entrada:", entrada);
+	saida = window.prompt("Horário de saída:", saida);
+	
+	configuraDados()
+
+	$(textos).removeClass("fadeIn");
+});
+$("#botao-config-clienteS").click(function(){
+	cliente = window.prompt("Nome do cliente:", cliente);
+	tag = window.prompt("TAG:", tag);
+	email = window.prompt("E-mail:", email);
+	telefone = window.prompt("Telefone primário:", telefone);
+
+	configuraDados()
+	
+	$(textos).removeClass("fadeIn");
+});
+$("#botao-config-atendimentoS").click(function(){
+	caso = window.prompt("Número do caso: (se não necessário, pressione 'ok' ou tecla 'Enter')", caso);
+	remoto = window.prompt("Código de acesso remoto: (se não necessário, pressione 'ok' ou tecla 'Enter')", remoto);
+	dps = window.prompt("Número de DPS: (se não necessário, pressione 'ok' ou tecla 'Enter')", dps);
+	eticket = window.prompt("Número do e-Ticket: (se não necessário, pressione 'ok' ou tecla 'Enter')", eticket);
+	endereco = window.prompt("Endereço CIS: (se não necessário, pressione 'ok' ou tecla 'Enter')", endereco);
+
+	configuraDados()
+
+	$(textos).removeClass("fadeIn");
+});
+
+function configuraDados(){
+	$("#frase-abertura-sessao").text("Olá, agradeço por contatar o suporte técnico Dell. Meu nome é "+analista+". Por favor, informe o nome do titular da compra, 2 Telefones com DDD. Está com o equipamento em mãos?")
+	$("#frase-queda-sessao1").text("Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone ${localStorage.getItem('telefone')}, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.")
+	$("#frase-ownership1").text("Durante todos os procedimentos eu serei o responsável do seu caso, caso haja dúvidas ou deseje informações é só responder o e-mail que te enviei no endereço ${localStorage.getItem('email')}. Poderia confirmar o recebimento?")
+	$("#frase-retorno-via-email1").text("Se possível de preferência das ${localStorage.getItem('entrada')} até às ${localStorage.getItem('saida')} que é o meu horário de trabalho. Acompanhe sempre sua caixa de entrada, pois as atualizações sobre o seu caso se dará principalmente por e-mail ou SMS.")
+	$("#frase-queda-sessao2").text("Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone ${localStorage.getItem('telefone')}, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.")
+	$("#frase-ownership2").text("Durante todos os procedimentos eu serei o responsável do seu caso, caso haja dúvidas ou deseje informações é só responder o e-mail que te enviei no endereço ${localStorage.getItem('email')}. Poderia confirmar o recebimento?")
+	$("#frase-retorno-via-email2").text("Se possível de preferência das ${localStorage.getItem('entrada')} até às ${localStorage.getItem('saida')} que é o meu horário de trabalho. Acompanhe sempre sua caixa de entrada, pois as atualizações sobre o seu caso se dará principalmente por e-mail ou SMS.")
+	$("#frase-dps-mis").text("Agradeço por aguardar, o número do chamado é ${localStorage.getItem('dps')}. O equipamento deve ser postado em uma Agencia dos Correios utilizando a Autorização de Postagem "+eticket+". O prazo para entregar o equipamento é de 7 dias a partir de hoje. Peço que tome nota de alguns procedimentos que deve tomar antes de postar a máquina nos Correios:\n- Efetue o backup de seus dados antes de entregar o equipamento\n- Devem ser enviados junto com a máquina, os CDs que foram recebidos (Sistema - Operacional, Mídia de Restauração, Drivers, Softwares, etc.)\n- Deve ser enviado o Username e Senha do Windows ou removê-la.\n- Deve ser enviado o Adaptador AC e a Bateria, mesmo se eles não apresentarem problemas.\n- Cópia da nota fiscal.\n- Deve usar a caixa original. Se você não possuir a caixa original, poderá comprar uma nos Correios e condicionar o equipamento de forma correta, para evitar danos físicos no envio. A caixa deve permanecer aberta para inspeção visual antes de ser enviado.")
+	$("#frase-dps-cis").text("Agradeço por aguardar, o número do chamado é ${localStorage.getItem('dps')}. O equipamento deverá ser levado para a prestadora PROXXI no endereço:\nPeço que tome nota de alguns procedimentos que deve tomar antes de levar a máquina:\n- Efetue o backup de seus dados antes de entregar o equipamento\n- Devem ser enviados junto com a máquina, os CDs que foram recebidos (Sistema - Operacional, Mádia de Restauração, Drivers, Softwares, etc.)\n- Deve ser enviado o Username e Senha do Windows ou removê-la.\n- Deve ser enviado o Adaptador AC e a Bateria, mesmo se eles não apresentarem problemas.\n- Cópia da nota fiscal.")
+
+	return;
+};
+*/
+//		5 Good Lines
+var diagnostico = $("#inp_diag");
+var codigo = $("#inp_code");
+var quantdps = $("#inp_dps");
+var sintoma = $("#inp_sintoma");
+var federal = $("#inp_federal");
+var instrucao = $("#inp_instrucao");
+var gerar_GoodLines = $("#btnGerarGoodLines");
+var resultado = $("#inp_resultado");
+
+
+
+//igual personalizado
+var federal = document.querySelector("#inp_federal");
+function limpaCampos(){
+	$("#inp_code").val("");
+	$("#inp_dps").val("1°");
+	$("#inp_sintoma").val("");
+	$("#inp_instrucao").val("Senhor tecnico, por favor trocar ...");
+	$("#opcao-numero-federal-cpf").val("");
+	$("#opcao-data-federal-nascimento").val("");
+	$("#opcao-numero-federal-cnpj").val("");
+	$("#opcao-inscricao-federal-estadual").val("");
+	$("#opcao-numero-parts-only-cpf").val("");
+	$("#opcao-data-parts-only-nascimento").val("");
+	$("#opcao-numero-parts-only-cnpj").val("");
+	$("#opcao-inscricao-parts-only-estadual").val("");
+	$("#opcao-modelo").val("");
+	$("#inp_federal").val("");
+}
+function escondeCampos(){
+	$("#secao-federal").slideUp(500);
+	$("#secao-parts-only").slideUp(500);
+	$("#secao-hd").slideUp(500);
+	$("#secao-federal-cpf").slideUp(500);
+	$("#secao-federal-cnpj").slideUp(500);
+	$("#secao-parts-only-cpf").slideUp(500);
+	$("#secao-parts-only-cnpj").slideUp(500);
+}
+	//primeiro nível
+$("#opcao-federal").click(function(){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-federal").slideDown(500);	
+	$("#inp_federal").val("Padrão Federal selecionado");
+});
+$("#opcao-parts-only").click(function(){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-parts-only").slideDown(500);
+	$("#inp_federal").val("Padrão Parts-Only selecionado");
+});
+$("#opcao-hd").click(function(){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-hd").slideDown(500);
+	$("#inp_federal").val("OS Download: <ARQUITETURA>, Language <IDIOMA>, Model <MODELO>, OS: <SISTEMA OPERACIONAL><VERSAO>");
+	$("#opcao-arquitetura").focus();
+});
+$("#opcao-nenhum").click(function(){
+	limpaCampos();
+	escondeCampos();
+});
+	//segundo nível
+		//cpf federal
+$("#opcao-federal-cpf").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-federal-cpf").slideDown(500);
+	$("#inp_federal").val("CPF:12345678910-BDATE:01/01/0101-");
+	$("#opcao-numero-federal-cpf").focus();
+
+	$("#opcao-numero-federal-cpf").focusout(function (){
+		atualizaFederalCPF();
+	});
+	$("#opcao-data-federal-nascimento").focusout(function (){
+		atualizaFederalCPF();
+	});
+	function atualizaFederalCPF(){
+		$("#inp_federal").val("CPF:"+$("#opcao-numero-federal-cpf").val()+"-BDATE:"+$("#opcao-data-federal-nascimento").val()+"-");
+	}
+});
+		//cnpj federal
+$("#opcao-federal-cnpj").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-federal-cnpj").slideDown(500);
+	$("#inp_federal").val("CNPJ:123456789123456789-STATE:1234567891234567-");
+	$("#opcao-numero-federal-cnpj").focus();
+
+	$("#opcao-numero-federal-cnpj").focusout(function (){
+		atualizaFederalCNPJ();
+	});
+	$("#opcao-inscricao-federal-estadual").focusout(function (){
+		atualizaFederalCNPJ();
+	});
+	function atualizaFederalCNPJ(){
+		var estadual = $("#opcao-inscricao-federal-estadual").val();
+		if(!$("#opcao-inscricao-federal-estadual").val() != ""){
+			$("#inp_federal").val("CNPJ:"+$("#opcao-numero-federal-cnpj").val()+"-STATE:ISENTO-");
+		}else{
+			$("#inp_federal").val("CNPJ:"+$("#opcao-numero-federal-cnpj").val()+"-STATE:"+estadual+"-");
+		}
+	}
+});
+
+		//cpf parts-only
+$("#opcao-parts-only-cpf").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-parts-only-cpf").slideDown(500);
+	$("#inp_federal").val("FEDERAL:123456789012345678-STATE:ISENTO-BDATE:01/01/0101");
+	$("#opcao-numero-parts-only-cpf").focus();
+
+	$("#opcao-numero-parts-only-cpf").focusout(function (){
+		atualizaPartsOnlyCPF();
+	});
+	$("#opcao-data-parts-only-nascimento").focusout(function (){
+		atualizaPartsOnlyCPF();
+	});
+	function atualizaPartsOnlyCPF(){
+		$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cpf").val()+"-STATE:ISENTO-BDATE:"+$("#opcao-data-parts-only-nascimento").val());
+	}
+});
+		//cnpj parts-only
+$("#opcao-parts-only-cnpj").click(function (){
+	limpaCampos();
+	escondeCampos();
+	$("#secao-parts-only-cnpj").slideDown(500);
+	$("#inp_federal").val("FEDERAL:123456789123456789-STATE:1234567891234567-");
+	$("#opcao-numero-parts-only-cnpj").focus();
+
+	$("#opcao-numero-parts-only-cnpj").focusout(function (){
+		atualizaPartsOnlyCNPJ();
+	});
+	$("#opcao-inscricao-parts-only-estadual").focusout(function (){
+		atualizaPartsOnlyCNPJ();
+	});
+	function atualizaPartsOnlyCNPJ(){
+		var estadual = $("#opcao-inscricao-parts-only-estadual").val();
+		if(!$("#opcao-inscricao-parts-only-estadual").val() != ""){
+			$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cnpj").val()+"-STATE:ISENTO-");
+		}else{
+			$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cnpj").val()+"-STATE:"+estadual+"-");
+		}
+	}
+});
+		//OS image
+$("#opcao-arquitetura").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-idioma").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-sistema").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-modelo").focusout(function(){
+	atualizaOSImage();
+});
+function atualizaOSImage() {
+	$("#inp_federal").val("OS Download: "+$("#opcao-arquitetura").val()+", Language "+$("#opcao-idioma").val()+", Model "+$("#opcao-modelo").val()+", OS: "+$("#opcao-sistema").val())
+};
+
+//gerar texto
+$("#btnGerarGoodLines").click(function(event){
+	event.preventDefault();
+	
+
+	
+	if(federal.value.length > 0){
+		$("#inp_resultado").val($("#inp_federal").val()+"\n"+"\nDiag: "+$("#inp_diag").val()+"\nCode: "+$("#inp_code").val()+"\nDPS: "+$("#inp_dps").val()+"\nSintoma: "+$("#inp_sintoma").val()+"\nInstrução: "+$("#inp_instrucao").val());
+	}else{
+		$("#inp_resultado").val("Diag: "+$("#inp_diag").val()+"\nCode: "+$("#inp_code").val()+"\nDPS: "+$("#inp_dps").val()+"\nSintoma: "+$("#inp_sintoma").val()+"\nInstrução: "+$("#inp_instrucao").val());
+	}
+
+	resultado.slideDown(500);
+
+	resultado.select();
+	document.execCommand('copy');
+	limpaCampos();
+	escondeCampos();
+	setTimeout(
+		function(){
+			$("#inp_resultado").slideUp(500);
+		},20000
+	)
+	});
+	</script>
+</body>
+</html>

@@ -1,0 +1,2027 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Templates</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="icon" href="icone_sitel.png" />
+	<link rel="shortcut icon" href="icone_sitel.png"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport" />
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/bootstrap/css/bootstrap.min.css" />
+	<link href="http://us145k12web02/app/conteudo/font.awesome.4.4.0/Content/Content/font-awesome.min.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/font-awesome-animation.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/css/skins/_all-skins.min.css" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.min.css" rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/libs/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css">
+
+	<!--<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">-->
+<style>
+body{
+	margin: 0;
+	background: #eee;
+}
+header {
+	float: left;
+	background: #222d32;
+	color:#ffffff;
+	width: auto;
+	height: 100%;
+	position: fixed;
+	list-style-type: none;
+	padding: 3% 1%;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	z-index: 2;
+	transition: left 3s ease-out;
+}
+header .fecha-menu{
+	color: red;
+	border: 0;
+}
+.menu-fechado{
+	left: -999px;
+	transition: left 3s ease-out;
+}
+header ul{
+	padding: 0;
+}
+header li{
+	list-style-type: none;
+}
+header a{
+	color: #ddd;
+}
+header button{
+	background: transparent;
+	width: 95%;
+	margin: 2px 0;
+	border-radius: 50px;
+}
+header button:hover, header button:focus{
+	transition: 0s, .5s;
+	box-shadow: 0 0 10px #fff;
+	background: #fff;
+}
+#inp_federal{
+	background: lightgray;
+	width: 70%
+}
+main {
+	background: #fff;
+	float: right;
+	width:100%;
+	padding: 0 5rem 0 15rem;
+	text-align: -webkit-center;
+}
+main .abre-menu{
+    color: #eeeeee;
+    font-weight: bold;
+    border: 0;
+    background: #222d32;
+    border-radius: 50px;
+    z-index: 1;
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    width: 3em;
+}
+main section {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	width: 100%;
+}
+main fieldset{
+	width: 50rem;
+}
+.template-linha{
+	text-align: start;
+   	margin: .3rem 0;
+    	display: flex;
+    	justify-content: space-between;
+    	align-items: center;
+}
+.template-linha label, .template-linha input, .template-linha select{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.frase, .resultado{
+	resize: none;
+	background-color: #fff;
+	border-radius: 5px;
+	padding: 3px;
+	margin: 5px 0;
+	list-style-type: none;
+	resize: vertical;
+	width: 100%;
+	height: 150px;
+}
+.gerar-log{
+	width: 40%;
+	padding: .5%;
+	margin: 1rem 30%;
+	background: #222d32;
+	color:#ffffff;
+}
+.botaoAdicionar{
+	border-radius: 50%;
+	background: lightgreen;
+	margin: 5%;
+	box-shadow: 0 0 5px black;
+	color: blue;
+	font-weight: bold;
+}
+
+.botaoAdicionar:hover{
+	background: green;
+	color: lightblue;
+	font-size: larger;
+}
+.resultado{
+	background-color: #eee;
+}
+.resultado:hover{
+	text-shadow: 0 0 1px #000;
+	background: #ddd; 
+	padding: 10px; 
+	box-shadow: 0 0 10px #222d32;
+}
+.invisivel{
+	display: none;
+}
+.dps {
+	margin: 2rem 0;
+}
+@media (max-width: 600px){
+header{
+    width: 100%;
+    text-align: center;
+    justify-content: space-around;
+    padding: 0;
+    height: auto;
+}
+header ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+header button {
+    width: 5rem;
+    margin: 0;
+    border-radius: 0;
+    font-size: xx-small;
+    height: 3rem;
+    text-align: center;
+    padding: 0;
+}
+main {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 7rem;
+}
+form fieldset {
+    width: 100%;
+}
+form legend {
+   width: 100%
+}
+.dps {
+    width: auto;
+}
+}
+</style>
+
+
+
+</head>
+<body>
+<header>
+	<button class="fecha-menu">X</button>
+	<h3>Selecione:</h3>
+	<ul>
+		<li><a href="#temp_guided" id="temp-guid"><button>Guidance</button></a></li>
+		<li><a href="#temp_345DPS" id="temp-345D"><button>3º/4º/5º DPS</button></a></li>
+		<li><a href="#temp_exchange" id="temp-exch"><button>Exchange</button></a></li>
+		<li><a href="#temp_reembolso" id="temp-reem"><button>Reembolso</button></a></li>
+		<li><a href="#temp_office" id="temp-offi"><button>Office</button></a></li>
+		<li><a href="#temp_contrasenha" id="temp_cont"><button>Contra senha</button></a></li>
+		<li><a href="#good-lines" id="temp_good"><button>5 Good Lines</button></a><li>
+	</ul>
+	<h3>Links úteis:</h3>
+	<ul>
+		<li class="rowGoodLines">
+			<a href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp" target="_blank">Consultar CPF</a>
+		</li>
+		<li class="rowGoodLines">
+			<a href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp" target="_blank">Consultar CNPJ</a>
+		</li>
+		<li class="rowGoodLines">
+			<a href="http://www.sintegra.gov.br/" target="_blank">Sintegra</a>
+		</li>
+		<li class="rowGoodLines">
+			<a href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf" target="_blank">Processo 320</a>
+		</li>
+		<li class="rowGoodLines">
+			<a href="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf" target="_blank">Processo 230</a>
+		</li>
+		<li class="rowGoodLines">
+			<a href="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf" target="_blank">Processo 231</a>
+		</li>
+	</ul>
+</header>
+<main>
+<button class="abre-menu"><</button>
+<!--	temp_guidance -->
+	<form id="temp_guidance" class="invisivel">
+		<h2>Solução desconhecida</h2>
+		<section>
+		<fieldset id="guid_dados" class="left">
+			<legend>Dados</legend>
+			<div class="template-linha">
+				<label id="lbl_mot" for="guid_motivo">Motivo da escalação: </label>
+				<input id="guid_motivo" required placeholder="Solução desconhecida">
+			</div>
+			<div class="template-linha">
+				<label id="lbl_obk" for="guid_okb">Oracle: </label>
+				<input id="guid_okb" required placeholder="SLN000000">
+			</div>
+			<div class="template-linha">
+				<label id="lbl_des" for="guid_descr">Descrição do caso: </label>
+				<br>
+				<textarea id="guid_descr" class="frase" required placeholder="Cliente de Tag ... possui o equipamento ... com problema de ..."></textarea>
+			</div>
+			<div class="template-linha">
+				<label id="lbl_tes" for="guid_testes">Testes realizados no atendimento:</label>
+				<br>
+				<textarea id="guid_testes" class="frase" required placeholder="-xxxxxx
+-xxxxxx
+-xxxxxx
+-xxxxxx"></textarea>
+			</div>
+			<div class="template-linha">
+				<label id="lbl_sug" for="guid_sugest">Sugestões do L2: </label>
+				<br>
+				<textarea id="guid_sugest" class="frase" required placeholder="Como soluçãoo para o problema sugiro a troca de ..."></textarea>
+			</div>
+			<div class="template-linha">
+				<label id="lbl_act" for="guid_interv">Aceita intervenção: </label>
+				<select id="guid_interv" required>
+					<option value"1">Sim</option>
+					<option value"2">Não</option>
+				</select>
+			</div>
+		</fieldset>
+		<fieldset id="guid_dps" class="right">
+			<legend>Histórico de DPS</legend>
+			<div class="template-linha">
+				<button id="addDPS" class="botaoAdicionarDPS"><i class="material-icons">swap_vert</i></button>
+			</div>
+			<div id="guidance-dps" class="invisivel">
+				<fieldset id="dps1" class="dps">
+					<div class="template-linha">
+						<label for="guid_dps1_num">1º DPS # </label>
+						<input id="guid_dps1_num" placeholder="xxxxxxxxx" type="number">
+						<select id="guid_dps1_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div class="template-linha">
+					<div class="template-linha">
+						<label for="guid_dps1_prob">Problema: </label>
+						<input id="guid_dps1_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps1_part">Peças enviadas: </label>
+						<input id="guid_dps1_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps1_daber">Aberto em: </label>
+						<input id="guid_dps1_daber" placeholder="xx/xx/xxxx" type="date">
+					</div>
+					<div class="template-linha">
+						<label for="">Concluído em: </label>
+						<input id="guid_dps1_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps1_report">Reporte: </label>
+						<input id="guid_dps1_report" placeholder="Negativo / Positivo">
+					</div>
+					<div class="template-linha">
+						<button id="mostrar2DPS" class="botaoAdicionar">+</button>
+					</div>
+				</fieldset>
+				<fieldset id="dps2" class="dps invisivel" >
+					<div class="template-linha">
+						<label for="guid_dps2_num">2º DPS # </label>
+						<input id="guid_dps2_num" placeholder="xxxxxxxxx" type="number">
+						<select id="guid_dps2_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps2_prob">Problema: </label>
+						<input id="guid_dps2_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps2_part">Peças enviadas: </label>
+						<input id="guid_dps2_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps2_daber">Aberto em: </label>
+						<input id="guid_dps2_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="">Concluído em: </label>	
+						<input id="guid_dps2_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps2_report">Reporte: </label>
+						<input id="guid_dps2_report" placeholder="Negativo / Positivo">
+					</div>
+					<div class="template-linha">
+						<button id="mostrar3DPS" class="botaoAdicionar">+</button>
+					</div>
+				</fieldset>
+				<fieldset id="dps3" class="dps invisivel">
+					<div class="template-linha">
+						<label for="guid_dps3_num">3º DPS # </label>
+						<input id="guid_dps3_num" placeholder="xxxxxxxxx" type="number">
+						<select id="guid_dps3_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps3_prob">Problema: </label>
+						<input id="guid_dps3_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps3_part">Peças enviadas: </label>
+						<input id="guid_dps3_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps3_daber">Aberto em: </label>
+						<input id="guid_dps3_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha"><label for="">Concluído em: </label>
+						<input id="guid_dps3_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps3_report">Reporte: </label>
+						<input id="guid_dps3_report" placeholder="Negativo / Positivo">
+					</div>
+					<div class="template-linha">
+						<button id="mostrar4DPS" class="botaoAdicionar">+</button>
+					</div>
+				</fieldset>
+				<fieldset id="dps4" class="dps invisivel">
+					<div class="template-linha">
+						<label for="guid_dps4_num">4º DPS # </label>
+						<input id="guid_dps4_num" placeholder="xxxxxxxxx" type="number">
+						<select id="guid_dps4_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps4_prob">Problema: </label>
+						<input id="guid_dps4_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps4_part">Peças enviadas: </label>
+						<input id="guid_dps4_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps4_daber">Aberto em: </label>
+						<input id="guid_dps4_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps4_dconcl">Concluído em: </label>
+						<input id="guid_dps4_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="guid_dps4_report">Reporte: </label>
+						<input id="guid_dps4_report" placeholder="Negativo / Positivo">
+					</div>
+				</fieldset>
+			</div>
+			</section>
+		</fieldset>
+		<div>
+			<button id="gerar_texto" class="gerar-log">Gerar e copiar texto</button>
+			<textarea id="resultado" class="resultado invisivel" readonly="readonly" rows="8"></textarea>
+		</div>
+	</form>
+<!--	temp_345DPS -->
+	<form id="temp_345DPS" class="invisivel">
+		<h2>3º/4º/5º DPS</h2>
+		<section>
+			<fieldset id="DPS_dados">
+				<legend>Dados</legend>
+				<div class="template-linha">
+					<label for="DPS_inp_prob" id="lbl_prob">Problema atual: </label>
+					<input id="DPS_inp_prob" placeholder="No boot / No power / No video / No post" required title="Problema atual do equipamento">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_temp" id="lbl_temp">Temperatura do cliente: </label>
+					<input id="DPS_inp_temp" placeholder="Neutro / Impactado" required title="Descreva o humor do cliente">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_sr" id="lbl_sr">SR # </label>
+					<input id="DPS_inp_sr" placeholder="000000000" required title="Entre com a Legacy SR do caso" type="number">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_ageSr" id="lbl_ageSr">Idade da SR # </label>
+					<input id="DPS_inp_ageSr" placeholder="0 Day(s)" required title="Idade da SR ou caso">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_own" id="lbl_own">Owner do caso: </label>
+					<input id="DPS_inp_own" placeholder="Citrix_L1 / Citrix_L2" title="Citrix de owner e L2">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_tag" id="lbl_tag">TAG # </label>
+					<input id="DPS_inp_tag" placeholder="XXXXXX2" required title="Entre com a TAG do equipamento">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_modelo" id="lbl_modelo">Modelo do equipamento # </label>
+					<input id="DPS_inp_mod" placeholder="INSP 3583" required title="Entre com o nome do modelo de equipamento">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_garantia" id="lbl_garantia">Garantia # </label>
+					<select id="DPS_inp_garantia" required title="Em garantia / Sem garantia">
+						<option value="IW">IW</option>
+						<option value="OOW">OOW</option>
+					</select>
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_ageMaq" id="lbl_ageMaq">Idade da Máquina # </label>
+		 			<input id="DPS_inp_ageMaq" placeholder="0 Years, 0 Days" required title="Idade da TAG ou máquina">
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_resumo" id="lbl_resumo">Resumo do caso: </label>
+					<br>
+		 			<textarea id="DPS_inp_resumo" class="frase" required placeholder="O resumo do caso deverá ser descrito com todos os detalhes técnicos e histórico de DPSs, para que seja feita uma análise do que deve ser feito a seguir" title="O resumo do caso deverá ser descrito com todos os detalhes técnicos e histórico de DPSs, para que seja feita uma análise do que deve ser feito a seguir"></textarea>
+				</div>
+				<div class="template-linha">
+					<label for="DPS_inp_analise" id="lbl_analise">Análise do L2: </label>
+					<textarea id="DPS_inp_analise" class="frase" required placeholder="Oportunidades identificadas pelo L2, OKBs seguidos, versões de BIOS e drivers relevantes ao problema, além de toda e qualquer outra informação relevante. É necessário que o L2 faça uma recomendação ao final de qual seria sua recomendação." title="Oportunidades identificadas pelo L2, OKBs seguidos, versões de BIOS e drivers relevantes ao problema, além de toda e qualquer outra informação relevante. É necessário que o L2 faça uma recomendação ao final de qual seria sua recomendação."></textarea>
+				</div>
+ 			</fieldset>
+			<fieldset id="DPS_DPS">
+				<legend>Histórico de DPS</legend>
+				<fieldset class="dps">
+					<div class="template-linha">
+						<label for="DPS_guid_dps1_num">1º DPS # </label>
+						<input id="DPS_guid_dps1_num" placeholder="xxxxxxxxx" type="number">
+						<select id="DPS_guid_dps1_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps1_prob">Problema: </label>
+						<input id="DPS_guid_dps1_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps1_part">Peças enviadas: </label>
+						<input id="DPS_guid_dps1_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps1_daber">Aberto em: </label>
+						<input id="DPS_guid_dps1_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps1_dconcl">Concluído em: </label>
+						<input id="DPS_guid_dps1_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps1_report">Reporte: </label>
+						<input id="DPS_guid_dps1_report" placeholder="Negativo / Positivo">
+					</div>
+				</fieldset>
+				<fieldset class="dps">
+					<div class="template-linha">
+						<label for="DPS_guid_dps2_num">2º DPS # </label>
+						<input id="DPS_guid_dps2_num" placeholder="xxxxxxxxx" type="number">
+						<select id="DPS_guid_dps2_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps2_prob">Problema: </label>
+						<input id="DPS_guid_dps2_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps2_part">Peças enviadas: </label>
+						<input id="DPS_guid_dps2_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps2_daber">Aberto em: </label>
+						<input id="DPS_guid_dps2_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps2_dconcl">Concluído em: </label>	
+						<input id="DPS_guid_dps2_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps2_report">Reporte: </label>
+						<input id="DPS_guid_dps2_report" placeholder="Negativo / Positivo">
+					</div>
+					<div class="template-linha">
+						<button id="DPS_mostrar3DPS" class="botaoAdicionar">+</button>
+					</div>
+				</fieldset>
+				<fieldset id="DPS_dps3" class="dps invisivel">
+					<div class="template-linha">
+						<label for="DPS_guid_dps3_num">3º DPS # </label>
+						<input id="DPS_guid_dps3_num" placeholder="xxxxxxxxx" type="number">
+						<select id="DPS_guid_dps3_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps3_prob">Problema: </label>
+						<input id="DPS_guid_dps3_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps3_part">Peças enviadas: </label>
+						<input id="DPS_guid_dps3_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps3_daber">Aberto em: </label>
+						<input id="DPS_guid_dps3_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps3_dconcl">Concluído em: </label>
+						<input id="DPS_guid_dps3_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps3_report">Reporte: </label>
+						<input id="DPS_guid_dps3_report" placeholder="Negativo / Positivo">
+					</div>
+					<div class="template-linha">
+						<button id="DPS_mostrar3DPS" class="botaoAdicionar">+</button>
+					</div>
+				</fieldset>
+				<fieldset id="DPS_dps4" class="dps invisivel">
+					<div class="template-linha">
+						<label for="DPS_guid_dps4_num">4º DPS # </label>
+						<input id="DPS_guid_dps4_num" placeholder="xxxxxxxxx" type="number">
+						<select id="DPS_guid_dps4_tipo">
+							<option value="Parts and Labor">Parts and Labor</option>
+							<option value="Parts only">Parts only</option>
+							<option value="MIS">MIS</option>
+							<option value="CIS">CIS</option>
+							<option value="10BD">10BD</option>
+						</select>
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps4_prob">Problema: </label>
+						<input id="DPS_guid_dps4_prob" placeholder="no power / no post / no boot / no video">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps4_part">Peças enviadas: </label>
+						<input id="DPS_guid_dps4_part" placeholder="LCD P4NFX...">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps4_daber">Aberto em: </label>
+						<input id="DPS_guid_dps4_daber" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps4_dconcl">Concluído em: </label>
+						<input id="DPS_guid_dps4_dconcl" placeholder="xx/xx/xxxx">
+					</div>
+					<div class="template-linha">
+						<label for="DPS_guid_dps4_report">Reporte: </label>
+						<input id="DPS_guid_dps4_report" placeholder="Negativo / Positivo">
+					</div>
+				</fieldset>
+			</fieldset>
+		</section>
+		<div>
+			<button id="DPS_gerar_texto" class="gerar-log">Gerar e copiar texto</button>
+			<textarea readonly="readonly" rows="8" id="DPS_resultado" class="resultado invisivel"></textarea>
+		</div>
+	</form>
+<!--	temp_exchange -->
+	<form id="temp_exchange" class="invisivel">
+		<h2>Exchange</h2>
+		<section>
+			<fieldset id="exchange_templ_dados">
+				<legend>Dados</legend>
+				<div class="template-linha">
+					<label for="exchange_inp_trigger">Trigger: </label>
+					<select id="exchange_inp_trigger">
+						<option value="+ 3 DPS dentro de 30 dias">+ 3 DPS dentro de 30 dias</option>
+						<option value="+ 4 DPS dentro de 1 ano">+ 4 DPS dentro de 1 ano</option>
+						<option value="Captura de qualidade">Captura de qualidade</option>
+						<option value="Dano acidental">Dano acidental</option>
+						<option value="Exceção">Exceção</option>
+						<option value="Extravio">Extravio</option>
+						<option value="PNC">PNC</option>
+						<option value="Problema não solucionado em 30 dias">Problema não solucionado em 30 dias</option>
+						<option value="Problema técnico dentro dos 7 primeiros dias">Problema técnico dentro dos 7 primeiros dias</option>
+						<option value="Reembolso de Serviço de Reparo">Reembolso de Serviço de Reparo</option>
+					</select>
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_tag">Tag: </label>
+					<input id="exchange_inp_tag" placeholder="0000002">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_modelo">Modelo: </label>
+					<input placeholder="INSP 3567" id="exchange_inp_modelo">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_order">Ordem: </label>
+					<input placeholder="000000000" id="exchange_inp_order" type="number">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_sr">SR# </label>
+					<input placeholder="000000000" id="exchange_inp_sr" type="number">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_caso">Salesforce case# </label>
+					<input placeholder="00000000" id="exchange_inp_caso" type="number">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_cliente">Cliente: </label>
+					<input placeholder="Fulano de tal" id="exchange_inp_cliente">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_tel1">Telefone principal: </label>
+					<input placeholder="11987654321" id="exchange_inp_tel1" type="number">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_tel2">Telefone adicional: </label>
+					<input placeholder="1187654321" id="exchange_inp_tel2" type="number">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_email">E-mail: </label>
+					<input placeholder="email@email.com" id="exchange_inp_email" type="email">
+				</div>
+				<div class="template-linha">
+					<label for="exchange_inp_resumo">Resumo do caso: </label>
+					<textarea placeholder="O resumo do caso deverá ser descrito com todos os detalhes técnicos para que seja feita uma análise do que deve ser feito no próximo DPS." id="exchange_inp_resumo" class="frase"></textarea>
+				</div>
+			</fieldset>
+			<fieldset id="exchange_templ_dps">
+				<legend>Histórico de DPS</legend>
+				<div class="template-linha">
+					<button id="exchange_btn-adicionar-DPS"><i class="material-icons">swap_vert</i></button>
+				</div>
+				<div id="exchange-dps">
+					<fieldset id="exchange_campos-DPS1" class="dps invisivel">
+						<div class="template-linha">
+							<label for="exchange_templ_dps1_num">1º DPS # </label>
+							<input id="exchange_templ_dps1_num" placeholder="xxxxxxxxx" type="number">
+							<select id="exchange_templ_dps1_tipo">
+								<option value="Parts and Labor">Parts and Labor</option>
+								<option value="Parts only">Parts only</option>
+								<option value="MIS">MIS</option>
+								<option value="CIS">CIS</option>
+								<option value="10BD">10BD</option>
+							</select>
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps1_prob">Problema: </label>
+							<input id="exchange_templ_dps1_prob" placeholder="no power / no post / no boot / no video">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps1_part">Peças enviadas: </label>
+							<input id="exchange_templ_dps1_part" placeholder="LCD P4NFX...">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps1_daber">Aberto em: </label>
+							<input id="exchange_templ_dps1_daber" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps1_dconcl">Concluído em: </label>
+							<input id="exchange_templ_dps1_dconcl" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps1_report">Reporte: </label>
+							<input id="exchange_templ_dps1_report" placeholder="Negativo / Positivo">
+						</div>
+						<div class="template-linha">
+							<button id="exchange_adicionar-dps-2" class="botaoAdicionar">+</button>
+						</div>
+					</fieldset>
+					<fieldset id="exchange_campos-DPS2" class="dps invisivel">
+						<div class="template-linha">
+							<label for="exchange_templ_dps2_num">2º DPS # </label>
+							<input id="exchange_templ_dps2_num" placeholder="xxxxxxxxx" type="number">
+							<select id="exchange_templ_dps2_tipo">
+								<option value="Parts and Labor">Parts and Labor</option>
+								<option value="Parts only">Parts only</option>
+								<option value="MIS">MIS</option>
+								<option value="CIS">CIS</option>
+								<option value="10BD">10BD</option>
+							</select>
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps2_prob">Problema: </label>
+							<input id="exchange_templ_dps2_prob" placeholder="no power / no post / no boot / no video">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps2_part">Peças enviadas: </label>
+							<input id="exchange_templ_dps2_part" placeholder="LCD P4NFX...">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps2_daber">Aberto em: </label>
+							<input id="exchange_templ_dps2_daber" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps2_dconcl">Concluído em: </label>
+							<input id="exchange_templ_dps2_dconcl" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps2_report">Reporte: </label>
+							<input id="exchange_templ_dps2_report" placeholder="Negativo / Positivo">
+						</div>
+						<div class="template-linha">
+							<button id="exchange_adicionar-dps-3" class="botaoAdicionar">+</button>
+						</div>
+					</fieldset>
+					<fieldset id="exchange_campos-DPS3" class="dps invisivel">
+						<div class="template-linha">
+							<label for="exchange_templ_dps3_num">3º DPS # </label>
+							<input id="exchange_templ_dps3_num" placeholder="xxxxxxxxx" type="number">
+							<select id="exchange_templ_dps3_tipo">
+								<option value="Parts and Labor">Parts and Labor</option>
+								<option value="Parts only">Parts only</option>
+								<option value="MIS">MIS</option>
+								<option value="CIS">CIS</option>
+								<option value="10BD">10BD</option>
+							</select>
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps3_prob">Problema: </label>
+							<input id="exchange_templ_dps3_prob" placeholder="no power / no post / no boot / no video">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps3_part">Peças enviadas: </label>
+							<input id="exchange_templ_dps3_part" placeholder="LCD P4NFX...">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps3_daber">Aberto em: </label>
+							<input id="exchange_templ_dps3_daber" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps3_dconcl">Concluído em: </label>
+							<input id="exchange_templ_dps3_dconcl" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps3_report">Reporte: </label>
+							<input id="exchange_templ_dps3_report" placeholder="Negativo / Positivo">
+						</div>
+						<div class="template-linha">
+							<button id="exchange_adicionar-dps-3" class="botaoAdicionar">+</button>
+						</div>
+					</fieldset>
+					<fieldset id="exchange_campos-DPS4" class="dps invisivel">
+						<div class="template-linha">
+							<label for="exchange_templ_dps4_num">4º DPS # </label>
+							<input id="exchange_templ_dps4_num" placeholder="xxxxxxxxx" type="number">
+							<select id="exchange_templ_dps4_tipo">
+								<option value="Parts and Labor">Parts and Labor</option>
+								<option value="Parts only">Parts only</option>
+								<option value="MIS">MIS</option>
+								<option value="CIS">CIS</option>
+								<option value="10BD">10BD</option>
+							</select>
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps4_prob">Problema: </label>
+							<input id="exchange_templ_dps4_prob" placeholder="no power / no post / no boot / no video">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps4_part">Peças enviadas: </label>
+							<input id="exchange_templ_dps4_part" placeholder="LCD P4NFX...">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps4_daber">Aberto em: </label>
+							<input id="exchange_templ_dps4_daber" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps4_dconcl">Concluído em: </label>
+							<input id="exchange_templ_dps4_dconcl" placeholder="xx/xx/xxxx">
+						</div>
+						<div class="template-linha">
+							<label for="exchange_templ_dps4_report">Reporte: </label>
+							<input id="exchange_templ_dps4_report" placeholder="Negativo / Positivo">
+						</div>
+					</fieldset>
+				</div>
+			</fieldset>
+		</section>
+		<div>
+			<button id="exchange_gerar_texto" class="gerar-log">Gerar e copiar texto</button>
+			<textarea readonly="readonly" rows="8" id="exchange_resultado" class="resultado invisivel"></textarea>
+		</div>
+	</form>
+<!--	temp_reembolso -->
+	<form id="temp_reembolso" class="invisivel">
+		<fieldset>
+			<h2>Reembolso</h2>
+			<div class="template-linha">
+				<label for="reembolso_reemb_motivo">Motivo: </label>
+				<input class="campos" name ="Motivo" id="reembolso_reemb_motivo" required title="Breve descrição do motivo" placeholder="Breve descrição...">
+			</div>
+			<div class="template-linha">
+				<label for="reembolso_reemb_order">Ordem: </label>
+				<input class="campos" name ="Ordem" id="reembolso_reemb_order" required placeholder="000000000" title="Número de ordem com 9 dígitos" pattern=["0-9"]{9} type="number">
+			</div>
+			<div class="template-linha">
+				<label for="reembolso_reemb_valor">Valor: R$ </label>
+				<input class="campos" name ="Valor" id="reembolso_reemb_valor" required placeholder="000,00" type="number">
+			</div>
+			<div class="template-linha">
+				<label for="reembolso_reemb_age_sr">Age_SR: </label>
+				<input class="campos" name ="Age_SR" id="reembolso_reemb_age_sr" required placeholder="6 Day(s)">
+			</div>
+			<div class="template-linha">
+				<label for="reembolso_reemb_tag">TAG: </label>
+				<input class="campos" name ="TAG" id="reembolso_reemb_tag" required placeholder="XXXXXX2" title="Preencher apenas letras maíusculas e 7 dígitos" pattern=["A-Z0-9"]{7}>
+			</div>
+			<div class="template-linha">
+				<label for="reembolso_reemb_modelo">Modelo: </label>
+				<input class="campos" name ="Modelo" id="reembolso_reemb_modelo" required placeholder="INSP 5566">
+			</div>
+			<div class="template-linha">
+				<label for="reembolso_reemb_age_maq">Age_TAG: </label>
+				<input class="campos" name ="Age_TAG" id="reembolso_reemb_age_maq"required placeholder="1 Years, 146 Days">
+			</div>
+		</fieldset>
+		<button id="reembolso_gerar_texto" class="gerar-log">Gerar e copiar texto</button>
+		<textarea readonly="readonly" rows="8" id="reembolso_resultado" class="resultado invisivel"></textarea>
+	</form>
+<!--	temp_office -->
+	<form id="temp_office" class="invisivel">
+		<fieldset>
+			<h2>Office</h2>
+				<div class="template-linha">
+					<label for="office_inp_versao">Versão do Office: </label>
+					<select id="office_inp_versao" title="Office2016/Office2019/Office365">
+						<option>Office2016</option>
+						<option>Office2019</option>
+						<option>Office365</option>
+					</select>
+				</div>
+    				<div class="template-linha">
+					<label for="office_inp_detalhes">Detalhes da versão: </label>
+					<select id="office_inp_detalhes" title="H&S/H&B/365P/365H/PRO">
+						<option value="Office Home and Student">H&S</option>
+						<option value="Office Home and Business">H&B</option>
+						<option value="Office 365 Personal">365P</option>
+						<option value="Office 365 Home">365H</option>
+						<option value="Office Professional">PRO</option>
+					</select>
+				</div>
+			   	<div class="template-linha">
+					<label for="office_inp_okb">OKB utilizado: </label>
+					<input id="office_inp_okb" title="Número do SLN" placeholder="SLN000000">
+				</div>
+			   	<div class="template-linha">
+				<label for="office_inp_fixit">Fix it Microsoft Executado: </label>
+				<select id="office_inp_fixit" title="http://aka.ms/diag_97275">
+					<option value="NAO">Não</option>
+					<option value="SIM">Sim</option>
+				</select>
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_ospp">OSPP.log anexo na SR: </label>
+				<select id="office_inp_ospp" title="Conforme SLN306817">
+					<option value="NAO">Não</option>
+					<option value="SIM">Sim</option>
+				</select>
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_nome">Nome completo do cliente: </label>
+				<input id="office_inp_nome" title="Nome completo" placeholder="Fulano de tal...">
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_order">Ordem: </label>
+				<input id="office_inp_order" title="Apenas números" placeholder="000000000" type="number">
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_tag">TAG: </label>
+				<input id="office_inp_tag" title="entre com a TAG do equipamento" placeholder="0000002">
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_msa">MSA: </label>
+				<input id="office_inp_msa" title="Conta Microsoft válida" placeholder="e-mail@outlook ou @hotmail" type="email">
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_msaTestada">MSA testada com cliente: </label>
+				<select id="office_inp_msaTestada" title="Testada?">
+					<option value="NAO">Não</option>
+					<option value="SIM">Sim</option>
+				</select>
+			</div>
+    			<div class="template-linha">
+				<label for="office_inp_sr">SR Microsoft: </label>
+				<input id="office_inp_sr" required title="Fornecida pela Microsoft durante o atendimento no chat" placeholder="SRX....">
+			</div>
+   		</fieldset>
+		<button id="office_botaoGerar" class="gerar-log">Gerar e copiar texto</button>
+		<textarea readonly="readonly" rows="8" id="office_resultado" class="resultado invisivel"></textarea>
+	</form>
+<!--	temp_contrasenha -->
+	<form id="temp_contrasenha" class="invisivel">
+		<fieldset>
+			<h2>Contra senha</h2>
+			<div class="template-linha">
+				<label for="contrasenha-login">Citrix: </label>
+				<input id="contrasenha-login" placeholder="NOME_CITRIX">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-badge">Badge: </label>
+				<input id="contrasenha-badge" placeholder="000000" type="number">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-tipo">Tipo de solicitação: </label>
+				<select id="contrasenha-tipo">
+					<option value="BIOS">BIOS</option>
+					<option value="ADMIN">Admin</option>
+					<option value="HDD">HDD</option>
+				</select>
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-account">Account TAG: </label>
+				<input id="contrasenha-account" placeholder="LUCKETT ELLEN">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-cliente">Nome do cliente: </label>
+				<input id="contrasenha-cliente" placeholder="ANDERSON SILVA SANTOS">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-email">E-mail do cliente: </label>
+				<input id="contrasenha-email" placeholder="email@email.com" type="email">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-telefone">Telefone do cliente: </label>
+				<input id="contrasenha-telefone" placeholder="11988776655" type="number">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-tag">TAG: </label>
+				<input id="contrasenha-tag" placeholder="XXXXXX2">
+			</div>
+			<div class="template-linha">
+				<label for="contrasenha-codigo">Código: </label>
+				<input id="contrasenha-codigo" placeholder="#HQWHSL2-6FF1">
+			</div>
+		</fieldset>
+		<button id="contrasenha-botaoGerar" class="gerar-log">Gerar e copiar texto</button>
+		<textarea readonly="readonly" rows="8" id="contrasenha-resultado" class="resultado invisivel"></textarea>
+	</form>
+<!--	temp_contrasenha -->
+	<form id="good-lines" class="invisivel">
+		<fieldset>
+			<h2>5 good lines</h2>
+			<div class="template-linha">
+				<label for="inp_diag" id="lbl_diag">Diag: </label>
+				<select id="inp_diag" name="diagnostico" class="campoGoodLines" required title="Ferramenta de diagnóstico">
+					<option value="ePSA">Epsa</option>
+					<option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
+					<option value="Alien Autopsy">Alien Autopsy</option>
+					<option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
+					<option value="FPD Bist">FPD Bist</option>
+					<option value="LCD Bist">LCD Bist</option>
+					<option value="Led Indicators">Led Indicators</option>
+					<option value="MemRX">MemRX</option>
+					<option value="MpMemory">MpMemory</option>
+					<option value="PC Doctor">PC Doctor</option>
+					<option value="PSA">PSA</option>
+					<option value="PSU Bist">PSU Bist</option>
+					<option value="Quad-Pack Leds">Quad-Pack Leds</option>
+					<option value="Tools not Needed">Tools not Needed</option>
+				</select>
+			</div>
+			<div class="template-linha">
+				<label for="inp_code" id="lbl_code">Code: </label>
+				<input id="inp_code" name="codigo" class="campoGoodLines" required title="Entrar com o código de erro ou PASS" placeholder="Validation em caso de EPSA">
+			</div>
+			<div class="template-linha">
+				<label for="inp_dps" id="lbl_dps">DPS: </label>
+				<select id="inp_dps" name="dps" class="campoGoodLines" required title="Quantidade de DPS da SR">
+					<option value="1º">1</option>
+					<option value="2º">2</option>
+					<option value="3º">3</option>
+					<option value="4º">4</option>
+					<option value="5º">5</option>
+				</select>
+			</div>
+			<div class="template-linha">
+				<label for="inp_sintoma" id="lbl_sintoma">Sintoma: </label>
+				<input id="inp_sintoma" name="sintoma" class="campoGoodLines" required title="No post, No video, No boot, No power, No audio..." placeholder="Sintoma do equipamento Ex: No Power, No Post">
+			</div>
+			<div class="template-linha">
+				<div>
+					<label for="opcao-federal">Federal</label>
+					<input type="radio" name="especial-opcao" id="opcao-federal">
+				</div>
+				<div>
+					<label for="opcao-parts-only">Parts Only</label>
+					<input type="radio" name="especial-opcao" id="opcao-parts-only">
+				</div>
+				<div>
+					<label for="opcao-hd">HD</label>
+					<input type="radio" name="especial-opcao" id="opcao-hd">
+				</div>
+				<div>
+					<label for="opcao-nenhum">Nada</label>
+					<input type="radio" name="especial-opcao" id="opcao-nenhum">
+				</div>
+			</div>
+			<div class="template-linha invisivel" id="secao-federal">
+				<div class="rowGoodLines">
+					<label for="opcao-federal-cpf">CPF</label>
+					<input type="radio" name="federal-opcao" id="opcao-federal-cpf">
+				</div>
+				<div class="rowGoodLines">
+					<label for="opcao-federal-cnpj">CNPJ</label>
+					<input type="radio" name="federal-opcao" id="opcao-federal-cnpj">
+				</div>
+			</div>
+			<div class="template-linha invisivel" id="secao-parts-only">
+				<div class="rowGoodLines">
+					<label for="opcao-parts-only-cpf">CPF</label>
+					<input type="radio" name="parts-only-opcao" id="opcao-parts-only-cpf">
+				</div>
+				<div class="rowGoodLines">
+					<label for="opcao-parts-only-cnpj">CNPJ</label>
+					<input type="radio" name="parts-only-opcao" id="opcao-parts-only-cnpj">
+				</div>
+			</div>
+			<div class="invisivel" id="secao-hd">
+				<div class="template-linha">
+					<label for="opcao-arquitetura">Arquitetura: </label>
+					<select id="opcao-arquitetura">
+						<option value="32 bits">32</option>
+						<option value="64 bits">64</option>
+					</select>
+				</div>
+				<div class="template-linha">
+					<label for="opcao-idioma">Idioma: </label>
+					<select id="opcao-idioma">
+						<option value="Brazilian Portuguese">Português</option>
+						<option value="English">English</option>
+						<option value="Spanish">Español</option>
+					</select>
+				</div>
+				<div class="template-linha">
+					<label for="opcao-sistema">Sistema:</label>
+					<select id="opcao-sistema">						
+						<option value="Windows 10 Home">Win 10 Home</option>
+						<option value="Windows 10 Home Single Language">Win 10 SingLang</option>
+						<option value="Windows 10 Professional">Win 10 Pro</option>
+
+						<option value="Windows 8 Home">Win 8 Home</option>
+						<option value="Windows 8 Professional">Win 8 Pro</option>
+						<option value="Windows 8.1 Home">Win 8.1 Home</option>
+						<option value="Windows 8.1 Single Language">Win 8.1 SingLang</option>
+						<option value="Windows 8.1 Professional">Win 8.1 Pro</option>
+
+						<option value="Windows 7 Home">Win 7 Home</option>
+						<option value="Windows 7 Professional">Win 7 Pro</option>
+						<option value="Windows 7 Ultimate">Win 7 Ultimate</option>
+					</select>
+				</div>
+				<div class="template-linha">
+					<label for="opcao-modelo">Modelo: </label>
+					<input id="opcao-modelo" placeholder="Inspiron 5566">
+				</div>
+			</div>
+			<div class="invisivel" id="secao-federal-cpf">
+				<div class="template-linha">
+					<label for="opcao-numero-federal-cpf">Número: </label>
+					<input id="opcao-numero-federal-cpf" type="number" placeholder="00011122233">
+				</div>
+				<div class="template-linha">
+					<label for="opcao-data-federal-nascimento">Data de nascimento: </label>
+					<input id="opcao-data-federal-nascimento" placeholder="01/01/1990"><!--type="date"-->
+				</div>
+			</div>
+			<div class="invisivel" id="secao-federal-cnpj">
+				<div class="template-linha">
+					<label for="opcao-numero-federal-cnpj">Número: </label>
+					<input type="number" id="opcao-numero-federal-cnpj" maxlength="14" placeholder="00000000000000">
+				</div>
+				<div class="template-linha">
+					<label for="opcao-inscricao-federal-estadual">Inscrição estadual</label>
+					<input type="number" id="opcao-inscricao-federal-estadual" placeholder="Não preencher se isento">
+				</div>
+			</div>
+			<div class="invisivel" id="secao-parts-only-cpf">
+				<div class="template-linha">
+					<label for="opcao-numero-parts-only-cpf">Número: </label>
+					<input id="opcao-numero-parts-only-cpf" type="number" placeholder="00011122233">
+				</div>
+				<div class="template-linha">
+					<label for="opcao-data-parts-only-nascimento">Data de nascimento: </label>
+					<input id="opcao-data-parts-only-nascimento" placeholder="01/01/1990"><!--type="date"-->
+				</div>
+			</div>
+			<div class="invisivel" id="secao-parts-only-cnpj">
+				<div class="template-linha">
+					<label for="opcao-numero-parts-only-cnpj">Número: </label>
+					<input type="number" id="opcao-numero-parts-only-cnpj" maxlength="14" placeholder="00000000000000">
+				</div>
+				<div class="template-linha">
+					<label for="opcao-inscricao-parts-only-estadual">Inscrição estadual</label>
+					<input type="number" id="opcao-inscricao-parts-only-estadual" placeholder="Não preencher se isento">
+				</div>
+			</div>
+			<div class="template-linha">
+				<label for="inp_federal" id="lbl_federal">Instrução especial: </label>
+				<input readonly="readonly" id="inp_federal" name="federal" class="campoGoodLines" title="CPF:xxxxxxxxxxx-BDATE:xx/xx/xxxx- // OS Download: XX bits, Language: xxxxxx, Model: xxxxxx, OS: xxxxxx">
+			</div>
+			<div class="template-linha">
+				<label for="inp_instrucao" id="lbl_instrucao">Instrução: <br></label>
+				<textarea id="inp_instrucao" name="instrucao" class="frase" required title="O que deve ser feito pelo Tech" placeholder="Senhor tecnico, por favor trocar parts e garantir funcionalidade">Senhor tecnico, por favor trocar ...</textarea>
+			</div>
+			<div class="template-linha">
+				<button id="btnGerarGoodLines" name="gerar_GoodLines" class="gerar-log">Gerar e copiar</button>
+			</div>
+			<div class="template-linha">
+				<textarea readonly="readonly" id="inp_resultado" class="resultado invisivel" name="resultado"></textarea>
+			</div>
+		</fieldset>
+	</form>
+</main>
+
+
+
+<!--	JS -->
+	<script src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+$(function() {
+	$("#datepicker").datepicker();
+});
+			/*****	templates	***/
+$(".fecha-menu").click(function(){
+	alternaMenu();
+});
+$(".abre-menu").click(function(){
+	alternaMenu();
+});
+
+function alternaMenu(){
+	$("header").toggleClass("menu-fechado");
+}
+
+function escondeTodos(){
+	$("#temp_guidance").slideUp(500);
+	$("#temp_345DPS").slideUp(500);
+	$("#temp_exchange").slideUp(500);
+	$("#temp_reembolso").slideUp(500);
+	$("#temp_office").slideUp(500);
+	$("#temp_contrasenha").slideUp(500);
+	$("#good-lines").slideUp(500);
+	alternaMenu();
+}
+
+
+$("#temp-guid").click(function(){
+	escondeTodos();
+	$("#temp_guidance").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#guid_motivo").focus();
+		}, 500
+	)
+});
+$("#temp-345D").click(function(){
+	escondeTodos();
+	$("#temp_345DPS").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#DPS_inp_prob").focus();
+		}, 500
+	)
+});
+$("#temp-exch").click(function(){
+	escondeTodos();
+	$("#temp_exchange").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#exchange_inp_trigger").focus();
+		}, 500
+	)
+});
+$("#temp-reem").click(function(){
+	escondeTodos();
+	$("#temp_reembolso").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#reembolso_reemb_motivo").focus();
+		}, 500
+	)
+});
+$("#temp-offi").click(function(){
+	escondeTodos();
+	$("#temp_office").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#office_inp_versao").focus();
+		}, 500
+	)
+});
+$("#temp_cont").click(function(){
+	escondeTodos();
+	$("#temp_contrasenha").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#contrasenha-login").focus();
+		}, 500
+	)
+});
+$("#temp_good").click(function(){
+	escondeTodos();
+	$("#good-lines").slideToggle(500);
+	setTimeout(
+		function(){
+			$("#inp_diag").focus();
+		}, 500
+	)
+});
+
+			/***	guidance	***/
+var guid_out_mot = document.querySelector("#guid_motivo");
+var guid_out_des = document.querySelector("#guid_descr");
+var guid_out_okb = document.querySelector("#guid_okb");
+var guid_out_tes = document.querySelector("#guid_testes");
+var guid_out_sug = document.querySelector("#guid_sugest");
+var guid_out_act = document.querySelector("#guid_interv");
+
+var dps1_num = document.querySelector("#guid_dps1_num");
+var dps1_tip = document.querySelector("#guid_dps1_tipo");
+var dps1_pro = document.querySelector("#guid_dps1_prob");
+var dps1_par = document.querySelector("#guid_dps1_part");
+var dps1_abe = document.querySelector("#guid_dps1_daber");
+var dps1_fec = document.querySelector("#guid_dps1_dconcl");
+var dps1_rep = document.querySelector("#guid_dps1_report");
+var exibe2DPS = document.querySelector("#mostrar2DPS");
+
+var dps2Vis = document.querySelector("#dps2");
+var dps2_num = document.querySelector("#guid_dps2_num");
+var dps2_tip = document.querySelector("#guid_dps2_tipo");
+var dps2_pro = document.querySelector("#guid_dps2_prob");
+var dps2_par = document.querySelector("#guid_dps2_part");
+var dps2_abe = document.querySelector("#guid_dps2_daber");
+var dps2_fec = document.querySelector("#guid_dps2_dconcl");
+var dps2_rep = document.querySelector("#guid_dps2_report");
+var exibe3DPS = document.querySelector("#mostrar3DPS");
+
+var dps3Vis = document.querySelector("#dps3");
+var dps3_num = document.querySelector("#guid_dps3_num");
+var dps3_tip = document.querySelector("#guid_dps3_tipo");
+var dps3_pro = document.querySelector("#guid_dps3_prob");
+var dps3_par = document.querySelector("#guid_dps3_part");
+var dps3_abe = document.querySelector("#guid_dps3_daber");
+var dps3_fec = document.querySelector("#guid_dps3_dconcl");
+var dps3_rep = document.querySelector("#guid_dps3_report");
+
+var gerarTexto = document.querySelector("#gerar_texto");
+var res = document.querySelector("#resultado");
+
+$("#addDPS").click(
+	function(event){
+		event.preventDefault();
+		$("#guidance-dps").slideToggle(300);
+		//adicionarDPS.classList.add("invisivel");
+		dps1_num.focus();
+	}
+);
+
+exibe2DPS.addEventListener("click", function(event){
+	event.preventDefault();
+	dps2Vis.classList.remove("invisivel");
+	exibe2DPS.classList.add("invisivel");
+	dps2_num.focus();
+});
+
+exibe3DPS.addEventListener("click", function(event){
+	event.preventDefault();
+	dps3Vis.classList.remove("invisivel");
+	exibe3DPS.classList.add("invisivel");
+	dps3_num.focus();
+});
+
+/*
+var dataFormatada = dataPadraoBr(dps1_abe);
+
+function dataPadraoBr(dataSemFormato){
+	var dia = dataSemFormato.getDate();
+	var mes = dataSemFormato.getMonth()+1;
+	var ano = dataSemFormato.getFullYear;
+
+	return dia+"/"+mes+"/"+ano
+}
+*/
+
+gerarTexto.addEventListener("click", function(){
+	event.preventDefault();
+
+	if(dps1_num.value.length == 0 && dps2_num.value.length == 0 && dps3_num.value.length == 0){
+		res.textContent =
+					"STL/GUIDANCE\n"+
+					"\n"+
+					"Motivo da escalação: "+ guid_out_mot.value+"\n\n"+
+					"descrição do caso:\n"+ guid_out_des.value+"\n"+
+					"\n"+
+					"Oracle utilizado: "+ guid_out_okb.value+"\n"+
+					"Foram realizados os seguintes testes para o problema atual:\n"+
+					guid_out_tes.value+"\n"+
+					"\n"+
+					"Sugestão L2: "+ guid_out_sug.value+"\n"+
+					"\n"+
+					"Cliente aceita intervenção técnica: "+ guid_out_act.value+"\n"+
+					"\n"+
+
+					"Como podemos proceder?"
+
+	}else{
+
+	if(dps2_num.value.length == 0 && dps3_num.value.length == 0){
+	res.textContent =
+					"STL/GUIDANCE\n"+
+					"\n"+
+					"Motivo da escalação: "+ guid_out_mot.value+"\n\n"+
+					"descrição do caso:\n"+ guid_out_des.value+"\n"+
+					"\n"+
+					"Oracle utilizado: "+ guid_out_okb.value+"\n"+
+					"Foram realizados os seguintes testes para o problema atual:\n"+
+					guid_out_tes.value+"\n"+
+					"\n"+
+					"Sugestão L2: "+ guid_out_sug.value+"\n"+
+					"\n"+
+					"Cliente aceita intervenção técnica: "+ guid_out_act.value+"\n"+
+					"\n"+
+
+					"1º DPS # "+dps1_num.value+" - "+dps1_tip.value+"\n"+
+					"Problema: "+dps1_pro.value+"\n"+
+					"Peças enviadas: "+dps1_par.value+"\n"+
+					"Aberto em: "+dps1_abe.value+"\n"+
+					"Concluído em: "+dps1_fec.value+"\n"+
+					"Reporte: "+dps1_rep.value+"\n"+
+					"\n"+
+					"Como podemos proceder?"
+}else{
+	if(dps3_num.value.length == 0){
+	res.textContent =
+					"STL/GUIDANCE\n"+
+					"\n"+
+					"Motivo da escalação: "+ guid_out_mot.value+"\n\n"+
+					"descrição do caso:\n"+ guid_out_des.value+"\n"+
+					"\n"+
+					"Oracle utilizado: "+ guid_out_okb.value+"\n"+
+					"Foram realizados os seguintes testes para o problema atual:\n"+
+					guid_out_tes.value+"\n"+
+					"\n"+
+					"Sugestão L2: "+ guid_out_sug.value+"\n"+
+					"\n"+
+					"Cliente aceita intervenção técnica: "+ guid_out_act.value+"\n"+
+					"\n"+
+
+					"1º DPS # "+dps1_num.value+" - "+dps1_tip.value+"\n"+
+					"Problema: "+dps1_pro.value+"\n"+
+					"Peças enviadas: "+dps1_par.value+"\n"+
+					"Aberto em: "+dps1_abe.value+"\n"+
+					"Concluído em: "+dps1_fec.value+"\n"+
+					"Reporte: "+dps1_rep.value+"\n"+
+					"\n"+
+					"2º DPS # "+dps2_num.value+" - "+dps2_tip.value+"\n"+
+					"Problema: "+dps2_pro.value+"\n"+
+					"Peças enviadas: "+dps2_par.value+"\n"+
+					"Aberto em: "+dps2_abe.value+"\n"+
+					"Concluído em: "+dps2_fec.value+"\n"+
+					"Reporte: "+dps2_rep.value+"\n"+
+					"\n"+
+					"Como podemos proceder?"
+	}else{
+		res.textContent =
+					"STL/GUIDANCE\n"+
+					"\n"+
+					"Motivo da escalação: "+ guid_out_mot.value+"\n\n"+
+					"descrição do caso:\n"+ guid_out_des.value+"\n"+
+					"\n"+
+					"Oracle utilizado: "+ guid_out_okb.value+"\n"+
+					"Foram realizados os seguintes testes para o problema atual:\n"+
+					guid_out_tes.value+"\n"+
+					"\n"+
+					"Sugestão L2: "+ guid_out_sug.value+"\n"+
+					"\n"+
+					"Cliente aceita intervenção técnica: "+ guid_out_act.value+"\n"+
+					"\n"+
+
+		"1º DPS # "+dps1_num.value+" - "+dps1_tip.value+"\n"+
+		"Problema: "+dps1_pro.value+"\n"+
+		"Peças enviadas: "+dps1_par.value+"\n"+
+		"Aberto em: "+dps1_abe.value+"\n"+
+		"Concluído em: "+dps1_fec.value+"\n"+
+		"Reporte: "+dps1_rep.value+"\n"+
+		"\n"+
+		"2º DPS # "+dps2_num.value+" - "+dps2_tip.value+"\n"+
+		"Problema: "+dps2_pro.value+"\n"+
+		"Peças enviadas: "+dps2_par.value+"\n"+
+		"Aberto em: "+dps2_abe.value+"\n"+
+		"Concluído em: "+dps2_fec.value+"\n"+
+		"Reporte: "+dps2_rep.value+"\n"+
+		"\n"+
+		"3º DPS # "+dps3_num.value+" - "+dps3_tip.value+"\n"+
+		"Problema: "+dps3_pro.value+"\n"+
+		"Peças enviadas: "+dps3_par.value+"\n"+
+		"Aberto em: "+dps3_abe.value+"\n"+
+		"Concluído em: "+dps3_fec.value+"\n"+
+		"Reporte: "+dps3_rep.value+"\n"+
+		"\n"+
+		"Como podemos proceder?"
+	}
+}}
+		res.classList.remove("invisivel");
+		res.select();
+		document.execCommand('copy');
+		limpaCampos();
+
+})
+
+
+
+			/***	3_4_5_DPS	***/
+console.log("3_4_5_DPS.js funciona");
+
+var DPS_tag 		= document.querySelector("#DPS_inp_tag");
+var DPS_sr 		= document.querySelector("#DPS_inp_sr");
+var DPS_ageSr 		= document.querySelector("#DPS_inp_ageSr");
+var DPS_modelo 		= document.querySelector("#DPS_inp_mod");
+var DPS_garantia 	= document.querySelector("#DPS_inp_garantia");
+var DPS_ageMaq 		= document.querySelector("#DPS_inp_ageMaq");
+var DPS_owner 		= document.querySelector("#DPS_inp_own");
+var DPS_problema 	= document.querySelector("#DPS_inp_prob");
+var DPS_temperatura 	= document.querySelector("#DPS_inp_temp");
+var DPS_resumo 		= document.querySelector("#DPS_inp_resumo");
+var DPS_analise 	= document.querySelector("#DPS_inp_analise");
+
+var DPS_dps1_num 	= document.querySelector("#DPS_guid_dps1_num");
+var DPS_dps1_tip 	= document.querySelector("#DPS_guid_dps1_tipo");
+var DPS_dps1_pro 	= document.querySelector("#DPS_guid_dps1_prob");
+var DPS_dps1_par 	= document.querySelector("#DPS_guid_dps1_part");
+var DPS_dps1_abe 	= document.querySelector("#DPS_guid_dps1_daber");
+var DPS_dps1_fec 	= document.querySelector("#DPS_guid_dps1_dconcl");
+var DPS_dps1_rep 	= document.querySelector("#DPS_guid_dps1_report");
+
+var DPS_dps2_num 	= document.querySelector("#DPS_guid_dps2_num");
+var DPS_dps2_tip 	= document.querySelector("#DPS_guid_dps2_tipo");
+var DPS_dps2_pro 	= document.querySelector("#DPS_guid_dps2_prob");
+var DPS_dps2_par 	= document.querySelector("#DPS_guid_dps2_part");
+var DPS_dps2_abe 	= document.querySelector("#DPS_guid_dps2_daber");
+var DPS_dps2_fec 	= document.querySelector("#DPS_guid_dps2_dconcl");
+var DPS_dps2_rep 	= document.querySelector("#DPS_guid_dps2_report");
+var DPS_exibe3DPS 	= document.querySelector("#DPS_mostrar3DPS");
+
+var DPS_dps3Vis 	= document.querySelector("#DPS_dps3");
+var DPS_dps3_num 	= document.querySelector("#DPS_guid_dps3_num");
+var DPS_dps3_tip 	= document.querySelector("#DPS_guid_dps3_tipo");
+var DPS_dps3_pro 	= document.querySelector("#DPS_guid_dps3_prob");
+var DPS_dps3_par 	= document.querySelector("#DPS_guid_dps3_part");
+var DPS_dps3_abe 	= document.querySelector("#DPS_guid_dps3_daber");
+var DPS_dps3_fec 	= document.querySelector("#DPS_guid_dps3_dconcl");
+var DPS_dps3_rep 	= document.querySelector("#DPS_guid_dps3_report");
+
+var DPS_gerarTexto 	= document.querySelector("#DPS_gerar_texto");
+var DPS_res 		= document.querySelector("#DPS_resultado");
+
+DPS_exibe3DPS.addEventListener("click", function(event){
+	event.preventDefault();
+	DPS_dps3Vis.classList.remove("invisivel");
+	DPS_exibe3DPS.classList.add("invisivel");
+	DPS_dps3_num.focus();
+});
+
+DPS_gerarTexto.addEventListener("click", function(){
+	event.preventDefault();
+	if(DPS_dps3_num.value.length == 0){
+		DPS_res.textContent =	"TAG # "+DPS_tag.value+
+							"\nSR # "+DPS_sr.value+
+							"\nIdade da SR # "+DPS_ageSr.value+
+							"\nModelo do equipamento # "+DPS_modelo.value+
+							"\nGarantia # "+DPS_garantia.value+
+							"\nIdade da Máquina # "+DPS_ageMaq.value+
+							"\nOwner do caso: "+DPS_owner.value+
+							"\nProblema atual: "+DPS_problema.value+
+							"\nTemperatura do cliente: "+DPS_temperatura.value+
+							"\n\nResumo do caso: "+DPS_resumo.value+
+							"\n\n1º DPS # "+DPS_dps1_num.value+" - "+DPS_dps1_tip.value+"\n"+
+							"Problema: "+DPS_dps1_pro.value+"\n"+
+							"Peças enviadas: "+DPS_dps1_par.value+"\n"+
+							"Aberto em: "+DPS_dps1_abe.value+"\n"+
+							"Concluído em: "+DPS_dps1_fec.value+"\n"+
+							"Reporte: "+DPS_dps1_rep.value+"\n"+
+							"\n"+
+							"2º DPS # "+DPS_dps2_num.value+" - "+DPS_dps2_tip.value+"\n"+
+							"Problema: "+DPS_dps2_pro.value+"\n"+
+							"Peças enviadas: "+DPS_dps2_par.value+"\n"+
+							"Aberto em: "+DPS_dps2_abe.value+"\n"+
+							"Concluído em: "+DPS_dps2_fec.value+"\n"+
+							"Reporte: "+DPS_dps2_rep.value+
+							"\n\nAnálise do L2: "+DPS_analise.value
+	}else{
+		DPS_res.textContent =	"TAG # "+DPS_tag.value+
+							"\nSR # "+DPS_sr.value+
+							"\nIdade da SR # "+DPS_ageSr.value+
+							"\nModelo do equipamento # "+DPS_modelo.value+
+							"\nGarantia # "+DPS_garantia.value+
+							"\nIdade da Máquina # "+DPS_ageMaq.value+
+							"\nOwner do caso: "+DPS_owner.value+
+							"\nProblema atual: "+DPS_problema.value+
+							"\nTemperatura do cliente: "+DPS_temperatura.value+
+							"\n\nResumo do caso: "+DPS_resumo.value+
+							"\n\n1º DPS # "+DPS_dps1_num.value+" - "+DPS_dps1_tip.value+"\n"+
+							"Problema: "+DPS_dps1_pro.value+"\n"+
+							"Peças enviadas: "+DPS_dps1_par.value+"\n"+
+							"Aberto em: "+DPS_dps1_abe.value+"\n"+
+							"Concluído em: "+DPS_dps1_fec.value+"\n"+
+							"Reporte: "+DPS_dps1_rep.value+"\n"+
+							"\n"+
+							"2º DPS # "+DPS_dps2_num.value+" - "+DPS_dps2_tip.value+"\n"+
+							"Problema: "+DPS_dps2_pro.value+"\n"+
+							"Peças enviadas: "+DPS_dps2_par.value+"\n"+
+							"Aberto em: "+DPS_dps2_abe.value+"\n"+
+							"Concluído em: "+DPS_dps2_fec.value+"\n"+
+							"Reporte: "+DPS_dps2_rep.value+
+							"\n\n3º DPS # "+DPS_dps3_num.value+" - "+DPS_dps3_tip.value+"\n"+
+							"Problema: "+DPS_dps3_pro.value+"\n"+
+							"Peças enviadas: "+DPS_dps3_par.value+"\n"+
+							"Aberto em: "+DPS_dps3_abe.value+"\n"+
+							"Concluído em: "+DPS_dps3_fec.value+"\n"+
+							"Reporte: "+DPS_dps3_rep.value+
+							"\n\nAnálise do L2: "+DPS_analise.value
+		}
+	DPS_res.classList.remove("invisivel");
+	DPS_res.select();
+	document.execCommand('copy');
+	limpaCampos();
+	}
+);
+
+
+
+			/***	exchange	***/
+console.log("exchange.js funciona");
+
+var exchange_btnAdicionarDPS	= document.querySelector("#exchange_btn-adicionar-DPS");
+var exchange_trigger			= document.querySelector("#exchange_inp_trigger");
+var exchange_tag			= document.querySelector("#exchange_inp_tag");
+var exchange_modelo			= document.querySelector("#exchange_inp_modelo");
+var exchange_sr				= document.querySelector("#exchange_inp_sr");
+var exchange_caso			= document.querySelector("#exchange_inp_caso");
+var exchange_order			= document.querySelector("#exchange_inp_order");
+var exchange_cliente			= document.querySelector("#exchange_inp_cliente");
+var exchange_tel1			= document.querySelector("#exchange_inp_tel1");
+var exchange_tel2			= document.querySelector("#exchange_inp_tel2");
+var exchange_email			= document.querySelector("#exchange_inp_email");
+var exchange_resumo			= document.querySelector("#exchange_inp_resumo");
+var exchange_dps1 			= document.querySelector("#exchange_campos-DPS1");
+var exchange_dps1_num 		= document.querySelector("#exchange_templ_dps1_num");
+var exchange_dps1_tip 		= document.querySelector("#exchange_templ_dps1_tipo");
+var exchange_dps1_pro 		= document.querySelector("#exchange_templ_dps1_prob");
+var exchange_dps1_par 		= document.querySelector("#exchange_templ_dps1_part");
+var exchange_dps1_abe 		= document.querySelector("#exchange_templ_dps1_daber");
+var exchange_dps1_fec 		= document.querySelector("#exchange_templ_dps1_dconcl");
+var exchange_dps1_rep			= document.querySelector("#exchange_templ_dps1_report");
+var exchange_addDPS2			= document.querySelector("#exchange_adicionar-dps-2");
+
+var exchange_dps2			= document.querySelector("#exchange_campos-DPS2");
+var exchange_dps2_num			= document.querySelector("#exchange_templ_dps2_num");
+var exchange_dps2_tip			= document.querySelector("#exchange_templ_dps2_tipo");
+var exchange_dps2_pro			= document.querySelector("#exchange_templ_dps2_prob");
+var exchange_dps2_par			= document.querySelector("#exchange_templ_dps2_part");
+var exchange_dps2_abe			= document.querySelector("#exchange_templ_dps2_daber");
+var exchange_dps2_fec			= document.querySelector("#exchange_templ_dps2_dconcl");
+var exchange_dps2_rep			= document.querySelector("#exchange_templ_dps2_report");
+var exchange_addDPS3			= document.querySelector("#exchange_adicionar-dps-3");
+var exchange_dps3			= document.querySelector("#exchange_campos-DPS3");
+var exchange_dps3_num			= document.querySelector("#exchange_templ_dps3_num");
+var exchange_dps3_tip			= document.querySelector("#exchange_templ_dps3_tipo");
+var exchange_dps3_pro			= document.querySelector("#exchange_templ_dps3_prob");
+var exchange_dps3_par			= document.querySelector("#exchange_templ_dps3_part");
+var exchange_dps3_abe			= document.querySelector("#exchange_templ_dps3_daber");
+var exchange_dps3_fec			= document.querySelector("#exchange_templ_dps3_dconcl");
+var exchange_dps3_rep			= document.querySelector("#exchange_templ_dps3_report");
+var exchange_gerarTexto		= document.querySelector("#exchange_gerar_texto");
+var exchange_res			= document.querySelector("#exchange_resultado");
+
+exchange_btnAdicionarDPS.addEventListener("click", function(){
+	event.preventDefault();
+	exchange_dps1.classList.remove("invisivel");
+	exchange_btnAdicionarDPS.classList.add("invisivel");
+});
+exchange_addDPS2.addEventListener("click", function(){
+	event.preventDefault();
+	exchange_dps2.classList.remove("invisivel");
+	exchange_addDPS2.classList.add("invisivel");
+});
+
+exchange_addDPS3.addEventListener("click", function(){
+	event.preventDefault();
+	exchange_dps3.classList.remove("invisivel");
+	exchange_addDPS3.classList.add("invisivel");
+});
+
+
+exchange_gerarTexto.addEventListener("click", function(){
+	event.preventDefault();
+	if(exchange_dps1_num.value.length == 0 && exchange_dps2_num.value.length == 0 && exchange_dps3_num.value.length == 0){
+	exchange_res.textContent = 
+		"Trigger: "+exchange_inp_trigger.value+
+		"\n\nTAG: "+exchange_inp_tag.value+
+		"\nModelo: "+exchange_inp_modelo.value+
+		"\nSR# "+exchange_sr.value+
+		"\nSalesforce case# "+exchange_caso.value+
+		"\nOrdem: "+exchange_order.value+
+		"\nCliente: "+exchange_cliente.value+
+		"\nTel1: "+exchange_tel1.value+
+		"\nTel2: "+exchange_tel2.value+
+		"\nE-mail: "+exchange_email.value+
+		"\n\nResumo do caso: "+exchange_resumo.value+
+		"\n\nSem DPS neste atendimento"
+	}else{
+	if(exchange_dps2_num.value.length == 0 && exchange_dps3_num.value.length == 0){
+	exchange_res.textContent =
+		"Trigger: "+exchange_inp_trigger.value+
+		"\n\nTAG: "+exchange_inp_tag.value+
+		"\nModelo: "+exchange_inp_modelo.value+
+		"\nSR# "+exchange_sr.value+
+		"\nSalesforce case# "+exchange_caso.value+
+		"\nOrdem: "+exchange_order.value+
+		"\nCliente: "+exchange_cliente.value+
+		"\nTel1: "+exchange_tel1.value+
+		"\nTel2: "+exchange_tel2.value+
+		"\nE-mail: "+exchange_email.value+
+		"\n\nResumo do caso:  "+exchange_resumo.value+
+		"\n\n1º DPS # "+exchange_dps1_num.value+" - "+exchange_dps1_tip.value+
+		"\nProblema: "+exchange_dps1_pro.value+
+		"\nPeças enviadas: "+exchange_dps1_par.value+
+		"\nAberto em: "+exchange_dps1_abe.value+
+		"\nConcluído em: "+exchange_dps1_fec.value+
+		"\nReporte: "+exchange_dps1_rep.value
+	}else{
+	if(exchange_dps3_num.value.length == 0){
+	exchange_res.textContent =
+		
+		"Trigger: "+exchange_inp_trigger.value+
+		"\n\nTAG: "+exchange_inp_tag.value+
+		"\nModelo: "+exchange_inp_modelo.value+
+		"\nSR# "+exchange_sr.value+
+		"\nSalesforce case# "+exchange_caso.value+
+		"\nOrdem: "+exchange_order.value+
+		"\nCliente: "+exchange_cliente.value+
+		"\nTel1: "+exchange_tel1.value+
+		"\nTel2: "+exchange_tel2.value+
+		"\nE-mail: "+exchange_email.value+
+		"\n\nResumo do caso:  "+exchange_resumo.value+
+		"\n\n1º DPS # "+exchange_dps1_num.value+" - "+exchange_dps1_tip.value+"\n"+
+		"Problema: "+exchange_dps1_pro.value+"\n"+
+		"Peças enviadas: "+exchange_dps1_par.value+"\n"+
+		"Aberto em: "+exchange_dps1_abe.value+"\n"+
+		"Concluído em: "+exchange_dps1_fec.value+"\n"+
+		"Reporte: "+exchange_dps1_rep.value+"\n"+
+		"\n"+
+		"2º DPS # "+exchange_dps2_num.value+" - "+exchange_dps2_tip.value+"\n"+
+		"Problema: "+exchange_dps2_pro.value+"\n"+
+		"Peças enviadas: "+exchange_dps2_par.value+"\n"+
+		"Aberto em: "+exchange_dps2_abe.value+"\n"+
+		"Concluído em: "+exchange_dps2_fec.value+"\n"+
+		"Reporte: "+exchange_dps2_rep.value
+	}else{
+		exchange_res.textContent =
+		
+		"Trigger: "+exchange_inp_trigger.value+
+		"\n\nTAG: "+exchange_inp_tag.value+
+		"\nModelo: "+exchange_inp_modelo.value+
+		"\nSR# "+exchange_sr.value+
+		"\nSalesforce case# "+exchange_caso.value+
+		"\nOrdem: "+exchange_order.value+
+		"\nCliente: "+exchange_cliente.value+
+		"\nTel1: "+exchange_tel1.value+
+		"\nTel2: "+exchange_tel2.value+
+		"\nE-mail: "+exchange_email.value+
+		"\n\nResumo do caso:  "+exchange_resumo.value+
+		"\n\n1º DPS # "+exchange_dps1_num.value+" - "+exchange_dps1_tip.value+"\n"+
+		"Problema: "+exchange_dps1_pro.value+"\n"+
+		"Peças enviadas: "+exchange_dps1_par.value+"\n"+
+		"Aberto em: "+exchange_dps1_abe.value+"\n"+
+		"Concluído em: "+exchange_dps1_fec.value+"\n"+
+		"Reporte: "+exchange_dps1_rep.value+"\n"+
+		"\n"+
+		"2º DPS # "+exchange_dps2_num.value+" - "+exchange_dps2_tip.value+"\n"+
+		"Problema: "+exchange_dps2_pro.value+"\n"+
+		"Peças enviadas: "+exchange_dps2_par.value+"\n"+
+		"Aberto em: "+exchange_dps2_abe.value+"\n"+
+		"Concluído em: "+exchange_dps2_fec.value+"\n"+
+		"Reporte: "+exchange_dps2_rep.value+"\n"+
+		"\n"+
+		"3º DPS # "+exchange_dps3_num.value+" - "+exchange_dps3_tip.value+"\n"+
+		"Problema: "+exchange_dps3_pro.value+"\n"+
+		"Peças enviadas: "+exchange_dps3_par.value+"\n"+
+		"Aberto em: "+exchange_dps3_abe.value+"\n"+
+		"Concluído em: "+exchange_dps3_fec.value+"\n"+
+		"Reporte: "+exchange_dps3_rep.value
+	}
+}}
+		exchange_res.classList.remove("invisivel");
+		exchange_res.select();
+		document.execCommand('copy');
+		limpaCampos();
+});
+
+
+
+			/***	reembolso	***/
+console.log("reembolso.js funciona");
+
+var reembolso_reemb_inp_motivo 		= document.querySelector("#reembolso_reemb_motivo");
+var reembolso_reemb_inp_tag 		= document.querySelector("#reembolso_reemb_tag");
+var reembolso_reemb_inp_order 		= document.querySelector("#reembolso_reemb_order");
+var reembolso_reemb_inp_age_sr 		= document.querySelector("#reembolso_reemb_age_sr");
+var reembolso_reemb_inp_age_maq 	= document.querySelector("#reembolso_reemb_age_maq");
+var reembolso_reemb_inp_modelo 		= document.querySelector("#reembolso_reemb_modelo");
+var reembolso_reemb_inp_valor 		= document.querySelector("#reembolso_reemb_valor");
+var reembolso_gerarTexto 			= document.querySelector("#reembolso_gerar_texto");
+var reembolso_res 				= document.querySelector("#reembolso_resultado");
+
+reembolso_gerarTexto.addEventListener("click", function(){
+	event.preventDefault();
+	reembolso_res.textContent =
+		"Motivo da solicitação: "+reembolso_reemb_inp_motivo.value+";\n"+
+		"Número da Service tag: "+reembolso_reemb_inp_tag.value+";\n"+
+		"Número da ordem: "+reembolso_reemb_inp_order.value+";\n"+
+		"Age da SR: "+reembolso_reemb_inp_age_sr.value+";\n"+
+		"Age da Máquina: "+reembolso_reemb_inp_age_maq.value+";\n"+
+		"Modelo da máquina: "+reembolso_reemb_inp_modelo.value+";\n"+
+		"Valor que deve ser estornado: R$ "+reembolso_reemb_inp_valor.value+"."
+		reembolso_res.classList.remove("invisivel");
+		reembolso_res.select();
+		document.execCommand('copy');
+		limpaCampos();
+});
+
+
+
+			/***	office	***/
+
+var office_okb 		= document.querySelector("#office_inp_okb");
+var office_fixit 	= document.querySelector("#office_inp_fixit");
+var office_ospp 	= document.querySelector("#office_inp_ospp");
+var office_nome 	= document.querySelector("#office_inp_nome");
+var office_order 	= document.querySelector("#office_inp_order");
+var office_tag 		= document.querySelector("#office_inp_tag");
+var office_msa 		= document.querySelector("#office_inp_msa");
+var office_msaTestada	= document.querySelector("#office_inp_msaTestada");
+var office_sr 		= document.querySelector("#office_inp_sr");
+var office_gerarTexto	= document.querySelector("#office_botaoGerar");
+var office_res		= document.querySelector("#office_resultado");
+
+office_gerarTexto.addEventListener("click", function(){
+	event.preventDefault();
+	office_res.textContent =
+		"VersãodoOffice: "+$("#office_inp_versao").val()+
+		"\nDetalhesdaversão: "+$("#office_inp_detalhes").val()+
+		"\nOKButilizado: "+$("#office_inp_okb").val()+
+		"\nFixitMicrosoftExecutado: "+office_fixit.value+
+		"\nOSPP.loganexonaSR(SLN306817): "+office_ospp.value+
+		"\nNomecompletodocliente: "+office_nome.value+
+		"\nORDEM: "+office_order.value+
+		"\nTAG: "+office_tag.value+
+		"\nMSA: "+office_msa.value+
+		"\nMSAtestadacomcliente: "+office_msaTestada.value+
+		"\nSRMicrosoft: "+office_sr.value
+		office_res.classList.remove("invisivel");
+		office_res.select();
+		document.execCommand('copy');
+		limpaCampos();
+});
+
+
+
+			/***	contra_senha	***/
+
+$("#contrasenha-botaoGerar").click(
+	function(event){
+		event.preventDefault();
+		$("#contrasenha-resultado").text(
+			"Citrix: "+$("#contrasenha-login").val()+"\n"+
+			"Badge: "+$("#contrasenha-badge").val()+"\n"+
+			"Tipo de solicitacao: "+$("#contrasenha-tipo").val()+"\n"+
+			"Account TAG: "+$("#contrasenha-account").val()+"\n"+
+			"Nome do cliente: "+$("#contrasenha-cliente").val()+"\n"+
+			"E-mail do cliente: "+$("#contrasenha-email").val()+"\n"+
+			"Telefone do cliente: "+$("#contrasenha-telefone").val()+"\n"+
+			"TAG: "+$("#contrasenha-tag").val()+"\n"+
+			"Codigo: "+$("#contrasenha-codigo").val()
+		)
+		$("#contrasenha-resultado").slideDown(500);
+		$("#contrasenha-resultado").select();
+		document.execCommand('copy');
+		limpaCampos();
+	}
+);
+			/***	5 Good Lines	***/
+function limpaCampos(){
+	$("input").val("");
+	$(".frase").val("");
+	setTimeout(function(){
+		$("input").val("");
+		$(".frase").val("");
+	}, 1000)
+	$("#opcao-numero-federal-cpf").val("");
+	$("#opcao-data-federal-nascimento").val("");
+	$("#opcao-numero-federal-cnpj").val("");
+	$("#opcao-inscricao-federal-estadual").val("");
+	$("#opcao-numero-parts-only-cpf").val("");
+	$("#opcao-data-parts-only-nascimento").val("");
+	$("#opcao-numero-parts-only-cnpj").val("");
+	$("#opcao-inscricao-parts-only-estadual").val("");
+	$("#opcao-modelo").val("");
+	$("#inp_federal").val("");
+}
+function escondeCampos(){
+	$("#secao-federal").slideUp(500);
+	$("#secao-parts-only").slideUp(500);
+	$("#secao-hd").slideUp(500);
+	$("#secao-federal-cpf").slideUp(500);
+	$("#secao-federal-cnpj").slideUp(500);
+	$("#secao-parts-only-cpf").slideUp(500);
+	$("#secao-parts-only-cnpj").slideUp(500);
+}
+$("#opcao-federal").click(function(){
+	escondeCampos();
+	$("#secao-federal").slideDown(500);	
+	$("#inp_federal").val("Padrão Federal selecionado");
+});
+$("#opcao-parts-only").click(function(){
+	escondeCampos();
+	$("#secao-parts-only").slideDown(500);
+	$("#inp_federal").val("Padrão Parts-Only selecionado");
+});
+$("#opcao-hd").click(function(){
+	escondeCampos();
+	$("#secao-hd").slideDown(500);
+	$("#inp_federal").val("OS Download: <ARQUITETURA>, Language <IDIOMA>, Model <MODELO>, OS: <SISTEMA OPERACIONAL><VERSAO>");
+	$("#opcao-arquitetura").focus();
+});
+$("#opcao-nenhum").click(function(){
+	escondeCampos();
+});
+$("#opcao-federal-cpf").click(function (){
+	escondeCampos();
+	$("#secao-federal-cpf").slideDown(500);
+	$("#inp_federal").val("CPF:12345678910-BDATE:01/01/0101-");
+	$("#opcao-numero-federal-cpf").focus();
+
+	$("#opcao-numero-federal-cpf").focusout(function (){
+		atualizaFederalCPF();
+	});
+	$("#opcao-data-federal-nascimento").focusout(function (){
+		atualizaFederalCPF();
+	});
+	function atualizaFederalCPF(){
+		$("#inp_federal").val("CPF:"+$("#opcao-numero-federal-cpf").val()+"-BDATE:"+$("#opcao-data-federal-nascimento").val()+"-");
+	}
+});
+$("#opcao-federal-cnpj").click(function (){
+	escondeCampos();
+	$("#secao-federal-cnpj").slideDown(500);
+	$("#inp_federal").val("CNPJ:123456789123456789-STATE:1234567891234567-");
+	$("#opcao-numero-federal-cnpj").focus();
+
+	$("#opcao-numero-federal-cnpj").focusout(function (){
+		atualizaFederalCNPJ();
+	});
+	$("#opcao-inscricao-federal-estadual").focusout(function (){
+		atualizaFederalCNPJ();
+	});
+	function atualizaFederalCNPJ(){
+		var estadual = $("#opcao-inscricao-federal-estadual").val();
+		if(!$("#opcao-inscricao-federal-estadual").val() != ""){
+			$("#inp_federal").val("CNPJ:"+$("#opcao-numero-federal-cnpj").val()+"-STATE:ISENTO-");
+		}else{
+			$("#inp_federal").val("CNPJ:"+$("#opcao-numero-federal-cnpj").val()+"-STATE:"+estadual+"-");
+		}
+	}
+});
+$("#opcao-parts-only-cpf").click(function (){
+	escondeCampos();
+	$("#secao-parts-only-cpf").slideDown(500);
+	$("#inp_federal").val("FEDERAL:123456789012345678-STATE:ISENTO-BDATE:01/01/0101");
+	$("#opcao-numero-parts-only-cpf").focus();
+
+	$("#opcao-numero-parts-only-cpf").focusout(function (){
+		atualizaPartsOnlyCPF();
+	});
+	$("#opcao-data-parts-only-nascimento").focusout(function (){
+		atualizaPartsOnlyCPF();
+	});
+	function atualizaPartsOnlyCPF(){
+		$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cpf").val()+"-STATE:ISENTO-BDATE:"+$("#opcao-data-parts-only-nascimento").val());
+	}
+});
+$("#opcao-parts-only-cnpj").click(function (){
+	escondeCampos();
+	$("#secao-parts-only-cnpj").slideDown(500);
+	$("#inp_federal").val("FEDERAL:123456789123456789-STATE:1234567891234567-");
+	$("#opcao-numero-parts-only-cnpj").focus();
+
+	$("#opcao-numero-parts-only-cnpj").focusout(function (){
+		atualizaPartsOnlyCNPJ();
+		$("#opcao-inscricao-parts-only-estadual").focus();
+	});
+	$("#opcao-inscricao-parts-only-estadual").focusout(function (){
+		atualizaPartsOnlyCNPJ();
+	});
+	function atualizaPartsOnlyCNPJ(){
+		var estadual = $("#opcao-inscricao-parts-only-estadual").val();
+		if(!$("#opcao-inscricao-parts-only-estadual").val() != ""){
+			$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cnpj").val()+"-STATE:ISENTO-");
+		}else{
+			$("#inp_federal").val("FEDERAL:"+$("#opcao-numero-parts-only-cnpj").val()+"-STATE:"+estadual+"-");
+		}
+	}
+});
+$("#opcao-arquitetura").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-idioma").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-sistema").focusout(function(){
+	atualizaOSImage();
+});
+$("#opcao-modelo").focusout(function(){
+	atualizaOSImage();
+});
+function atualizaOSImage() {
+	$("#inp_federal").val("OS Download: "+$("#opcao-arquitetura").val()+", Language "+$("#opcao-idioma").val()+", Model "+$("#opcao-modelo").val()+", OS: "+$("#opcao-sistema").val())
+};
+$("#btnGerarGoodLines").click(function(event){
+	event.preventDefault();
+	if($("#inp_federal").val().length > 0){
+		$("#inp_resultado").val($("#inp_federal").val()+"\n"+"\nDiag: "+$("#inp_diag").val()+"\nCode: "+$("#inp_code").val()+"\nDPS: "+$("#inp_dps").val()+"\nSintoma: "+$("#inp_sintoma").val()+"\nInstrução: "+$("#inp_instrucao").val());
+	}else{
+		$("#inp_resultado").val("Diag: "+$("#inp_diag").val()+"\nCode: "+$("#inp_code").val()+"\nDPS: "+$("#inp_dps").val()+"\nSintoma: "+$("#inp_sintoma").val()+"\nInstrução: "+$("#inp_instrucao").val());
+	}
+	limpaCampos();
+	escondeCampos();
+	$("#inp_resultado").slideDown(1000);
+	$("#inp_resultado").select();
+	document.execCommand('copy');
+	setTimeout(
+		function(){
+			$("#inp_resultado").slideUp(1000)
+		},20000
+	)
+});
+</script>
+</body>
+</html>

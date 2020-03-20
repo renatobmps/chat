@@ -1,0 +1,100 @@
+/**Geral**/
+html, body{
+	height: 100%;
+}
+body{
+	display: flex;
+	flex-flow: column nowrap;
+	align-content: center;
+	background: #1086de;
+	border: 0;
+	font-family: 'Salesforce Sans',Arial,sans-serif;
+	font-size: 14px;
+    background: #ecf0f5;
+    margin: 0;
+}
+.material-icons{
+	vertical-align: middle;
+	margin: 0 5px;
+}
+.invisivel{
+	display: none;
+}
+
+/**Titulo**/
+.cabecalio{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background: #0076ce;
+    color: white;
+    text-align: center;
+}
+.cabecalio-titulo{
+    flex-grow: 1;
+    font-size: 1.5em;
+}
+a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+.cabecalio i{
+    color: #222d32;
+}
+.cabecalio ul, .cabecalio li{
+    list-style: none;
+	padding: 0;
+}
+.cabecalio-titulo{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.cabecalio-nav{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: .5em;
+    background: transparent;
+    padding: .5em;
+}
+#lista-atalhos {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    flex-flow: row wrap;
+}
+#lista-atalhos li {
+    border-right-style: dotted;
+    border-left-style: dotted;
+}
+#lista-config{
+    padding: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+	width: 100%;
+}
+#lista-config input{
+	color: #222d32;
+	text-align: center;
+	font-weight: bold;
+	
+}
+/**Principal**/
+.principal{
+	flex-grow: 1;
+}
+.frame{
+	width: 100%;
+	height: 100%;
+}
+/**Rodape**/
+.rodape{
+	background: #222d32;
+	color: white;
+	text-align: center;
+	padding: .5em;
+	border-top: 1px solid black;
+}
