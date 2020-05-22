@@ -1,18 +1,28 @@
 function desenhaSemDps() {
+    document.head.innerHTML = `
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat | Sem DPS</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="shotcut icon" href="img/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    `
     tela.innerHTML = `
     <div class="container">
         <form onsubmit="semDps.adiciona(event)">
             <div class="form-row">
                 <div class="form-group col">
-                    <label for="login">Owner</label>
+                    <label for="login">Owner Login</label>
                     <input type="text" class="form-control form-control-sm" id="login" required placeholder="Fulano_XX" pattern="[&quot;A-Za-z0-9_&quot;]{5,20}" title="login de Citrix">
                 </div>
                 <div class="form-group col">
-                    <label for="caso">Número da Case#</label>
+                    <label for="caso">Case</label>
                     <input type="number" class="form-control form-control-sm" id="caso" required placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
                 </div>
                 <div class="form-group col">
-                    <label for="data">Data de abertura de SR</label>
+                    <label for="data">Data</label>
                     <input type="date" class="form-control form-control-sm" id="data" required placeholder="XX/XX/XXXX" type="date" maxlength="8">
                 </div>
                 <div class="form-group col">
@@ -73,8 +83,7 @@ function desenhaSemDps() {
             </div>
             <div class="form-row">
                 <div class="form-group">
-                    <button class="btn btn-primary">Gerar registro</button>
-                    <button class="btn btn-primary">Limpar tabela</button>
+                    <button type="submit" class="btn btn-sm btn-primary">Gerar registro</button>
                 </div>
             </div>
         </form>
@@ -82,8 +91,10 @@ function desenhaSemDps() {
     <div class="container" id="semDpsView">
         <!--Table view-->
     </div>
+    <div class="container">
+        <button onclick="semDps.limpa()" class="btn btn-sm btn-outline-secondary">Limpar tabela</button>
+    </div>
     `
-    setTimeout(() => {
-        document.querySelector('tbody').innerHTML = localStorage.getItem('tabela')
-    }, 100)
+
+    new SemDpsController();
 }

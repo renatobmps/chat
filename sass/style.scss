@@ -1,33 +1,5 @@
-$cor-primaria: #010101;
-$cor-secundaria: brown;
-$cor-terciaria: #efefef;
+@import "style/var";
 
-body{
-    background: $cor-terciaria;
-    *, .btn-link{
-        color: $cor-primaria;
-    }
-    .invisivel{
-        display: none;
-    }
-    .material-icons{
-        vertical-align: middle;
-    }
-}
-header{
-    color: $cor-primaria;
-    background: $cor-secundaria;
-    .nav-link{
-        color: lighten($color: $cor-primaria, $amount: 20) !important;
-    }
-    .active{
-        .nav-link{
-            color: lighten($color: $cor-terciaria, $amount: 20) !important;
-        }
-    }
-}
+@import "style/global";
 
-@import "header/logo";
-.chat{
-    @import "main/chat";
-}
+@import "style/header/header.scss"

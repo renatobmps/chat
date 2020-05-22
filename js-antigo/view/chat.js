@@ -13,7 +13,7 @@ function validaNome() {
     }
 }
 validaNome()
-desenhaSemDps()
+desenhaChat()
 
 function desenhaChat(){
     {//desenha chat

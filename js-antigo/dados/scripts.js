@@ -57,7 +57,7 @@ chat = [
                 nome: `Continuidade`,
                 scripts: [
                     {
-                        id: "",
+                        id: "telefone",
                         input: [
                             `${cliente.telefone}`,
                         ],
@@ -65,7 +65,7 @@ chat = [
                         texto: `Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone ${cliente.telefone}, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.`
                     },
                     {
-                        id: "",
+                        id: "email",
                         input: [
                             `${cliente.email}`,
                         ],
@@ -79,7 +79,7 @@ chat = [
                         texto: `Me informe uma janela de horário (2 horas) em que possua disponibilidade para o nosso contato via telefone, se necessário, ou caso não tenha disponibilidade para nos atender devido serviço, estudo e etc, vamos te enviar um link de acesso remoto, assim conseguimos acessar sua máquina na sua presença e dar continuidade ao suporte.`
                     },
                     {
-                        id: "",
+                        id: "entrada",
                         input: [
                             `${analista.entrada}`,
                             `${analista.saida}`
@@ -190,7 +190,7 @@ chat = [
                         texto: `Levando em conta suas informações, estou abrindo o chamado técnico, mas não garanto que teremos assertividade na resolução do problema relatado. Pode ser que o caso não seja resolvido no primeiro chamado e o técnico terá que analisar o equipamento por completo, fazendo com que a máquina fique parada por um período maior.`
                     },
                     {
-                        id: "",
+                        id: "dps",
                         input: [
                             `${atendimento.dps}`,
                             `${atendimento.eticket}`
@@ -205,7 +205,7 @@ chat = [
                         - Deve usar a caixa original. Se você não possuir a caixa original, poderá comprar uma nos Correios e condicionar o equipamento de forma correta, para evitar danos físicos no envio. A caixa deve permanecer aberta para inspeção visual antes de ser enviado.`
                     },
                     {
-                        id: "",
+                        id: "cis",
                         input: [
                             `${atendimento.dps}`,
                             `${atendimento.cis}`
@@ -230,7 +230,7 @@ chat = [
                 nome: `Padrão de encerramento`,
                 scripts: [
                     {
-                        id: "",
+                        id: "telefone",
                         input: [
                             `${cliente.telefone}`
                         ],
@@ -238,7 +238,7 @@ chat = [
                         texto: `Vamos dar início nos testes para solucionar o problema da máquina. Caso a sessão caia, peço que NÃO retorne ao chat, eu retornarei no telefone ${cliente.telefone}, se eu não conseguir o contato, irei te encaminhar um e-mail e ficarei no aguardo da sua resposta.`
                     },
                     {
-                        id: "",
+                        id: "saida",
                         input: [
                             `${analista.entrada}`,
                             `${analista.saida}`
