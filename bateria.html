@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aleredan | Bateria</title>
+    <link rel="icon" href="img/icone_sitel.png">
+    <link rel="shotcut icon" href="img/icone_sitel.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/libs/icon.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <p style="border-radius: 50px; background-color: red; color: white; width: 1.5em; text-align: center; margin: 0;">S</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav-menu">
+                    <li class="nav-item"> <!--active-->
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="chat.html">Chat</a>
+                    </li>
+                    <li class="nav-item"> <!--active-->
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="good-lines.html">5 Good Lines</a>
+                    </li>
+                    <li class="nav-item"> <!--active-->
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="escalacao.html">Escalação</a>
+                    </li>
+                    <li class="nav-item"> <!--active-->
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="sem-dps.html">Sem DPS</a>
+                    </li>
+                    <li class="nav-item active"> <!--active-->
+                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="bateria.html">Bateria</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main id="section-bateria">
+        <form class="container">
+            <div class="dropdown-divider"></div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <small class="form-text text-muted">Para consultar o relatório, rode o comando <code>powercfg -energy</code> no <em>CMD</em> como administrador. Após carregar, basta abir o link <code>c:\Windows\System32\batteryreport.html</code></small>
+                    <small class="form-text text-muted"><a href="https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-8.1-and-8/hh824902(v=win.10)?redirectedfrom=MSDN" target="_blank" rel="noopener noreferrer">Mais informações</a></small>
+                </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="bateria-projeto">Projeto total</label>
+                    <input type="number" id="bateria-projeto" class="form-control form-control-sm" placeholder="41998" required min="1">
+                </div>
+                <div class="form-group col">
+                    <label for="bateria-atual">Último carregamento total</label>
+                    <input type="number" id="bateria-atual" class="form-control form-control-sm" placeholder="32889" required min="1">
+                </div>
+            </div>
+            <div class="form-row">
+                <button type="submit" class="btn btn-outline-primary">Calcular saúde</button>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <textarea id="bateria-resultado" cols="30" rows="5" class="form-control" disabled readonly>Resultado...</textarea>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+    
+    <!--Imports-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="js/app/libs/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="js/app/libs/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="js/app/libs/bootstrap.min.js"></script>
+    
+    <script>
+        let $ = document.querySelector.bind(document)
+
+        $("#bateria-projeto").value = sessionStorage.getItem("bateria-projeto") || 40000
+        $("#bateria-atual").value = sessionStorage.getItem('bateria-atual') || 40000
+        
+        let retorno = calculaBateria($("#bateria-projeto").value, $("#bateria-atual").value)
+
+        comparaValores(retorno)
+
+        $("#bateria-projeto").focus()
+        
+        $("form").addEventListener("submit", event => {
+            event.preventDefault()
+            
+            let retorno = calculaBateria($("#bateria-projeto").value, $("#bateria-atual").value)
+            
+            comparaValores(retorno)
+        })
+        document.querySelectorAll(".form-control").forEach(i => {
+            i.addEventListener("input", () => {
+                let retorno = calculaBateria($("#bateria-projeto").value, $("#bateria-atual").value)
+                
+                comparaValores(retorno)
+
+                sessionStorage.setItem('bateria-projeto', $("#bateria-projeto").value)
+                sessionStorage.setItem('bateria-atual', $("#bateria-atual").value)
+            })
+        })
+        function calculaBateria(projeto, atual){
+            let saude = ((100*atual)/projeto).toFixed(2)
+            
+            return parseFloat(saude)
+        }
+        function comparaValores(retorno) {
+            if ($("#bateria-projeto").value < 1 || $("#bateria-atual").value < 1 || parseInt($("#bateria-atual").value) > parseInt($("#bateria-projeto").value)) {
+                $("#bateria-projeto").focus()
+                $("#bateria-resultado").value = `Revise os valores digitados`
+            }else{
+                if (retorno <= 75) {    
+                    $("#bateria-resultado").value = 
+                    `Saúde: ${retorno}%\nDegradado: ${(100 - retorno).toFixed(2)}%\n\nResultado: Trocar a bateria se age menor do que 1 ano`
+                    $("#bateria-resultado").style = `border: 1px solid red; color: red; font-wegth: bold`
+                }else{
+                    $("#bateria-resultado").value = 
+                    `Saúde: ${retorno}%\nDegradado: ${(100 - retorno).toFixed(2)}%\n\nResultado: Dentro do esperado`
+                    $("#bateria-resultado").style = `border: 1px solid green; color: green; font-wegth: bold`
+                }
+            }
+        }
+    </script>
+</body>
+</html>
