@@ -111,7 +111,7 @@ class RepeatDpsView extends View{
             <div class="form-row">
                 <div class="form-group col">
                     <label for="release-resumo">Resumo do caso</label>
-                    <textarea id="release-resumo" cols="30" rows="10" required class="form-control form-control-sm">Era uma vez...</textarea>
+                    <textarea id="release-resumo" cols="30" rows="10" required class="form-control form-control-sm"></textarea>
                 </div>
             </div>
             <div class="dropdown-divider"></div>
@@ -122,9 +122,11 @@ class RepeatDpsView extends View{
                 </div>
             </div>
             <div class="dropdown-divider"></div>
-            
             //Aqui falta colocar um método de adicionar DPSs
-            <button type="submit" class="btn btn-outline-primary">Gerar template e copiar</button>
+            <div class="dropdown-divider"></div>
+            <button type="submit" class="btn btn-outline-primary btn-block">Gerar template e copiar</button>
+            <div class="dropdown-divider"></div>
+            //Aqui terá o campo para resultado
         </form>
         `
     }

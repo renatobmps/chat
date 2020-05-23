@@ -42,6 +42,7 @@ class SemDpsController{
                 this._semDpsView.update(this._listaSemDps)
                 
                 this._addLocalStorage('login', this._inputLogin.value)
+                this._addLocalStorage('caso', this._inputCaso.value)
                 this._addLocalStorage('hoje', this._inputData.value)
         
                 this._limpaFormulario()
@@ -75,7 +76,7 @@ class SemDpsController{
         
         this._inputLogin.focus();
         this._inputLogin.value = localStorage.getItem('login')
-        this._inputCaso.value = '';
+        this._inputCaso.value = localStorage.getItem('caso')
         this._inputData.value = localStorage.getItem('hoje') //new Date();
         this._inputArtigo.value = '';
         this._inputMotivo.value = '';

@@ -19,7 +19,7 @@ class EscalacaoController{
         //this.officeView = new OfficeView($("#office"))
         //this.officeView.update()
 
-        //this.contaSenhaView = new ContraSenhaView($("#contra-senha"))
-        //this.contaSenhaView.update()
+        this.contaSenhaView = new ContraSenhaView($("#contra-senha"))
+        this.contaSenhaView.update()
     }
 }
