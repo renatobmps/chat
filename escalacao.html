@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleredan | Escalação</title>
+    <title>...</title>
     <link rel="icon" href="img/icone_sitel.png">
     <link rel="shotcut icon" href="img/icone_sitel.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,34 +13,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="index.html">
-                <p style="border-radius: 50px; background-color: red; color: white; width: 1.5em; text-align: center; margin: 0;">S</p>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav-menu">
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="chat.html">Chat</a>
-                    </li>
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="good-lines.html">5 Good Lines</a>
-                    </li>
-                    <li class="nav-item active"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="escalacao.html">Escalação</a>
-                    </li>
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="sem-dps.html">Sem DPS</a>
-                    </li>
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="bateria.html">Bateria</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <header class="menu-view">
+        
     </header>
     <main id="section-escalacao">
         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
@@ -70,14 +44,14 @@
             <li class="nav-item dropdown" role="presentation">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Links</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" target="_blank" href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp">Validar CPF</a>
-                    <a class="dropdown-item" target="_blank" href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp">Validar CNPJ</a>
-                    <a class="dropdown-item" target="_blank" href="http://www.sintegra.gov.br/">Sintegra</a>
-                    <a class="dropdown-item" target="_blank" href="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm">Consultar CEP</a>
+                    <a class="dropdown-item" id="link-cpf-tab" data-toggle="tab" href="#link-cpf" role="tab" aria-controls="link-cpf" aria-selected="false" target="_blank" href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp">Validar CPF</a>
+                    <a class="dropdown-item" id="link-cnpj-tab" data-toggle="tab" href="#link-cnpj" role="tab" aria-controls="link-cnpj" aria-selected="false" target="_blank" href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp">Validar CNPJ</a>
+                    <a class="dropdown-item" id="link-sintegra-tab" data-toggle="tab" href="#link-sintegra" role="tab" aria-controls="link-sintegra" aria-selected="false" target="_blank" href="http://www.sintegra.gov.br/">Sintegra</a>
+                    <a class="dropdown-item" id="link-cep-tab" data-toggle="tab" href="#link-cep" role="tab" aria-controls="link-cep" aria-selected="false" target="_blank" href="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm">Consultar CEP</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" target="_blank" href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf">Processo 320</a>
-                    <a class="dropdown-item" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf">Processo 230</a>
-                    <a class="dropdown-item" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf">Processo 231</a>
+                    <a class="dropdown-item" id="link-320-tab" data-toggle="tab" href="#link-320" role="tab" aria-controls="link-320" aria-selected="false" target="_blank" href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf">Processo 320</a>
+                    <a class="dropdown-item" id="link-230-tab" data-toggle="tab" href="#link-230" role="tab" aria-controls="link-230" aria-selected="false" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf">Processo 230</a>
+                    <a class="dropdown-item" id="link-231-tab" data-toggle="tab" href="#link-231" role="tab" aria-controls="link-231" aria-selected="false" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf">Processo 231</a>
                 </div>
             </li>
         </ul>
@@ -89,6 +63,15 @@
             <div class="tab-pane fade" id="reembolso" role="tabpanel" aria-labelledby="reembolso-tab">Form de reembolso...</div>
             <div class="tab-pane fade" id="office" role="tabpanel" aria-labelledby="office-tab">Form Office...</div>
             <div class="tab-pane fade" id="contra-senha" role="tabpanel" aria-labelledby="contra-senha-tab">Form de contrasenha...</div>
+            <!--links-->
+            <iframe src="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cpf" role="tabpanel" aria-labelledby="link-cpf-tab"></iframe>
+            <iframe src="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cnpj" role="tabpanel" aria-labelledby="link-cnpj-tab"></iframe>
+            <iframe src="http://www.sintegra.gov.br/" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-sintegra" role="tabpanel" aria-labelledby="link-sintegra-tab"></iframe>
+            <iframe src="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cep" role="tabpanel" aria-labelledby="link-cep-tab"></iframe>
+
+            <iframe src="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-320" role="tabpanel" aria-labelledby="link-320-tab"></iframe>
+            <iframe src="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-230" role="tabpanel" aria-labelledby="link-230-tab"></iframe>
+            <iframe src="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-231" role="tabpanel" aria-labelledby="link-231-tab"></iframe>
         </div>
     </main>
     <footer></footer>
@@ -101,16 +84,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/app/libs/bootstrap.min.js"></script>
     
-    <!--<script>
-        document.querySelector(".navbar").addEventListener("click", function(event){
-            if(event.target.nodeName == "A"){
-                document.querySelectorAll(".navbar li").forEach(i => {
-                    i.classList.remove("active")
-                })
-                event.target.parentElement.classList.add("active")
-            }
-        })
-    </script>-->
     <script src="js/app/models/TemplateContraSenha.js"></script>
     <script src="js/app/models/TemplateDps.js"></script>
     <script src="js/app/models/TemplateExchange.js"></script>
@@ -120,6 +93,7 @@
     <script src="js/app/models/TemplateRepeatDps.js"></script>
 
     <script src="js/app/view/View.js"></script>
+    <script src="js/app/view/MenuPaginas.js"></script>
     <script src="js/app/view/ContraSenhaView.js"></script>
     <script src="js/app/view/ExchangeView.js"></script>
     <script src="js/app/view/GuidanceView.js"></script>

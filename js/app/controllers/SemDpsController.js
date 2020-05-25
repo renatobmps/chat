@@ -3,6 +3,9 @@ class SemDpsController{
     constructor(){
         
         let $ = document.querySelector.bind(document)
+
+        this._menuView = new MenuPaginas($(".menu-view"), "ativo-sem-dps", "Sem DPS")
+        this._menuView.update()
         
         this._inputLogin = $("#login");
         this._inputCaso = $("#caso");

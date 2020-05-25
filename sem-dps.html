@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aleredan | Sem DPS</title>
+    <title>...</title>
     <link rel="icon" href="img/logo.png">
     <link rel="shotcut icon" href="img/logo.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -13,63 +13,37 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <a class="navbar-brand" href="index.html">
-                <p style="border-radius: 50px; background-color: red; color: white; width: 1.5em; text-align: center; margin: 0;">S</p>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav-menu">
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="chat.html">Chat</a>
-                    </li>
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="good-lines.html">5 Good Lines</a>
-                    </li>
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="escalacao.html">Escalação</a>
-                    </li>
-                    <li class="nav-item active"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="sem-dps.html">Sem DPS</a>
-                    </li>
-                    <li class="nav-item"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="batera.html">Bateria</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <header class="menu-view">
+        
     </header>
     <main id="section-sem-dps">
         <div class="container">
             <form onsubmit="semDps.adiciona(event)">
                 <div class="form-row">
                     <div class="form-group col">
-                        <label for="login">Owner Login *</label>
+                        <label for="login">Login</label>
                         <input type="text" class="form-control form-control-sm" id="login" required="" placeholder="seu_login_de_citrix" pattern="[&quot;A-Za-z0-9_&quot;]{5,20}" title="login de Citrix">
                     </div>
                     <div class="form-group col">
-                        <label for="caso">Case *</label>
+                        <label for="caso">Case</label>
                         <input type="number" class="form-control form-control-sm" id="caso" required="" placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
                     </div>
                     <div class="form-group col">
-                        <label for="data">Data *</label>
+                        <label for="data">Data</label>
                         <input type="date" class="form-control form-control-sm" id="data" required="" placeholder="XX/XX/XXXX" maxlength="8">
                     </div>
                     <div class="form-group col">
-                        <label for="artigo">Oracle ID</label>
+                        <label for="artigo">Oracle</label>
                         <input type="text" class="form-control form-control-sm" id="artigo" required="" placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col">
-                        <label for="motivo">Motivo da não abertura do DPS</label>
+                        <label for="motivo">Motivo do NoDPS</label>
                         <textarea class="form-control form-control-sm" id="motivo" required="" placeholder="Cliente fazendo as atualizações pendentes do windows update"></textarea>
                     </div>
                     <div class="form-group col">
-                        <label for="problema">Problema</label>
+                        <label for="problema">Problema da máquina</label>
                         <select class="custom-select" size="2" id="problema" required="" placeholder="Teclado numérico não funciona">
                             <option value="3rd Party Hardware">3rd Party Hardware</option>
                             <option value="3rd Party Software">3rd Party Software</option>
@@ -153,6 +127,8 @@
     <script src="js/app/dao/SemDpsDao.js"></script>
     <script src="js/app/helpers/DateHelper.js"></script>
     
+    <script src="js/app/view/View.js"></script>
+    <script src="js/app/view/MenuPaginas.js"></script>
     <script src="js/app/view/semDpsView.js"></script>
     <script src="js/app/controllers/SemDpsController.js"></script>
     
