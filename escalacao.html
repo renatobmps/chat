@@ -19,59 +19,66 @@
     <main id="section-escalacao">
         <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="guidance-tab" data-toggle="tab" href="#guidance" role="tab" aria-controls="guidance" aria-selected="true">Guidance</a>
+                <a class="nav-link disabled" id="guidance-tab" data-toggle="tab" href="#guidance" role="tab" aria-controls="guidance" aria-selected="true">Guidance</a>
             </li>
             
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="dps-repeat-tab" data-toggle="tab" href="#dps-repeat" role="tab" aria-controls="dps-repeat" aria-selected="false">3º/4º/5º DPS</a>
+                <a class="nav-link disabled" id="dps-repeat-tab" data-toggle="tab" href="#dps-repeat" role="tab" aria-controls="dps-repeat" aria-selected="false">3º/4º/5º DPS</a>
             </li>
             
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="exchange-tab" data-toggle="tab" href="#exchange" role="tab" aria-controls="exchange" aria-selected="false">Exchange</a>
+                <a class="nav-link  disabled" id="exchange-tab" data-toggle="tab" href="#exchange" role="tab" aria-controls="exchange" aria-selected="false">Exchange</a>
             </li>
             
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="reembolso-tab" data-toggle="tab" href="#reembolso" role="tab" aria-controls="reembolso" aria-selected="true">Reembolso</a>
+                <a class="nav-link disabled" id="reembolso-tab" data-toggle="tab" href="#reembolso" role="tab" aria-controls="reembolso" aria-selected="true">Reembolso</a>
             </li>
             
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="office-tab" data-toggle="tab" href="#office" role="tab" aria-controls="office" aria-selected="false">Office</a>
+                <a class="nav-link disabled" id="office-tab" data-toggle="tab" href="#office" role="tab" aria-controls="office" aria-selected="false">Office</a>
             </li>
             
             <li class="nav-item" role="presentation">
-                <a class="nav-link" id="contra-senha-tab" data-toggle="tab" href="#contra-senha" role="tab" aria-controls="contra-senha" aria-selected="false">Contra senha</a>
+                <a class="nav-link active" id="contra-senha-tab" data-toggle="tab" href="#contra-senha" role="tab" aria-controls="contra-senha" aria-selected="false">Contra senha</a>
             </li>
             <li class="nav-item dropdown" role="presentation">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Links</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" id="link-cpf-tab" data-toggle="tab" href="#link-cpf" role="tab" aria-controls="link-cpf" aria-selected="false" target="_blank" href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp">Validar CPF</a>
-                    <a class="dropdown-item" id="link-cnpj-tab" data-toggle="tab" href="#link-cnpj" role="tab" aria-controls="link-cnpj" aria-selected="false" target="_blank" href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp">Validar CNPJ</a>
+                    <!--<a class="dropdown-item" id="link-cpf-tab" data-toggle="tab" href="#link-cpf" role="tab" aria-controls="link-cpf" aria-selected="false" target="_blank" href="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp">Validar CPF</a>
+                    <a class="dropdown-item" target="_blank" href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp">Validar CNPJ</a>
+                    <a class="dropdown-item" target="_blank" href="http://www.sintegra.gov.br/">Sintegra</a>
+                    <a class="dropdown-item" target="_blank" href="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm">Consultar CEP</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" target="_blank" href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf">Processo 320</a>
+                    <a class="dropdown-item" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf">Processo 230</a>
+                    <a class="dropdown-item" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf">Processo 231</a>
+                    <!--<a class="dropdown-item" id="link-cnpj-tab" data-toggle="tab" href="#link-cnpj" role="tab" aria-controls="link-cnpj" aria-selected="false" target="_blank" href="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp">Validar CNPJ</a>
                     <a class="dropdown-item" id="link-sintegra-tab" data-toggle="tab" href="#link-sintegra" role="tab" aria-controls="link-sintegra" aria-selected="false" target="_blank" href="http://www.sintegra.gov.br/">Sintegra</a>
                     <a class="dropdown-item" id="link-cep-tab" data-toggle="tab" href="#link-cep" role="tab" aria-controls="link-cep" aria-selected="false" target="_blank" href="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm">Consultar CEP</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" id="link-320-tab" data-toggle="tab" href="#link-320" role="tab" aria-controls="link-320" aria-selected="false" target="_blank" href="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf">Processo 320</a>
                     <a class="dropdown-item" id="link-230-tab" data-toggle="tab" href="#link-230" role="tab" aria-controls="link-230" aria-selected="false" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf">Processo 230</a>
-                    <a class="dropdown-item" id="link-231-tab" data-toggle="tab" href="#link-231" role="tab" aria-controls="link-231" aria-selected="false" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf">Processo 231</a>
+                    <a class="dropdown-item" id="link-231-tab" data-toggle="tab" href="#link-231" role="tab" aria-controls="link-231" aria-selected="false" target="_blank" href="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf">Processo 231</a>-->
                 </div>
             </li>
         </ul>
         <div class="tab-content container" id="myTabContent">
             <!--forms aqui-->
-            <div class="tab-pane fade show active" id="guidance" role="tabpanel" aria-labelledby="guidance-tab">Form de guidance...</div>
+            <div class="tab-pane fade" id="guidance" role="tabpanel" aria-labelledby="guidance-tab">Form de guidance...</div>
             <div class="tab-pane fade" id="dps-repeat" role="tabpanel" aria-labelledby="dps-repeat-tab">Form de 3º, 4º e 5º DPSs...</div>
             <div class="tab-pane fade" id="exchange" role="tabpanel" aria-labelledby="exchange-tab">Form de Exchange...</div>
             <div class="tab-pane fade" id="reembolso" role="tabpanel" aria-labelledby="reembolso-tab">Form de reembolso...</div>
             <div class="tab-pane fade" id="office" role="tabpanel" aria-labelledby="office-tab">Form Office...</div>
-            <div class="tab-pane fade" id="contra-senha" role="tabpanel" aria-labelledby="contra-senha-tab">Form de contrasenha...</div>
+            <div class="tab-pane fade show active" id="contra-senha" role="tabpanel" aria-labelledby="contra-senha-tab">Form de contrasenha...</div>
             <!--links-->
-            <iframe src="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cpf" role="tabpanel" aria-labelledby="link-cpf-tab"></iframe>
+            <!--<iframe src="https://servicos.receita.fazenda.gov.br/Servicos/CPF/ConsultaSituacao/ConsultaPublica.asp" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cpf" role="tabpanel" aria-labelledby="link-cpf-tab"></iframe>
             <iframe src="https://www.receita.fazenda.gov.br/pessoajuridica/cnpj/cnpjreva/cnpjreva_solicitacao2.asp" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cnpj" role="tabpanel" aria-labelledby="link-cnpj-tab"></iframe>
             <iframe src="http://www.sintegra.gov.br/" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-sintegra" role="tabpanel" aria-labelledby="link-sintegra-tab"></iframe>
             <iframe src="http://www.buscacep.correios.com.br/sistemas/buscacep/buscaCepEndereco.cfm" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-cep" role="tabpanel" aria-labelledby="link-cep-tab"></iframe>
 
             <iframe src="file:///Z:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/320_TECH_MASTER%20COMO%20ABRIR%20UM%20CHAMADO%20REV52.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-320" role="tabpanel" aria-labelledby="link-320-tab"></iframe>
             <iframe src="file:///S:/03.TECH/08.%20PROCESSOS/L1/Tech%20(Cons%20&%20Comm)/230_TECH_COMO%20ESCALAR%20UM%20CASO%20L1%20REV54.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-230" role="tabpanel" aria-labelledby="link-230-tab"></iframe>
-            <iframe src="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-231" role="tabpanel" aria-labelledby="link-231-tab"></iframe>
+            <iframe src="file:///S:/03.TECH/08.%20PROCESSOS/L2_SUPERVISOR/Tech%20(Cons%20&%20Comm)/231_TECH_COMO%20ESCALAR%20UM%20CASO%20L2%20REV62.pdf" frameborder="0" width="100%" height="500px" class="tab-pane fade" id="link-231" role="tabpanel" aria-labelledby="link-231-tab"></iframe>-->
         </div>
     </main>
     <footer></footer>

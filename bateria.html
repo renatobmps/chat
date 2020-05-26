@@ -64,8 +64,8 @@
         this._menuView = new MenuPaginas($(".menu-view"), "ativo-bateria", "Calculadora de bateria")
         this._menuView.update()
 
-        $("#bateria-projeto").value = sessionStorage.getItem("bateria-projeto") || 40000
-        $("#bateria-atual").value = sessionStorage.getItem('bateria-atual') || 40000
+        $("#bateria-projeto").value = localStorage.getItem("bateria-projeto") || 40000
+        $("#bateria-atual").value = localStorage.getItem('bateria-atual') || 40000
         
         let retorno = calculaBateria($("#bateria-projeto").value, $("#bateria-atual").value)
 
@@ -73,21 +73,14 @@
 
         $("#bateria-projeto").focus()
         
-        $("form").addEventListener("submit", event => {
-            event.preventDefault()
-            
-            let retorno = calculaBateria($("#bateria-projeto").value, $("#bateria-atual").value)
-            
-            comparaValores(retorno)
-        })
         document.querySelectorAll(".form-control").forEach(i => {
             i.addEventListener("input", () => {
                 let retorno = calculaBateria($("#bateria-projeto").value, $("#bateria-atual").value)
                 
                 comparaValores(retorno)
 
-                sessionStorage.setItem('bateria-projeto', $("#bateria-projeto").value)
-                sessionStorage.setItem('bateria-atual', $("#bateria-atual").value)
+                localStorage.setItem('bateria-projeto', $("#bateria-projeto").value)
+                localStorage.setItem('bateria-atual', $("#bateria-atual").value)
             })
         })
         function calculaBateria(projeto, atual){

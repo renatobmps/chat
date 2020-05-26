@@ -4,7 +4,7 @@ class ContraSenhaView extends View{
     }
     template(model){
         return `
-        <form>
+        <form onsubmit="escalacao.adicionaContraSenha(event)">
             <div class="form-row">
                 <div class="form-group col">
                     <label for="contra-login">Citrix</label>

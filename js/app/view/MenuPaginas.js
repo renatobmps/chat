@@ -26,10 +26,10 @@ class MenuPaginas extends View {
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav-menu">
                     <li class="nav-item ativo-chat"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="chat.html">Chat</a>
+                        <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="chat.html">Chat</a>
                     </li>
                     <li class="nav-item ativo-good-lines"> <!--active-->
-                        <a class="nav-link" tabindex="-1" aria-disabled="true" href="good-lines.html">5 Good Lines</a>
+                        <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="good-lines.html">5 Good Lines</a>
                     </li>
                     <li class="nav-item ativo-escalacao"> <!--active-->
                         <a class="nav-link" tabindex="-1" aria-disabled="true" href="escalacao.html">Escalação</a>

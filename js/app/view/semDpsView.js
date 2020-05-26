@@ -9,7 +9,7 @@ class semDpsView{
         
         return `
         <div class="table-responsive">
-        <table class="table table-sm table-hover">
+        <table class="table table-sm table-hover user-select-all">
             <thead>
                 <tr>
                     <th scope="col">Owner</th>

@@ -89,15 +89,15 @@
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-sm btn-primary">Gerar registro</button>
-                    </div>
+                    <button type="submit" class="btn btn-outline-primary btn-block">Gerar registro</button>
                 </div>
             </form>
         </div>
+        <div class="dropdown-divider"></div>
         <div id="semDpsView" class="container"></div>
+        <div class="dropdown-divider"></div>
         <div class="container">
-            <button onclick="semDps.limpa()" class="btn btn-sm btn-outline-secondary">Limpar tabela</button>
+            <button onclick="semDps.limpa()" class="btn btn-outline-secondary">Limpar tabela</button>
         </div>
     </main>
     <footer></footer>
@@ -110,19 +110,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/app/libs/bootstrap.min.js"></script>
     
-    <!--<script>
-        document.querySelector(".navbar").addEventListener("click", function(event){
-            if(event.target.nodeName == "A"){
-                document.querySelectorAll(".navbar li").forEach(i => {
-                    i.classList.remove("active")
-                })
-                event.target.parentElement.classList.add("active")
-            }
-        })
-    </script>-->
     <script src="js/app/models/SemDps.js"></script>
     <script src="js/app/models/ListaSemDps.js"></script>
-
+    
     <script src="js/app/service/ConnectionFactory.js"></script>
     <script src="js/app/dao/SemDpsDao.js"></script>
     <script src="js/app/helpers/DateHelper.js"></script>
