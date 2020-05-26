@@ -43,7 +43,7 @@ class ContraSenhaView extends View{
             <div class="form-row">
                 <div class="form-group col input-group-sm">
                     <label for="contra-tipo">Tipo de solicitação</label>
-                    <select id="contra-tipo" class="custom-select">
+                    <select id="contra-tipo" class="custom-select" required>
                         <option value="BIOS">BIOS</option>
                         <option value="ADMIN">Admin</option>
                         <option value="HDD">HD</option>
@@ -57,7 +57,11 @@ class ContraSenhaView extends View{
             <div class="dropdown-divider"></div>
             <button type="submit" class="btn btn-outline-primary btn-block">Gerar template e copiar</button>
             <div class="dropdown-divider"></div>
-            //Aqui tem que aparecer o resultado
+            <div class="form-row">
+                <div class="form-group col">
+                    <textarea id="contra-senha-resultado" cols="30" rows="5" class="form-control" readonly></textarea>
+                </div>
+            </div>
         </form>
         `
     }

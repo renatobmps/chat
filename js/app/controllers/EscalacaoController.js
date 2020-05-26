@@ -34,6 +34,7 @@ class EscalacaoController{
         this._inputContraTelefone = $("#contra-telefone")
         this._inputContraTipo = $("#contra-tipo")
         this._inputContraCodigo = $("#contra-codigo")
+        this._outputContraResultado = $("#contra-senha-resultado")
 
         this._limpaForm()
     }
@@ -42,7 +43,17 @@ class EscalacaoController{
 
         event.preventDefault()
 
-        alert("Submitou")
+        localStorage.setItem('login', this._inputContraLogin.value)
+        localStorage.setItem('badge', this._inputContraBadge.value)
+        localStorage.setItem('tag', this._inputContraTag.value)
+        localStorage.setItem('cliente', this._inputContraCliente.value)
+        localStorage.setItem('email', this._inputContraEmail.value)
+        localStorage.setItem('telefone', this._inputContraTelefone.value)
+
+        this._outputContraResultado.value = `Citrix: ${this._inputContraLogin.value}\nBadge: ${this._inputContraBadge.value}\nTipo de solicitacao: ${this._inputContraTipo.value}\nAccount TAG: ${this._inputContraAccount.value}\nNome do cliente: ${this._inputContraCliente.value}\nE-mail do cliente: ${this._inputContraEmail.value}\nTelefone do cliente: ${this._inputContraTelefone.value}\nTAG: ${this._inputContraTag.value}\nCodigo: ${this._inputContraCodigo.value}`
+
+        this._outputContraResultado.select()
+        document.execCommand('copy')
 
         this._limpaForm()
     }
