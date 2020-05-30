@@ -3,6 +3,9 @@ class SemDpsController{
     constructor(){
         
         let $ = document.querySelector.bind(document)
+
+        this._menuView = new MenuPaginas($(".menu-view"), "ativo-sem-dps", "Sem DPS")
+        this._menuView.update()
         
         this._inputLogin = $("#login");
         this._inputCaso = $("#caso");
@@ -13,7 +16,7 @@ class SemDpsController{
         
         this._listaSemDps = new ListaSemDps()
         
-        this._semDpsView = new semDpsView($("#semDpsView"))
+        this._semDpsView = new SemDpsView($("#semDpsView"))
         this._semDpsView.update(this._listaSemDps)
         
         this._limpaFormulario()
@@ -41,8 +44,10 @@ class SemDpsController{
         
                 this._semDpsView.update(this._listaSemDps)
                 
-                this._addLocalStorage('login', this._inputLogin.value)
-                this._addLocalStorage('hoje', this._inputData.value)
+                localStorage.setItem('login', this._inputLogin.value)
+                localStorage.setItem('caso', this._inputCaso.value)
+                localStorage.setItem('hoje', this._inputData.value)
+                localStorage.setItem('problema', this._inputProblema.value)
         
                 this._limpaFormulario()
             }).catch(erro => console.log(erro))
@@ -75,10 +80,11 @@ class SemDpsController{
         
         this._inputLogin.focus();
         this._inputLogin.value = localStorage.getItem('login')
-        this._inputCaso.value = '';
+        this._inputCaso.value = localStorage.getItem('caso')
         this._inputData.value = localStorage.getItem('hoje') //new Date();
         this._inputArtigo.value = '';
         this._inputMotivo.value = '';
+        this._inputProblema.value = localStorage.getItem('problema');
     }
     _addLocalStorage(id, valor){
         

@@ -6,7 +6,7 @@ class MenuPaginas extends View {
         this._id = id;
         this._titulo = titulo
 
-        this.nomePagina = "Sistema Indigente"
+        this.nomePagina = "Nananico"
 
         setTimeout(() => {
             this._ativo(this._id)

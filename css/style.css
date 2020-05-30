@@ -1,10 +1,11 @@
 .invisivel {
-  display: none; }
+    display: none;
+}
 
 .navbar {
-  background-color: brown;
-  margin-bottom: 2em; }
-  .navbar a {
-    color: #efefef; }
-
-/*# sourceMappingURL=style.css.map */
+    background-color: brown;
+    margin-bottom: 2em;
+}
+.navbar a {
+    color: #efefef;
+}

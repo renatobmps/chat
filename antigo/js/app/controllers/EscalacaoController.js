@@ -95,7 +95,7 @@ class EscalacaoController{
 
         let office = new TemplateOffice(this._inputOfficeVersao.value, this._inputOfficeDetalhe.value, this._inputOfficeArtigo.value, this._inputOfficeFixit.value, this._inputOfficeOspp.value, this._inputOfficeCliente.value, this._inputOfficeOrdem.value, this._inputOfficeTag.value, this._inputOfficeMsa.value, this._inputOfficeMsaTestada.value, this._inputOfficeSr.value)
 
-        this._outputOfficeResultado.value = `VersãodoOffice: ${office.categoria}\nDetalhesdaversão: ${office.versao}\nOKButilizado: ${office.artigo}\nFixitMicrosoftExecutado: ${office.fixit}\nOSPP.loganexonaSR(SLN306817): ${office.ospp}\nNomecompletodocliente: ${office.cliente}\nORDEM: ${office.ordem}\nTAG: ${office.tag}\nMSA: ${office.msa}\nMSAtestadacomcliente: ${office.msaTestada}\nSRMicrosoft: SRX${office.microsoft}`
+        this._outputOfficeResultado.value = `VersãodoOffice: ${office.categoria}\nDetalhesdaversão: ${office.versao}\nOKButilizado: ${office.artigo}\nFixitMicrosoftExecutado: ${office.fixit}\nOSPP.loganexonaSR(SLN306817): ${office.ospp}\nNomecompletodocliente: ${office.cliente}\nORDEM: ${office.ordem}\nTAG: ${office.tag}\nMSA: ${office.msa}\nMSAtestadacomcliente: ${office.msaTestada}\nSRMicrosoft: SRXc${office.microsoft}`
 
         this._outputOfficeResultado.select()
         document.execCommand('copy')

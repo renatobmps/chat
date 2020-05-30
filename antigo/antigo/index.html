@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Scrips de Chat</title>
+	<link rel="shortcut icon" href="img/icone_sitel.png"/>
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/bootstrap/css/bootstrap.min.css" />
+	<link href="http://us145k12web02/app/conteudo/font.awesome.4.4.0/Content/Content/font-awesome.min.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/font-awesome-animation.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="http://us145k12web02/app/conteudo/css/skins/_all-skins.min.css" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.css" rel="stylesheet" />
+	<link href="http://us145k12web02/app/conteudo/css/AdminLTE.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+	<link rel="stylesheet" href="css/libs/bootstrap/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-reboot.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="css/libs/bootstrap/bootstrap.min.css">
+
+	<link rel="stylesheet" href="css/scripts.css" />
+</head>
+<body>
+<noscript>JavaScript precisa estar ativado para o correto funcionamento</noscript>
+<section class="cabecalio">
+	<h1 class="cabecalio-titulo">Scripts</h1>
+	<nav id="lista-config" class="cabecalio-nav-lista-configuracoes">
+		<li>
+			<a href="#" id="botao-config-analistaS" title="Dados de analista"><i class="faa-spin animated-hover material-icons">account_circle</i>Analista</a>
+			<ul class="entradas-analista invisivel">
+				<li><p>Nome: </p><input class="lista-analista-nome"></li>
+				<li><p>Entrada: </p><input class="lista-analista-entrada"></li>
+				<li><p>Saída: </p><input class="lista-analista-saida"></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" id="botao-config-clienteS" title="Dados de cliente"><i class="faa-spin animated-hover material-icons">chat</i>Cliente</a>
+			<ul class="entradas-cliente invisivel">
+				<li><p>Nome: </p><input class="lista-cliente-nome"></li>
+				<li><p>TAG: </p><input class="lista-cliente-tag"></li>
+				<li><p>Telefone: </p><input class="lista-cliente-telefone"></li>
+				<li><p>E-mail: </p><input class="lista-cliente-email"></li>
+			</ul>
+		</li>
+		<li>
+			<a href="#" id="botao-config-atendimentoS" title="Dados de atendimento"><i class="faa-spin animated-hover material-icons">work</i>Atendimento</a>
+			<ul class="entradas-atendimento invisivel">
+				<li><p>Case: </p><input class="lista-atendimento-caso"></li>
+				<li><p>Acesso: </p><input class="lista-atendimento-remoto"></li>
+				<li><p>DPS: </p><input class="lista-atendimento-dps"></li>
+				<li><p>CIS: </p><input class="lista-atendimento-cis"></li>
+			</ul>
+		</li>
+		<li>
+			<a href="html/templates.html" target="_blank" class="gerar-log"><i class="material-icons">dashboard</i>Escalação/5 Good Lines</a>
+		</li>
+		<li class="invisivel">
+			<a href href="#" class="troca-script"><i class="material-icons">swap_vert</i>Padrao/Personalizado</a>
+		</li>
+		<li>
+			<a href="html/sem-dps.html" target="_blank" class="sem-dps"><i class="material-icons">table_chart</i>Sem DPS</a>
+		</li>
+	</nav>
+</section>
+<section class="principal">
+	<iframe frameborder="0" marginheight="0" marginwidth="0" src="html/padrao.html" class="frame-padrao frame">
+	</iframe>
+	<iframe frameborder="0" marginheight="0" marginwidth="0" src="html/personalizado.html" class="frame-personalizado frame invisivel">
+	</iframe>
+</section>
+<section class="rodape">
+	<footer>Para mais informações, consulte o processo <a href="http://us145k12web02/app/company_new/intra/processos/default.aspx?projeto=16&cod_processo=9448" target="_blank">014_TECH_SCRIPTS PARA ATENDIMENTO</a>.</footer>
+</section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.0.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>
