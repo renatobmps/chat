@@ -10,7 +10,15 @@ class IndexController{
         this._indexMenuView = new IndexMenuView($("body"))
         this._indexMenuView.update()
 
-        $("#btn-bateria").addEventListener("click", () => {
+        document.querySelectorAll("header li").forEach(link => {
+            link.classList.remove("active")
+        })
+
+        this.link = (document.URL).split("#")
+        
+        this.verificaLink()
+
+        $(".ativo-bateria").addEventListener("click", () => {
 
             this.bateriaController()
         })
@@ -19,6 +27,14 @@ class IndexController{
     bateriaController(){
 
         new BateriaController()
+    }
+
+    verificaLink(){
+
+        if (document.URL == `${this.link[0]}#bateria`) {
+
+            this.bateriaController()
+        }
     }
 }
 

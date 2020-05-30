@@ -28,20 +28,20 @@ export class IndexMenuView extends View{
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0 nav-menu">
-                        <li class="nav-item ativo-chat"> <!--active-->
+                        <li class="nav-item ativo-chat">
                             <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#chat">Chat</a>
                         </li>
-                        <li class="nav-item ativo-good-lines"> <!--active-->
+                        <li class="nav-item ativo-good-lines">
                             <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#good-lines">5 Good Lines</a>
                         </li>
-                        <li class="nav-item ativo-escalacao"> <!--active-->
-                            <a class="nav-link" tabindex="-1" aria-disabled="true" href="#escalacao">Escalação</a>
+                        <li class="nav-item ativo-escalacao">
+                            <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#escalacao">Escalação</a>
                         </li>
-                        <li class="nav-item ativo-sem-dps"> <!--active-->
-                            <a class="nav-link" tabindex="-1" aria-disabled="true" href="#sem-dps">Sem DPS</a>
+                        <li class="nav-item ativo-sem-dps">
+                            <a class="nav-link disabled" tabindex="-1" aria-disabled="true" href="#sem-dps">Sem DPS</a>
                         </li>
-                        <li class="nav-item ativo-bateria"> <!--active-->
-                            <a id="btn-bateria" class="nav-link" tabindex="-1" aria-disabled="true" href="#bateria">Bateria</a>
+                        <li class="nav-item ativo-bateria">
+                            <a class="nav-link" tabindex="-1" aria-disabled="true" href="#bateria">Bateria</a>
                         </li>
                     </ul>
                 </div>
