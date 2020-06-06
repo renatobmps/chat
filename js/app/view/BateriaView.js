@@ -23,8 +23,8 @@ export class BateriaView extends View {
         <div class="dropdown-divider"></div>
         <form class="container">
             <div class="form-row">
-                ${InputsView.projeto(this.prefixo)}
-                ${InputsView.atual(this.prefixo)}
+                ${InputsView.bateriaProjeto(this.prefixo)}
+                ${InputsView.bateriaAtual(this.prefixo)}
             </div>
             <div class="form-row">
                 ${InputsView.resultado(this.prefixo)}
