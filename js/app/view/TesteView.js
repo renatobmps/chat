@@ -21,8 +21,8 @@ export class TesteView extends View{
                 <div class='card-body'>
                     citrix${InputsView.citrix(this.prefixo)}
                     badge${InputsView.badge(this.prefixo)}
-                    horario, entrada${InputsView.horario(this.prefixo, 'entrada')}
-                    horario, saida${InputsView.horario(this.prefixo, 'saida')}
+                    horario, entrada, Horário de entrada${InputsView.horario(this.prefixo, 'entrada', 'Horário de entrada')}
+                    horario, saida, Horário de saída${InputsView.horario(this.prefixo, 'saida', 'Horário de saída')}
                 </div>
             </div>
             <br>
