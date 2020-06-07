@@ -6,8 +6,9 @@
         <div class="form-group col">
             <label for="${e}-badge">Badge</label>
             <input type="number" id="${e}-badge" class="form-control form-control-sm" required placeholder="" pattern="" title="Número de badge">
-        </div>`}static horario(){return`
+        </div>`}static horario(e){return`
         <div class="form-group col">
+            <label for="${e}-"></label>
             
         </div>`}static cliente(e){return`
         <div class="form-group col">
@@ -17,8 +18,9 @@
         <div class="form-group col">
             <label for="${e}-telefone">Telefone principal</label>
             <input type="tel" id="${e}-telefone" class="form-control form-control-sm">
-        </div>`}static telefoneAdicional(){return`
+        </div>`}static telefoneAdicional(e){return`
         <div class="form-group col">
+            <label for="${e}-"></label>
             
         </div>`}static email(e){return`
         <div class="form-group col">
@@ -28,8 +30,9 @@
         <div class="form-group col">
             <label for="${e}-caso">Case</label>
             <input type="number" class="form-control form-control-sm" id="${e}-caso" required="" placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
-        </div>`}static srAge(){return`
+        </div>`}static srAge(e){return`
         <div class="form-group col">
+            <label for="${e}-"></label>
             
         </div>`}static data(e,t,o){return`
         <div class="form-group col">
@@ -39,48 +42,22 @@
         <div class="form-group col">
             <label for="${e}-motivo">Motivo do NoDPS</label>
             <textarea class="form-control form-control-sm" id="${e}-motivo" required="" placeholder="Cliente fazendo as atualizações pendentes do windows update"></textarea>
-        </div>`}static ordem(){return`
+        </div>`}static ordem(e){return`
         <div class="form-group col">
+            <label for="${e}-"></label>
             
-        </div>`}static valor(){return`
+        </div>`}static valor(e){return`
         <div class="form-group col">
-            
-        </div>`}static temperatura(){return`
-        <div class="form-group col">
-            
-        </div>`}static aceitaIntervencao(){return`
-        <div class="form-group col">
-            
-        </div>`}static guidance(){return`
-        <div class="form-group col">
-            
-        </div>`}static diag(){return`
-        <div class="form-group col">
-            
-        </div>`}static code(){return`
-        <div class="form-group col">
-            
-        </div>`}static dpsQuantidade(){return`
-        <div class="form-group col">
-            
-        </div>`}static cpf(){return`
-        <div class="form-group col">
-            
-        </div>`}static cnpj(){return`
-        <div class="form-group col">
-            
-        </div>`}static inscricaoEstadual(){return`
-        <div class="form-group col">
-            
-        </div>`}static arquiteturaHd(){return`
-        <div class="form-group col">
-            
-        </div>`}static idioma(){return`
-        <div class="form-group col">
-            
-        </div>`}static windows(){return`
-        <div class="form-group col">
-            
+            <label for="${e}-valor">Valor do reembolso</label>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">R$</span>
+                </div>
+                <input type="number" id="${e}-valor" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">,00</span>
+                </div>
+            </div>
         </div>`}static dpsCompleto(e){return`
         <div class="form-group col">
             ${this.dps(e)}
@@ -97,7 +74,7 @@
         </div>`}static artigo(e){return`
         <div class="form-group col">
             <label for="${e}-artigo">Oracle</label>
-            <input type="text" class="form-control form-control-sm" id="${e}-artigo" placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
+            <input type="text" class="form-control form-control-sm" id="${e}-artigo" required placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
         </div>`}static bateriaAtual(e){return`
         <div class="form-group col">
             <label for="${e}-atual">Último carregamento total</label>
@@ -106,14 +83,49 @@
         <div class="form-group col">
             <label for="${e}-projeto">Projeto total</label>
             <input type="number" id="${e}-projeto" class="form-control form-control-sm" placeholder="41998" required min="9999" title="Projeto total da bateria">
+        </div>`}static cnpj(e){return`
+        <div class="form-group col">
+            <label for="${e}-cnpj">CNPJ</label>
+            <input type="number" id="${e}-cnpj" class="form-control form-control-sm" required placeholder="Somente numeros" title="Entre com o número do CNPJ">
         </div>`}static contraSenhaCodigo(e){return`
         <div class="form-group col">
             <label for="${e}-codigo-contra-senha">Código gerado</label>
             <input type="text" id="${e}-codigo-contra-senha" class="form-control form-control-sm" placeholder="#HQWHSL2-6FF1" title="Código gerado pela máquina para contra-senha">
+        </div>`}static cpf(e){return`
+        <div class="form-group col">
+            <label for="${e}-cpf">CPF</label>
+            <input type="number" id="${e}-cpf" class="form-control form-control-sm" required placeholder="00011122233" title="Entre com o CPF do cliente">
+        </div>`}static diag(e){return`
+        <div class="form-group col">
+            <label for="${e}-diag">Diag</label>
+            <select id="${e}-diag" class="custom-select" size="2" required title="Ferramenta de diagnóstico">
+                <option value="ePSA">Epsa</option>
+                <option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
+                <option value="Alien Autopsy">Alien Autopsy</option>
+                <option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
+                <option value="FPD Bist">FPD Bist</option>
+                <option value="LCD Bist">LCD Bist</option>
+                <option value="Led Indicators">Led Indicators</option>
+                <option value="MemRX">MemRX</option>
+                <option value="MpMemory">MpMemory</option>
+                <option value="PC Doctor">PC Doctor</option>
+                <option value="PSA">PSA</option>
+                <option value="PSU Bist">PSU Bist</option>
+                <option value="Quad-Pack Leds">Quad-Pack Leds</option>
+                <option value="Tools not Needed">Tools not Needed</option>
+            </select>
         </div>`}static dps(e){return`
         <div class="form-group col">
             <label for="${e}-dps">Nº DPS</label>
             <input type="number" id="${e}-dps" class="form-control form-control-sm" required placeholder="0000000000" title="Entre com o número de DPS">
+        </div>`}static guidance(e){return`
+        <div class="form-group col">
+            <label for="${e}-guidance">Motivo da solicitação</label>
+            <input type="text" id="${e}-guidance" class="form-control form-control-sm" required placeholder="Solução desconhecida" title="Descreva o motivo da solicitação" value="Solução desconhecida">
+        </div>`}static inscricaoEstadual(e){return`
+        <div class="form-group col">
+            <label for="${e}-inscricao-estadual">Inscrição estadual</label>
+            <input type="number" id="${e}-inscricao-estadual" class="form-control form-control-sm" placeholder="Não preencher se isento" title="Entre com a numeração da inscrição estadual">
         </div>`}static microsoft(e){return`
         <div class="form-group col">
             <label for="${e}-microsoft">SR Microsoft</label>
@@ -122,6 +134,13 @@
         <div class="form-group col">
             <label for="${e}-modelo">Modelo</label>
             <input type="text" id="${e}-modelo" class="form-control form-control-sm" required placeholder="INSPIRON 3583" title="Entre com o nome do modelo do equipamento">
+        </div>`}static optSimNao(e,t,o){return`
+        <div class="form-group col">
+            <label for="${e}-opcao-${t}">${o}</label>
+            <select id="${e}-opcao-${t}" class="custom-select" size="2" required>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
         </div>`}static peca(e){return`
         <div class="form-group col">
             <label for="${e}-peca">Peças enviadas</label>
@@ -146,6 +165,25 @@
         <div class="form-group col">
             <label for="${e}-tag-age">Idade da máquina</label>
             <input type="number" id="${e}-tag-age" class="form-control form-control-sm" required placeholder="0 Days(s)" title="Entre com a idade da máquina (apenas números)" min="1">
+        </div>`}static temperatura(e){return`
+        <div class="form-group col">
+            <label for="${e}-temperatura">Temperatura do cliente</label>
+            <input type="text" id="${e}-temperatura" class="form-control form-control-sm" required placeholder="Impactado / Neutro" title="Descreva o humor do cliente">
+        </div>`}static arquiteturaHd(e){return`
+        <div class="form-group col">
+            <label for="${e}-arquitetura"></label>
+            <select id="${e}-arquitetura" class="custom-select" size="2" required title="Selecione a arquitetura do sistema">
+                <option value="64 bits">64</option>
+                <option value="32 bits">32</option>
+            </select>
+        </div>`}static code(e){return`
+        <div class="form-group col">
+            <label for="${e}-code">Code</label>
+            <select id="${e}-code" class="custom-select" size="2" required>
+                <option value="Pass">Pass</option>
+                <option value="Failed">Failed</option>
+                <option value="Did not complete">Did not complete</option>
+            </select>
         </div>`}static contraSenhaTipo(e){return`
         <div class="form-group col">
             <label for="${e}-tipo-contra-senha">Senha de</label>
@@ -157,12 +195,22 @@
         </div>`}static dpsType(e){return`
         <div class="form-group col">
             <label for="${e}-dps-tipo">Tido de DPS</label>
-            <select id="${e}-dps-tipo" class="custom-select" required title="Selecione qual é o tipo de serviço do chamado">
+            <select id="${e}-dps-tipo" class="custom-select" size="2" required title="Selecione qual é o tipo de serviço do chamado">
                 <option value="Parts and Labor">P&L</option>
                 <option value="Parts only">Parts only</option>
                 <option value="Mail in">MIS</option>
                 <option value="Carry in service">CIS</option>
                 <option value="10 business day">P10</option>
+            </select>
+        </div>`}static dpsQuantidade(e){return`
+        <div class="form-group col">
+            <label for="${e}-dps-quantidade">Qtde</label>
+            <select id="${e}-dps-quantidade" class="custom-select" size="2" required title="Selecione a quantidade de DPSs da SR">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
         </div>`}static garantia(e){return`
         <div class="form-group col">
@@ -171,6 +219,14 @@
                 <option value="IW">Em garantia</option>
                 <option value="OOW">Sem garantia</option>
             </select>
+        </div>`}static idioma(e){return`
+        <div class="form-group col">
+            <label for="${e}-idioma">Idioma</label>
+            <select id="${e}-idioma" class="custom-select" size="2" required title="Seleciona o idioma do sistema">
+                <option value="Brazilian Portuguese">Português</option>
+                <option value="English">English</option>
+                <option value="Spanish">Español</option>
+            </select>
         </div>`}static officeCategoria(e){return`
         <div class="form-group col">
             <label for="${e}-office"></label>
@@ -178,27 +234,6 @@
                 <option value="Office2016">Office 2016</option>
                 <option value="Office2019">Office 2019</option>
                 <option value="Office365">Office 365</option>
-            </select>
-        </div>`}static officeFixit(e){return`
-        <div class="form-group col">
-            <label for="${e}-fixit"><a href="http://aka.ms/diag_97275">Fix it Microsoft</a> executado</label>
-            <select id="${e}-fixit" class="custom-select" size="2" title="http://aka.ms/diag_97275">
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-            </select>            
-        </div>`}static officeMsa(e){return`
-        <div class="form-group col">
-            <label for="${e}-msa">MSA testada com o cliente</label>
-            <select id="${e}-msa" class="custom-select" size="2">
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-            </select>
-        </div>`}static officeOspp(e){return`
-        <div class="form-group col">
-            <label for="${e}-ospp">Coletado OSPP.log</label>
-            <select id="${e}-ospp" class="custom-select" title="Conforme SLN306817">
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
             </select>
         </div>`}static officeVersao(e){return`
         <div class="form-group col">
@@ -270,10 +305,31 @@
                 <option value="Problema técnico dentro dos 7 primeiros dias">Problema técnico dentro dos 7 primeiros dias</option>
                 <option value="Reembolso de Serviço de Reparo">Reembolso de Serviço de Reparo</option>
             </select>
+        </div>`}static windows(e){return`
+        <div class="form-group col">            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-windows">Sistema</label>
+                </div>
+                <select id="${e}-windows" class="custom-select" size="3" required title="Versão do Windows">
+                    <option value="Windows 10 Home">Win 10 Home</option>
+                    <option value="Windows 10 Home Single Language">Win 10 SingLang</option>
+                    <option value="Windows 10 Professional">Win 10 Pro</option>
+                    <option value="Windows 8 Home">Win 8 Home</option>
+                    <option value="Windows 8 Professional">Win 8 Pro</option>
+                    <option value="Windows 8.1 Home">Win 8.1 Home</option>
+                    <option value="Windows 8.1 Single Language">Win 8.1 SingLang</option>
+                    <option value="Windows 8.1 Professional">Win 8.1 Pro</option>
+                    <option value="Windows 7 Home">Win 7 Home</option>
+                    <option value="Windows 7 Professional">Win 7 Pro</option>
+                    <option value="Windows 7 Ultimate">Win 7 Ultimate</option>
+                </select>
+            </div>
         </div>`}static submit(e){return`
         <button type="submit" id="${e}-submit" class="btn btn-outline-primary btn-block btn-sm">Submit</button>`}static buttonPrimary(e,t){return`
         <button class="btn btn-sm btn-outline-primary" id="${e}-primary-button">${t}</button>`}static buttonSecondary(e,t){return`<button class="btn btn-sm btn-outline-secondary" id="${e}-secondary-button">${t}</button>`}static resultado(e){return`
         <div class="form-group col">
+            <label for="${e}-resultado">Resultado</label>
             <textarea id="${e}-resultado" cols="30" rows="5" class="form-control" readonly>Resultado...</textarea>
         </div>`}static estiloBorda(e,t){e.style=`border: 1px solid ${t}; color: ${t}; font-weight: bold;`}}},function(e){function t(e,t){var r=e[1]||'',n=e[3];if(!n)return r;if(t&&'function'==typeof btoa){var a=o(n),i=n.sources.map(function(e){return'/*# sourceURL='+n.sourceRoot+e+' */'});return[r].concat(i).concat([a]).join('\n')}return[r].join('\n')}function o(e){var t=btoa(unescape(encodeURIComponent(JSON.stringify(e))));return'/*# '+('sourceMappingURL=data:application/json;charset=utf-8;base64,'+t)+' */'}e.exports=function(e){var o=[];return o.toString=function(){return this.map(function(o){var r=t(o,e);return o[2]?'@media '+o[2]+'{'+r+'}':r}).join('')},o.i=function(e,t){'string'==typeof e&&(e=[[null,e,'']]);for(var r={},n=0,a;n<this.length;n++)a=this[n][0],'number'==typeof a&&(r[a]=!0);for(n=0;n<e.length;n++){var i=e[n];'number'==typeof i[0]&&r[i[0]]||(t&&!i[2]?i[2]=t:t&&(i[2]='('+i[2]+') and ('+t+')'),o.push(i))}},o}},function(e,t,o){function r(e,t){for(var o=0;o<e.length;o++){var r=e[o],n=g[r.id];if(n){n.refs++;for(var a=0;a<n.parts.length;a++)n.parts[a](r.parts[a]);for(;a<r.parts.length;a++)n.parts.push(p(r.parts[a],t))}else{for(var i=[],a=0;a<r.parts.length;a++)i.push(p(r.parts[a],t));g[r.id]={id:r.id,refs:1,parts:i}}}}function n(e,t){for(var o=[],r={},n=0;n<e.length;n++){var a=e[n],i=t.base?a[0]+t.base:a[0],l=a[1],d=a[2],s=a[3],p={css:l,media:d,sourceMap:s};r[i]?r[i].parts.push(p):o.push(r[i]={id:i,parts:[p]})}return o}function a(e,t){var o=b(e.insertInto);if(!o)throw new Error('Couldn\'t find a style target. This probably means that the value for the \'insertInto\' parameter is invalid.');var r=y[y.length-1];if('top'===e.insertAt)r?r.nextSibling?o.insertBefore(t,r.nextSibling):o.appendChild(t):o.insertBefore(t,o.firstChild),y.push(t);else if('bottom'===e.insertAt)o.appendChild(t);else throw new Error('Invalid value for parameter \'insertAt\'. Must be \'top\' or \'bottom\'.')}function i(e){if(null===e.parentNode)return!1;e.parentNode.removeChild(e);var t=y.indexOf(e);0<=t&&y.splice(t,1)}function l(e){var t=document.createElement('style');return e.attrs.type='text/css',s(t,e.attrs),a(e,t),t}function d(e){var t=document.createElement('link');return e.attrs.type='text/css',e.attrs.rel='stylesheet',s(t,e.attrs),a(e,t),t}function s(e,t){Object.keys(t).forEach(function(o){e.setAttribute(o,t[o])})}function p(e,t){var o,r,n,a;if(t.transform&&e.css)if(a=t.transform(e.css),a)e.css=a;else return function(){};if(t.singleton){var s=x++;o=h||(h=l(t)),r=m.bind(null,o,s,!1),n=m.bind(null,o,s,!0)}else e.sourceMap&&'function'==typeof URL&&'function'==typeof URL.createObjectURL&&'function'==typeof URL.revokeObjectURL&&'function'==typeof Blob&&'function'==typeof btoa?(o=d(t),r=f.bind(null,o,t),n=function(){i(o),o.href&&URL.revokeObjectURL(o.href)}):(o=l(t),r=c.bind(null,o),n=function(){i(o)});return r(e),function(t){if(t){if(t.css===e.css&&t.media===e.media&&t.sourceMap===e.sourceMap)return;r(e=t)}else n()}}function m(e,t,o,r){var n=o?'':r.css;if(e.styleSheet)e.styleSheet.cssText=w(t,n);else{var a=document.createTextNode(n),i=e.childNodes;i[t]&&e.removeChild(i[t]),i.length?e.insertBefore(a,i[t]):e.appendChild(a)}}function c(e,t){var o=t.css,r=t.media;if(r&&e.setAttribute('media',r),e.styleSheet)e.styleSheet.cssText=o;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(o))}}function f(e,t,o){var r=o.css,n=o.sourceMap,a=t.convertToAbsoluteUrls===void 0&&n;(t.convertToAbsoluteUrls||a)&&(r=v(r)),n&&(r+='\n/*# sourceMappingURL=data:application/json;base64,'+btoa(unescape(encodeURIComponent(JSON.stringify(n))))+' */');var i=new Blob([r],{type:'text/css'}),l=e.href;e.href=URL.createObjectURL(i),l&&URL.revokeObjectURL(l)}var g={},u=function(e){var t;return function(){return'undefined'==typeof t&&(t=e.apply(this,arguments)),t}}(function(){return window&&document&&document.all&&!window.atob}),b=function(e){var t={};return function(o){return'undefined'==typeof t[o]&&(t[o]=e.call(this,o)),t[o]}}(function(e){return document.querySelector(e)}),h=null,x=0,y=[],v=o(28);e.exports=function(e,t){if('undefined'!=typeof DEBUG&&DEBUG&&'object'!=typeof document)throw new Error('The style-loader cannot be used in a non-browser environment');t=t||{},t.attrs='object'==typeof t.attrs?t.attrs:{},t.singleton||(t.singleton=u()),t.insertInto||(t.insertInto='head'),t.insertAt||(t.insertAt='bottom');var o=n(e,t);return r(o,t),function(e){for(var a=[],l=0;l<o.length;l++){var i=o[l],d=g[i.id];d.refs--,a.push(d)}if(e){var s=n(e,t);r(s,t)}for(var l=0,d;l<a.length;l++)if(d=a[l],0===d.refs){for(var p=0;p<d.parts.length;p++)d.parts[p]();delete g[d.id]}}};var w=function(){var e=[];return function(t,o){return e[t]=o,e.filter(Boolean).join('\n')}}()},function(e,t,o){'use strict';Object.defineProperty(t,'__esModule',{value:!0});var r=o(6),n=o(26),a=o.n(n),i=o(29),l=o.n(i),d=o(31),s=o.n(d),p=o(35),m=o(36),c=o.n(m);Object(r.a)()},function(e,t,o){'use strict';t.a=function(){return p};var r=o(7),n=o(8),a=o(11),i=o(18),l=o(20),d=o(22),s=o(24);let p=new class{constructor(){let e=document.querySelector.bind(document);this._indexMenuView=new r.a(e('body')),this._indexMenuView.update(),this.itensMenu=document.querySelectorAll('header li'),this.limpaActivies(),this.pageChat=this.itensMenu[0],this.pageGoodLines=this.itensMenu[1],this.pageEscalacao=this.itensMenu[2],this.pageSemDps=this.itensMenu[3],this.pageBateria=this.itensMenu[4],this.pageChat.addEventListener('click',()=>{this.chatController()}),this.pageGoodLines.addEventListener('click',()=>{this.goodLinesController()}),this.pageEscalacao.addEventListener('click',()=>{this.escalacaoController()}),this.pageSemDps.addEventListener('click',()=>{this.semDpsController()}),this.pageBateria.addEventListener('click',()=>{this.bateriaController()}),this.link=document.URL.split('#'),this.verificaLink()}chatController(){new d.a,this.limpaActivies(),this.pageChat.classList.add('active')}goodLinesController(){new l.a,this.limpaActivies(),this.pageGoodLines.classList.add('active')}escalacaoController(){new i.a,this.limpaActivies(),this.pageEscalacao.classList.add('active')}semDpsController(){new a.a,this.limpaActivies(),this.pageSemDps.classList.add('active')}bateriaController(){new n.a,this.limpaActivies(),this.pageBateria.classList.add('active')}testeController(){new s.a,this.limpaActivies()}verificaLink(){`${this.link[0]}#chat`==document.URL&&this.chatController(),`${this.link[0]}#good-lines`==document.URL&&this.goodLinesController(),`${this.link[0]}#escalacao`==document.URL&&this.escalacaoController(),`${this.link[0]}#sem-dps`==document.URL&&this.semDpsController(),`${this.link[0]}#bateria`==document.URL&&this.bateriaController(),`${this.link[0]}#teste`==document.URL&&this.testeController()}limpaActivies(){this.itensMenu.forEach((e)=>{e.classList.remove('active')})}}},function(e,t,o){'use strict';var r=o(0);class n extends r.a{constructor(e,t,o){super(e),this._id=t,this._titulo=o,this.nomePagina='Nananico',setTimeout(()=>{this._ativo(this._id)},100)}template(){return`
         <header class="menu-view">
@@ -419,7 +475,7 @@
                     ordem${n.a.ordem(this.prefixo)}
                     valor${n.a.valor(this.prefixo)}
                     temperatura${n.a.temperatura(this.prefixo)}
-                    aceitaIntervencao${n.a.aceitaIntervencao(this.prefixo)}
+                    optSimNao, aceita-intervencao, Cliente aceita intenvenção${n.a.optSimNao(this.prefixo,'aceita-intervencao','Cliente aceita intenven\xE7\xE3o')}
                     guidance${n.a.guidance(this.prefixo)}
                 </div>
             </div>
@@ -469,9 +525,9 @@
                     microsoft${n.a.microsoft(this.prefixo)}
                     officeCategoria${n.a.officeCategoria(this.prefixo)}
                     officeVersao${n.a.officeVersao(this.prefixo)}
-                    officeFixit${n.a.officeFixit(this.prefixo)}
-                    officeOspp${n.a.officeOspp(this.prefixo)}
-                    officeMsa ${n.a.officeMsa(this.prefixo)}
+                    optSimNao, fixit, <a href='http://aka.ms/diag_97275' target='_blank'>Fix it Microsoft</a> executado${n.a.optSimNao(this.prefixo,'fixit','<a href=\'http://aka.ms/diag_97275\' target=\'_blank\'>Fix it Microsoft</a> executado')}
+                    optSimNao, ospp, Coletado OSPP.log${n.a.optSimNao(this.prefixo,'ospp','Coletado OSPP.log')}
+                    optSimNao, msa, MSA testada com o cliente${n.a.optSimNao(this.prefixo,'msa','MSA testada com o cliente')}
                 </div>
             </div>
             <br>

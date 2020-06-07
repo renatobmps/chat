@@ -4,7 +4,7 @@ export class InputsView{
         
         throw new Error("Não é possível instanciar esta classe")
     }
-
+    
     static citrix(prefixo){
         return `
         <div class="form-group col">
@@ -22,6 +22,7 @@ export class InputsView{
     static horario(prefixo, identificador){
         return `
         <div class="form-group col">
+            <label for="${prefixo}-"></label>
             
         </div>`
     }
@@ -42,6 +43,7 @@ export class InputsView{
     static telefoneAdicional(prefixo){
         return `
         <div class="form-group col">
+            <label for="${prefixo}-"></label>
             
         </div>`
     }
@@ -62,6 +64,7 @@ export class InputsView{
     static srAge(prefixo){
         return `
         <div class="form-group col">
+            <label for="${prefixo}-"></label>
             
         </div>`
     }
@@ -82,91 +85,25 @@ export class InputsView{
     static ordem(prefixo){
         return `
         <div class="form-group col">
+            <label for="${prefixo}-"></label>
             
         </div>`
     }
     static valor(prefixo){
         return `
         <div class="form-group col">
-            
+            <label for="${prefixo}-valor">Valor do reembolso</label>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">R$</span>
+                </div>
+                <input type="number" id="${prefixo}-valor" class="form-control">
+                <div class="input-group-append">
+                    <span class="input-group-text">,00</span>
+                </div>
+            </div>
         </div>`
     }
-    static temperatura(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static aceitaIntervencao(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static guidance(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static diag(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static code(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static dpsQuantidade(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static cpf(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static cnpj(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static inscricaoEstadual(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static arquiteturaHd(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static idioma(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    static windows(prefixo){
-        return `
-        <div class="form-group col">
-            
-        </div>`
-    }
-    
-    
-    
-    
     
     /**Prontos */
     static dpsCompleto(prefixo){
@@ -194,7 +131,7 @@ export class InputsView{
         return `
         <div class="form-group col">
             <label for="${prefixo}-artigo">Oracle</label>
-            <input type="text" class="form-control form-control-sm" id="${prefixo}-artigo" placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
+            <input type="text" class="form-control form-control-sm" id="${prefixo}-artigo" required placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
         </div>`
     }
     static bateriaAtual(prefixo){
@@ -211,6 +148,13 @@ export class InputsView{
             <input type="number" id="${prefixo}-projeto" class="form-control form-control-sm" placeholder="41998" required min="9999" title="Projeto total da bateria">
         </div>`
     }
+    static cnpj(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-cnpj">CNPJ</label>
+            <input type="number" id="${prefixo}-cnpj" class="form-control form-control-sm" required placeholder="Somente numeros" title="Entre com o número do CNPJ">
+        </div>`
+    }
     static contraSenhaCodigo(prefixo){
         return `
         <div class="form-group col">
@@ -218,11 +162,54 @@ export class InputsView{
             <input type="text" id="${prefixo}-codigo-contra-senha" class="form-control form-control-sm" placeholder="#HQWHSL2-6FF1" title="Código gerado pela máquina para contra-senha">
         </div>`
     }
+    static cpf(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-cpf">CPF</label>
+            <input type="number" id="${prefixo}-cpf" class="form-control form-control-sm" required placeholder="00011122233" title="Entre com o CPF do cliente">
+        </div>`
+    }
+    static diag(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-diag">Diag</label>
+            <select id="${prefixo}-diag" class="custom-select" size="2" required title="Ferramenta de diagnóstico">
+                <option value="ePSA">Epsa</option>
+                <option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
+                <option value="Alien Autopsy">Alien Autopsy</option>
+                <option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
+                <option value="FPD Bist">FPD Bist</option>
+                <option value="LCD Bist">LCD Bist</option>
+                <option value="Led Indicators">Led Indicators</option>
+                <option value="MemRX">MemRX</option>
+                <option value="MpMemory">MpMemory</option>
+                <option value="PC Doctor">PC Doctor</option>
+                <option value="PSA">PSA</option>
+                <option value="PSU Bist">PSU Bist</option>
+                <option value="Quad-Pack Leds">Quad-Pack Leds</option>
+                <option value="Tools not Needed">Tools not Needed</option>
+            </select>
+        </div>`
+    }
     static dps(prefixo){
         return `
         <div class="form-group col">
             <label for="${prefixo}-dps">Nº DPS</label>
             <input type="number" id="${prefixo}-dps" class="form-control form-control-sm" required placeholder="0000000000" title="Entre com o número de DPS">
+        </div>`
+    }
+    static guidance(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-guidance">Motivo da solicitação</label>
+            <input type="text" id="${prefixo}-guidance" class="form-control form-control-sm" required placeholder="Solução desconhecida" title="Descreva o motivo da solicitação" value="Solução desconhecida">
+        </div>`
+    }
+    static inscricaoEstadual(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-inscricao-estadual">Inscrição estadual</label>
+            <input type="number" id="${prefixo}-inscricao-estadual" class="form-control form-control-sm" placeholder="Não preencher se isento" title="Entre com a numeração da inscrição estadual">
         </div>`
     }
     static microsoft(prefixo){
@@ -237,6 +224,16 @@ export class InputsView{
         <div class="form-group col">
             <label for="${prefixo}-modelo">Modelo</label>
             <input type="text" id="${prefixo}-modelo" class="form-control form-control-sm" required placeholder="INSPIRON 3583" title="Entre com o nome do modelo do equipamento">
+        </div>`
+    }
+    static optSimNao(prefixo, identificacao, view){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-opcao-${identificacao}">${view}</label>
+            <select id="${prefixo}-opcao-${identificacao}" class="custom-select" size="2" required>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+            </select>
         </div>`
     }
     static peca(prefixo){
@@ -281,8 +278,36 @@ export class InputsView{
             <input type="number" id="${prefixo}-tag-age" class="form-control form-control-sm" required placeholder="0 Days(s)" title="Entre com a idade da máquina (apenas números)" min="1">
         </div>`
     }
-
+    static temperatura(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-temperatura">Temperatura do cliente</label>
+            <input type="text" id="${prefixo}-temperatura" class="form-control form-control-sm" required placeholder="Impactado / Neutro" title="Descreva o humor do cliente">
+        </div>`
+    }
+    
     /**Select */
+    static arquiteturaHd(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-arquitetura"></label>
+            <select id="${prefixo}-arquitetura" class="custom-select" size="2" required title="Selecione a arquitetura do sistema">
+                <option value="64 bits">64</option>
+                <option value="32 bits">32</option>
+            </select>
+        </div>`
+    }
+    static code(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-code">Code</label>
+            <select id="${prefixo}-code" class="custom-select" size="2" required>
+                <option value="Pass">Pass</option>
+                <option value="Failed">Failed</option>
+                <option value="Did not complete">Did not complete</option>
+            </select>
+        </div>`
+    }
     static contraSenhaTipo(prefixo){
         return `
         <div class="form-group col">
@@ -298,12 +323,25 @@ export class InputsView{
         return `
         <div class="form-group col">
             <label for="${prefixo}-dps-tipo">Tido de DPS</label>
-            <select id="${prefixo}-dps-tipo" class="custom-select" required title="Selecione qual é o tipo de serviço do chamado">
+            <select id="${prefixo}-dps-tipo" class="custom-select" size="2" required title="Selecione qual é o tipo de serviço do chamado">
                 <option value="Parts and Labor">P&L</option>
                 <option value="Parts only">Parts only</option>
                 <option value="Mail in">MIS</option>
                 <option value="Carry in service">CIS</option>
                 <option value="10 business day">P10</option>
+            </select>
+        </div>`
+    }
+    static dpsQuantidade(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-dps-quantidade">Qtde</label>
+            <select id="${prefixo}-dps-quantidade" class="custom-select" size="2" required title="Selecione a quantidade de DPSs da SR">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
             </select>
         </div>`
     }
@@ -317,6 +355,17 @@ export class InputsView{
             </select>
         </div>`
     }
+    static idioma(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-idioma">Idioma</label>
+            <select id="${prefixo}-idioma" class="custom-select" size="2" required title="Seleciona o idioma do sistema">
+                <option value="Brazilian Portuguese">Português</option>
+                <option value="English">English</option>
+                <option value="Spanish">Español</option>
+            </select>
+        </div>`
+    }
     static officeCategoria(prefixo){
         return `
         <div class="form-group col">
@@ -325,36 +374,6 @@ export class InputsView{
                 <option value="Office2016">Office 2016</option>
                 <option value="Office2019">Office 2019</option>
                 <option value="Office365">Office 365</option>
-            </select>
-        </div>`
-    }
-    static officeFixit(prefixo){
-        return `
-        <div class="form-group col">
-            <label for="${prefixo}-fixit"><a href="http://aka.ms/diag_97275">Fix it Microsoft</a> executado</label>
-            <select id="${prefixo}-fixit" class="custom-select" size="2" title="http://aka.ms/diag_97275">
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-            </select>            
-        </div>`
-    }
-    static officeMsa(prefixo){
-        return `
-        <div class="form-group col">
-            <label for="${prefixo}-msa">MSA testada com o cliente</label>
-            <select id="${prefixo}-msa" class="custom-select" size="2">
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-            </select>
-        </div>`
-    }
-    static officeOspp(prefixo){
-        return `
-        <div class="form-group col">
-            <label for="${prefixo}-ospp">Coletado OSPP.log</label>
-            <select id="${prefixo}-ospp" class="custom-select" title="Conforme SLN306817">
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
             </select>
         </div>`
     }
@@ -437,6 +456,29 @@ export class InputsView{
             </select>
         </div>`
     }
+    static windows(prefixo){
+        return `
+        <div class="form-group col">            
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${prefixo}-windows">Sistema</label>
+                </div>
+                <select id="${prefixo}-windows" class="custom-select" size="3" required title="Versão do Windows">
+                    <option value="Windows 10 Home">Win 10 Home</option>
+                    <option value="Windows 10 Home Single Language">Win 10 SingLang</option>
+                    <option value="Windows 10 Professional">Win 10 Pro</option>
+                    <option value="Windows 8 Home">Win 8 Home</option>
+                    <option value="Windows 8 Professional">Win 8 Pro</option>
+                    <option value="Windows 8.1 Home">Win 8.1 Home</option>
+                    <option value="Windows 8.1 Single Language">Win 8.1 SingLang</option>
+                    <option value="Windows 8.1 Professional">Win 8.1 Pro</option>
+                    <option value="Windows 7 Home">Win 7 Home</option>
+                    <option value="Windows 7 Professional">Win 7 Pro</option>
+                    <option value="Windows 7 Ultimate">Win 7 Ultimate</option>
+                </select>
+            </div>
+        </div>`
+    }
     
     /**Botões */
     static submit(prefixo){
@@ -455,6 +497,7 @@ export class InputsView{
     static resultado(prefixo){
         return `
         <div class="form-group col">
+            <label for="${prefixo}-resultado">Resultado</label>
             <textarea id="${prefixo}-resultado" cols="30" rows="5" class="form-control" readonly>Resultado...</textarea>
         </div>`
     }

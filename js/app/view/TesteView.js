@@ -54,7 +54,7 @@ export class TesteView extends View{
                     ordem${InputsView.ordem(this.prefixo)}
                     valor${InputsView.valor(this.prefixo)}
                     temperatura${InputsView.temperatura(this.prefixo)}
-                    aceitaIntervencao${InputsView.aceitaIntervencao(this.prefixo)}
+                    optSimNao, aceita-intervencao, Cliente aceita intenvenção${InputsView.optSimNao(this.prefixo, 'aceita-intervencao', 'Cliente aceita intenvenção')}
                     guidance${InputsView.guidance(this.prefixo)}
                 </div>
             </div>
@@ -104,9 +104,9 @@ export class TesteView extends View{
                     microsoft${InputsView.microsoft(this.prefixo)}
                     officeCategoria${InputsView.officeCategoria(this.prefixo)}
                     officeVersao${InputsView.officeVersao(this.prefixo)}
-                    officeFixit${InputsView.officeFixit(this.prefixo)}
-                    officeOspp${InputsView.officeOspp(this.prefixo)}
-                    officeMsa ${InputsView.officeMsa(this.prefixo)}
+                    optSimNao, fixit, <a href='http://aka.ms/diag_97275' target='_blank'>Fix it Microsoft</a> executado${InputsView.optSimNao(this.prefixo, "fixit", "<a href='http://aka.ms/diag_97275' target='_blank'>Fix it Microsoft</a> executado")}
+                    optSimNao, ospp, Coletado OSPP.log${InputsView.optSimNao(this.prefixo, 'ospp', 'Coletado OSPP.log')}
+                    optSimNao, msa, MSA testada com o cliente${InputsView.optSimNao(this.prefixo, 'msa', 'MSA testada com o cliente')}
                 </div>
             </div>
             <br>
