@@ -17,6 +17,9 @@ export class BateriaController{
         this.inputAtual = $(`#${this.prefixo}-atual`)
         this.outputResultado = $(`#${this.prefixo}-resultado`)
 
+        this.inputProjeto.value = localStorage.getItem(`bateria-projeto`) || ''
+        this.inputAtual.value = localStorage.getItem(`bateria-atual`) || ''
+
         this.calcula()
 
         this.inputs = [this.inputProjeto, this.inputAtual]
@@ -31,8 +34,8 @@ export class BateriaController{
 
         let bateria = new Bateria(this.inputProjeto.value, this.inputAtual.value)
 
-        localStorage.setItem(`${this.prefixo}-projeto`, bateria.total)
-        localStorage.setItem(`${this.prefixo}-atual`, bateria.atual)
+        localStorage.setItem(`bateria-projeto`, bateria.total)
+        localStorage.setItem(`bateria-atual`, bateria.atual)
         
         InputsView.estiloBorda(this.outputResultado, "red")
         

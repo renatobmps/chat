@@ -1,64 +1,4 @@
-(function(e){function t(r){if(o[r])return o[r].exports;var n=o[r]={i:r,l:!1,exports:{}};return e[r].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var o={};return t.m=e,t.c=o,t.d=function(e,o,r){t.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var o=e&&e.__esModule?function(){return e['default']}:function(){return e};return t.d(o,'a',o),o},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p='dist',t(t.s=5)})([function(e,t){'use strict';t.a=class{constructor(e){this._elemento=e}template(){throw new Error('O m\xE9todo TEMPLATE precisa ser implementado')}update(e){this._elemento.innerHTML=this.template(e)}}},function(e){var t=function(){return this}();try{t=t||Function('return this')()||(1,eval)('this')}catch(o){'object'==typeof window&&(t=window)}e.exports=t},function(e,t){'use strict';t.a=class{constructor(){throw new Error('N\xE3o \xE9 poss\xEDvel instanciar esta classe')}static citrix(e){return`
-        <div class="form-group col">
-            <label for="${e}-citrix">Login</label>
-            <input type="text" class="form-control form-control-sm" id="${e}-citrix" required="" placeholder="seu_login_de_citrix" pattern="[&quot;A-Za-z0-9_&quot;]{5,20}" title="login de Citrix">
-        </div>`}static badge(e){return`
-        <div class="form-group col">
-            <label for="${e}-badge">Badge</label>
-            <input type="number" id="${e}-badge" class="form-control form-control-sm" required placeholder="" pattern="" title="Número de badge">
-        </div>`}static horario(e){return`
-        <div class="form-group col">
-            <label for="${e}-"></label>
-            
-        </div>`}static cliente(e){return`
-        <div class="form-group col">
-            <label for="${e}-cliente">Nome do cliente</label>
-            <input type="text" id="${e}-cliente" class="form-control form-control-sm" required placeholder="Fulano de tal" pattern="[az-AZ]" title="Entre com o nome do cliente">
-        </div>`}static telefonePrincipal(e){return`
-        <div class="form-group col">
-            <label for="${e}-telefone">Telefone principal</label>
-            <input type="tel" id="${e}-telefone" class="form-control form-control-sm">
-        </div>`}static telefoneAdicional(e){return`
-        <div class="form-group col">
-            <label for="${e}-"></label>
-            
-        </div>`}static email(e){return`
-        <div class="form-group col">
-            <label for="${e}-email">E-mail</label>
-            <input type="email" id="${e}-email" class="form-control form-control-sm" required placeholder="cliente@email.com" title="Endereço  de e-mail do cliente">
-        </div>`}static caso(e){return`
-        <div class="form-group col">
-            <label for="${e}-caso">Case</label>
-            <input type="number" class="form-control form-control-sm" id="${e}-caso" required="" placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
-        </div>`}static srAge(e){return`
-        <div class="form-group col">
-            <label for="${e}-"></label>
-            
-        </div>`}static data(e,t,o){return`
-        <div class="form-group col">
-            <label for="${e}-data-${t}">${o}</label>
-            <input type="date" class="form-control form-control-sm" id="${e}-data-${t}" required>
-        </div>`}static motivo(e){return`
-        <div class="form-group col">
-            <label for="${e}-motivo">Motivo do NoDPS</label>
-            <textarea class="form-control form-control-sm" id="${e}-motivo" required="" placeholder="Cliente fazendo as atualizações pendentes do windows update"></textarea>
-        </div>`}static ordem(e){return`
-        <div class="form-group col">
-            <label for="${e}-"></label>
-            
-        </div>`}static valor(e){return`
-        <div class="form-group col">
-            <label for="${e}-valor">Valor do reembolso</label>
-            <div class="input-group input-group-sm">
-                <div class="input-group-prepend">
-                    <span class="input-group-text">R$</span>
-                </div>
-                <input type="number" id="${e}-valor" class="form-control">
-                <div class="input-group-append">
-                    <span class="input-group-text">,00</span>
-                </div>
-            </div>
-        </div>`}static dpsCompleto(e){return`
+(function(e){function t(r){if(o[r])return o[r].exports;var n=o[r]={i:r,l:!1,exports:{}};return e[r].call(n.exports,n,n.exports,t),n.l=!0,n.exports}var o={};return t.m=e,t.c=o,t.d=function(e,o,r){t.o(e,o)||Object.defineProperty(e,o,{configurable:!1,enumerable:!0,get:r})},t.n=function(e){var o=e&&e.__esModule?function(){return e['default']}:function(){return e};return t.d(o,'a',o),o},t.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},t.p='dist',t(t.s=5)})([function(e,t){'use strict';t.a=class{constructor(e){this._elemento=e}template(){throw new Error('O m\xE9todo TEMPLATE precisa ser implementado')}update(e){this._elemento.innerHTML=this.template(e)}}},function(e){var t=function(){return this}();try{t=t||Function('return this')()||(1,eval)('this')}catch(o){'object'==typeof window&&(t=window)}e.exports=t},function(e,t){'use strict';t.a=class{constructor(){throw new Error('N\xE3o \xE9 poss\xEDvel instanciar esta classe')}static dpsCompleto(e){return`
         <div class="form-group col">
             ${this.dps(e)}
             ${this.dpsType(e)}
@@ -74,244 +14,502 @@
         </div>`}static artigo(e){return`
         <div class="form-group col">
             <label for="${e}-artigo">Oracle</label>
-            <input type="text" class="form-control form-control-sm" id="${e}-artigo" required placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128218;</span>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="${e}-artigo" required placeholder="SLNXXXXXX" pattern="[&quot;A-Z0-9&quot;]{9}" title="SLN, PNP, HOW, LNK... usado" maxlength="9">
+            </div>
+        </div>`}static badge(e){return`
+        <div class="form-group col">
+            <label for="${e}-badge">Badge</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${e}-badge" class="form-control form-control-sm" required placeholder="" pattern="" title="Número de badge">
+            </div>
         </div>`}static bateriaAtual(e){return`
         <div class="form-group col">
             <label for="${e}-atual">Último carregamento total</label>
-            <input type="number" id="${e}-atual" class="form-control form-control-sm" placeholder="32889" required min="9999" title="Projeto do último carregamento total">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128267;</span>
+                </div>
+                <input type="number" id="${e}-atual" class="form-control form-control-sm" placeholder="32889" required min="9999" title="Projeto do último carregamento total">
+            </div>
         </div>`}static bateriaProjeto(e){return`
         <div class="form-group col">
             <label for="${e}-projeto">Projeto total</label>
-            <input type="number" id="${e}-projeto" class="form-control form-control-sm" placeholder="41998" required min="9999" title="Projeto total da bateria">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128267;</span>
+                </div>
+                <input type="number" id="${e}-projeto" class="form-control form-control-sm" placeholder="41998" required min="9999" title="Projeto total da bateria">
+            </div>
+        </div>`}static caso(e){return`
+        <div class="form-group col">
+            <label for="${e}-caso">Case</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128188;</span>
+                </div>
+                <input type="number" class="form-control form-control-sm" id="${e}-caso" required="" placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
+            </div>
+        </div>`}static citrix(e){return`
+        <div class="form-group col">
+            <label for="${e}-citrix">Login</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#127380;</span>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="${e}-citrix" required="" placeholder="seu_login_de_citrix" pattern="[&quot;A-Za-z0-9_&quot;]{5,20}" title="login de Citrix">
+            </div>
+        </div>`}static cliente(e){return`
+        <div class="form-group col">
+            <label for="${e}-cliente">Nome do cliente</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128100;</span>
+                </div>
+                <input type="text" id="${e}-cliente" class="form-control form-control-sm" required placeholder="Fulano de tal" pattern="[az-AZ]" title="Entre com o nome do cliente">
+            </div>
         </div>`}static cnpj(e){return`
         <div class="form-group col">
             <label for="${e}-cnpj">CNPJ</label>
-            <input type="number" id="${e}-cnpj" class="form-control form-control-sm" required placeholder="Somente numeros" title="Entre com o número do CNPJ">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${e}-cnpj" class="form-control form-control-sm" required placeholder="Somente numeros" title="Entre com o número do CNPJ">
+            </div>
         </div>`}static contraSenhaCodigo(e){return`
         <div class="form-group col">
             <label for="${e}-codigo-contra-senha">Código gerado</label>
-            <input type="text" id="${e}-codigo-contra-senha" class="form-control form-control-sm" placeholder="#HQWHSL2-6FF1" title="Código gerado pela máquina para contra-senha">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128273;</span>
+                </div>
+                <input type="text" id="${e}-codigo-contra-senha" class="form-control form-control-sm" placeholder="#HQWHSL2-6FF1" title="Código gerado pela máquina para contra-senha">
+            </div>
         </div>`}static cpf(e){return`
         <div class="form-group col">
             <label for="${e}-cpf">CPF</label>
-            <input type="number" id="${e}-cpf" class="form-control form-control-sm" required placeholder="00011122233" title="Entre com o CPF do cliente">
-        </div>`}static diag(e){return`
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${e}-cpf" class="form-control form-control-sm" required placeholder="00011122233" title="Entre com o CPF do cliente">
+            </div>
+        </div>`}static data(e,t,o){return`
         <div class="form-group col">
-            <label for="${e}-diag">Diag</label>
-            <select id="${e}-diag" class="custom-select" size="2" required title="Ferramenta de diagnóstico">
-                <option value="ePSA">Epsa</option>
-                <option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
-                <option value="Alien Autopsy">Alien Autopsy</option>
-                <option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
-                <option value="FPD Bist">FPD Bist</option>
-                <option value="LCD Bist">LCD Bist</option>
-                <option value="Led Indicators">Led Indicators</option>
-                <option value="MemRX">MemRX</option>
-                <option value="MpMemory">MpMemory</option>
-                <option value="PC Doctor">PC Doctor</option>
-                <option value="PSA">PSA</option>
-                <option value="PSU Bist">PSU Bist</option>
-                <option value="Quad-Pack Leds">Quad-Pack Leds</option>
-                <option value="Tools not Needed">Tools not Needed</option>
-            </select>
+            <label for="${e}-data-${t}">${o}</label>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Data</span>
+                </div>
+                <input type="date" class="form-control form-control-sm" id="${e}-data-${t}" required>
+            </div>
         </div>`}static dps(e){return`
         <div class="form-group col">
             <label for="${e}-dps">Nº DPS</label>
-            <input type="number" id="${e}-dps" class="form-control form-control-sm" required placeholder="0000000000" title="Entre com o número de DPS">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${e}-dps" class="form-control form-control-sm" required placeholder="0000000000" title="Entre com o número de DPS">
+            </div>
+        </div>`}static email(e){return`
+        <div class="form-group col">
+            <label for="${e}-email">E-mail</label>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">@</span>
+                </div>
+                <input type="email" id="${e}-email" class="form-control form-control-sm" required placeholder="cliente@email.com" title="Endereço  de e-mail do cliente">
+            </div>
         </div>`}static guidance(e){return`
         <div class="form-group col">
             <label for="${e}-guidance">Motivo da solicitação</label>
-            <input type="text" id="${e}-guidance" class="form-control form-control-sm" required placeholder="Solução desconhecida" title="Descreva o motivo da solicitação" value="Solução desconhecida">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128220;</span>
+                </div>
+                <input type="text" id="${e}-guidance" class="form-control form-control-sm" required placeholder="Solução desconhecida" title="Descreva o motivo da solicitação" value="Solução desconhecida">
+            </div>
+        </div>`}static horario(e,t,o){return`
+        <div class="form-group col">
+            <label for="${e}-horario-${t}">${o}</label>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#9201;&#65039;</span>
+                </div>
+                <input type="time" id="${e}-horario-${t}" class="form-control form-control-sm" required placeholder="00:00" title="Horário">
+            </div>
         </div>`}static inscricaoEstadual(e){return`
         <div class="form-group col">
             <label for="${e}-inscricao-estadual">Inscrição estadual</label>
-            <input type="number" id="${e}-inscricao-estadual" class="form-control form-control-sm" placeholder="Não preencher se isento" title="Entre com a numeração da inscrição estadual">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${e}-inscricao-estadual" class="form-control form-control-sm" placeholder="Não preencher se isento" title="Entre com a numeração da inscrição estadual">
+            </div>
         </div>`}static microsoft(e){return`
         <div class="form-group col">
             <label for="${e}-microsoft">SR Microsoft</label>
-            <input type="number" id="${e}-microsoft" class="form-control form-control-sm" required placeholder="SRX123456789 (Só números)" title="Protocolo fornecido pela Microsoft durante o atendiento no chat">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">SRX</span>
+                </div>
+                <input type="number" id="${e}-microsoft" class="form-control form-control-sm" required placeholder="123456789" title="Protocolo fornecido pela Microsoft durante o atendiento no chat">
+            </div>
         </div>`}static modelo(e){return`
         <div class="form-group col">
             <label for="${e}-modelo">Modelo</label>
-            <input type="text" id="${e}-modelo" class="form-control form-control-sm" required placeholder="INSPIRON 3583" title="Entre com o nome do modelo do equipamento">
-        </div>`}static optSimNao(e,t,o){return`
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128187;</span>
+                </div>
+                <input type="text" id="${e}-modelo" class="form-control form-control-sm" required placeholder="INSPIRON 3583" title="Entre com o nome do modelo do equipamento">
+            </div>
+        </div>`}static motivo(e){return`
         <div class="form-group col">
-            <label for="${e}-opcao-${t}">${o}</label>
-            <select id="${e}-opcao-${t}" class="custom-select" size="2" required>
-                <option value="Sim">Sim</option>
-                <option value="Não">Não</option>
-            </select>
+            <label for="${e}-motivo">Motivo do NoDPS</label>
+            <textarea id="${e}-motivo" cols="30" rows="5" class="form-control" required placeholder="Cliente fazendo as atualizações pendentes do windows update" title="Descreva o motivo para ter ficado sem DPS"></textarea>
+        </div>`}static ordem(e){return`
+        <div class="form-group col">
+            <label for="${e}-ordem">Ordem</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${e}-ordem" class="form-control form-control-sm" required placeholder="" title="Digite o número da ordem de compra">
+            </div>
         </div>`}static peca(e){return`
         <div class="form-group col">
             <label for="${e}-peca">Peças enviadas</label>
-            <input type="text" id="${e}-peca" class="form-control form-control-sm" required placeholder="LCD P4NFX..." title="Entre com as peças que foram enviadas neste chamado">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#9000;&#65039;</span>
+                </div>
+                <input type="text" id="${e}-peca" class="form-control form-control-sm" required placeholder="LCD P4NFX..." title="Entre com as peças que foram enviadas neste chamado">
+            </div>
         </div>`}static reporte(e){return`
         <div class="form-group col">
             <label for="${e}-report">Reporte</label>
-            <input type="text" id="${e}-report" class="form-control form-control-sm" required placeholder="Negativo / Positivo" title="Resultado do atendimento do chamado">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128483;&#65039;</span>
+                </div>
+                <input type="text" id="${e}-report" class="form-control form-control-sm" required placeholder="Negativo / Positivo" title="Resultado do atendimento do chamado">
+            </div>
         </div>`}static resumo(e){return`
         <div class="form-group col">
             <label for="${e}-resumo">Resumo</label>
             <textarea id="${e}-resumo" cols="30" rows="5" class="form-control" required placeholder="O atendimento inicou com..." title="O resumo do caso deverá ser descrito com todos os detalhes técnicos e histórico de DPSs, para que seja feita uma análise do que deve ser feito a seguir"></textarea>
+        </div>`}static srAge(e){return`
+        <div class="form-group col">
+            <label for="${e}-sr-age">Tempo de SR</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#9203;</span>
+                </div>
+                <input type="number" class="form-control form-control-sm" required placeholder="0" title="Digite o tempo de SR">
+                <div class="input-group-append">
+                    <span class="input-group-text">Day(s)</span>
+                </div>
+            </div>
         </div>`}static tag(e){return`
         <div class="form-group col">
             <label for="${e}-tag">TAG</label>
-            <input type="text" id="${e}-tag" class="form-control form-control-sm" required placeholder="XXXXXX2" title="Entre com a TAG do equipamento" pattern="{8}">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128290;</span>
+                </div>
+                <input type="text" id="${e}-tag" class="form-control form-control-sm" required placeholder="XXXXXX2" title="Entre com a TAG do equipamento" pattern="{8}">
+            </div>
         </div>`}static tagAccount(e){return`
         <div class="form-group col">
             <label for="${e}-account">Account</label>
-            <input type="text" id="${e}-account" class="form-control form-control-sm" required placeholder="Via Varejo" title="Entre com account TAG">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128104;&#8205;&#128188;</span>
+                </div>
+                <input type="text" id="${e}-account" class="form-control form-control-sm" required placeholder="Via Varejo" title="Entre com account TAG">
+            </div>
         </div>`}static tagAge(e){return`
         <div class="form-group col">
             <label for="${e}-tag-age">Idade da máquina</label>
-            <input type="number" id="${e}-tag-age" class="form-control form-control-sm" required placeholder="0 Days(s)" title="Entre com a idade da máquina (apenas números)" min="1">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#8986;</span>
+                </div>
+                <input type="number" id="${e}-tag-age" class="form-control form-control-sm" required placeholder="0" title="Entre com a idade da máquina" min="1">
+                <div class="input-group-append">
+                    <span class="input-group-text">Day(s)</span>
+                </div>
+            </div>
+        </div>`}static telefoneAdicional(e){return`
+        <div class="form-group col">
+            <label for="${e}-telefone-adicional">Telefone adicional</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128241;</span>
+                </div>
+                <input type="tel" id="${e}-telefone-adicional" class="form-control form-control-sm" required placeholder="11988776655" title="Entre com o telefone adicional do cliente">
+            </div>
+        </div>`}static telefonePrincipal(e){return`
+        <div class="form-group col">
+            <label for="${e}-telefone-principal">Telefone principal</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128241;</span>
+                </div>
+                <input type="tel" id="${e}-telefone-principal" class="form-control form-control-sm" required placeholder="11988776655" title="Entre com o telefone de preferencia do cliente">
+            </div>
         </div>`}static temperatura(e){return`
         <div class="form-group col">
             <label for="${e}-temperatura">Temperatura do cliente</label>
-            <input type="text" id="${e}-temperatura" class="form-control form-control-sm" required placeholder="Impactado / Neutro" title="Descreva o humor do cliente">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#127777;&#65039;</span>
+                </div>
+                <input type="text" id="${e}-temperatura" class="form-control form-control-sm" required placeholder="Impactado / Neutro" title="Descreva o humor do cliente">
+            </div>
+        </div>`}static valor(e){return`
+        <div class="form-group col">
+            <label for="${e}-valor">Valor do reembolso</label>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">R$</span>
+                </div>
+                <input type="number" id="${e}-valor" class="form-control" required placeholder="000" title="Digite o valor para ser reembolsado">
+                <div class="input-group-append">
+                    <span class="input-group-text">,00</span>
+                </div>
+            </div>
         </div>`}static arquiteturaHd(e){return`
         <div class="form-group col">
-            <label for="${e}-arquitetura"></label>
-            <select id="${e}-arquitetura" class="custom-select" size="2" required title="Selecione a arquitetura do sistema">
-                <option value="64 bits">64</option>
-                <option value="32 bits">32</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-arquitetura">Arquitetura</label>
+                </div>
+                <select id="${e}-arquitetura" class="custom-select" size="2" required title="Selecione a arquitetura do sistema">
+                    <option value="64 bits">64</option>
+                    <option value="32 bits">32</option>
+                </select>
+            </div>
         </div>`}static code(e){return`
         <div class="form-group col">
-            <label for="${e}-code">Code</label>
-            <select id="${e}-code" class="custom-select" size="2" required>
-                <option value="Pass">Pass</option>
-                <option value="Failed">Failed</option>
-                <option value="Did not complete">Did not complete</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-code">Code</label>
+                </div>
+                <select id="${e}-code" class="custom-select" size="2" required>
+                    <option value="Pass">Pass</option>
+                    <option value="Failed">Failed</option>
+                    <option value="Did not complete">Did not complete</option>
+                </select>
+            </div>
         </div>`}static contraSenhaTipo(e){return`
         <div class="form-group col">
-            <label for="${e}-tipo-contra-senha">Senha de</label>
-            <select id="${e}-tipo-contra-senha" class="custom-select" required title="De qual serviço o cliente precisa de auxílio?" size="2">
-                <option value="BIOS">BIOS</option>
-                <option value="HD">HD</option>
-                <option value="Admin">Admin</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-tipo-contra-senha">Senha de</label>
+                </div>
+                <select id="${e}-tipo-contra-senha" class="custom-select" required title="De qual serviço o cliente precisa de auxílio?" size="2">
+                    <option value="BIOS">BIOS</option>
+                    <option value="HD">HD</option>
+                    <option value="Admin">Admin</option>
+                </select>
+            </div>
+        </div>`}static diag(e){return`
+        <div class="form-group col">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-diag">Diag</label>
+                </div>
+                <select id="${e}-diag" class="custom-select" size="2" required title="Ferramenta de diagnóstico">
+                    <option value="ePSA">Epsa</option>
+                    <option value="32 Bits Diagnostics">32 Bits Diagnostics</option>
+                    <option value="Alien Autopsy">Alien Autopsy</option>
+                    <option value="Dell Online Diagnostics">Dell Online Diagnostics</option>
+                    <option value="FPD Bist">FPD Bist</option>
+                    <option value="LCD Bist">LCD Bist</option>
+                    <option value="Led Indicators">Led Indicators</option>
+                    <option value="MemRX">MemRX</option>
+                    <option value="MpMemory">MpMemory</option>
+                    <option value="PC Doctor">PC Doctor</option>
+                    <option value="PSA">PSA</option>
+                    <option value="PSU Bist">PSU Bist</option>
+                    <option value="Quad-Pack Leds">Quad-Pack Leds</option>
+                    <option value="Tools not Needed">Tools not Needed</option>
+                </select>
+            </div>
         </div>`}static dpsType(e){return`
         <div class="form-group col">
-            <label for="${e}-dps-tipo">Tido de DPS</label>
-            <select id="${e}-dps-tipo" class="custom-select" size="2" required title="Selecione qual é o tipo de serviço do chamado">
-                <option value="Parts and Labor">P&L</option>
-                <option value="Parts only">Parts only</option>
-                <option value="Mail in">MIS</option>
-                <option value="Carry in service">CIS</option>
-                <option value="10 business day">P10</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-dps-tipo">Tipo de DPS</label>
+                </div>
+                <select id="${e}-dps-tipo" class="custom-select" size="2" required title="Selecione qual é o tipo de serviço do chamado">
+                    <option value="Parts and Labor">P&L</option>
+                    <option value="Parts only">Parts only</option>
+                    <option value="Mail in">MIS</option>
+                    <option value="Carry in service">CIS</option>
+                    <option value="10 business day">P10</option>
+                </select>
+            </div>
         </div>`}static dpsQuantidade(e){return`
         <div class="form-group col">
-            <label for="${e}-dps-quantidade">Qtde</label>
-            <select id="${e}-dps-quantidade" class="custom-select" size="2" required title="Selecione a quantidade de DPSs da SR">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-dps-quantidade">Qtde</label>
+                </div>
+                <select id="${e}-dps-quantidade" class="custom-select" size="2" required title="Selecione a quantidade de DPSs da SR">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
         </div>`}static garantia(e){return`
         <div class="form-group col">
-            <label for="${e}-garantia">Garantia</label>
-            <select id="${e}-garantia" class="custom-select" size="2">
-                <option value="IW">Em garantia</option>
-                <option value="OOW">Sem garantia</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-garantia">Garantia</label>
+                </div>
+                <select id="${e}-garantia" class="custom-select" size="2">
+                    <option value="IW">Em garantia</option>
+                    <option value="OOW">Sem garantia</option>
+                </select>
+            </div>
         </div>`}static idioma(e){return`
         <div class="form-group col">
-            <label for="${e}-idioma">Idioma</label>
-            <select id="${e}-idioma" class="custom-select" size="2" required title="Seleciona o idioma do sistema">
-                <option value="Brazilian Portuguese">Português</option>
-                <option value="English">English</option>
-                <option value="Spanish">Español</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-idioma">Idioma</label>
+                </div>
+                <select id="${e}-idioma" class="custom-select" size="2" required title="Seleciona o idioma do sistema">
+                    <option value="Brazilian Portuguese">Português</option>
+                    <option value="English">English</option>
+                    <option value="Spanish">Español</option>
+                </select>
+            </div>
         </div>`}static officeCategoria(e){return`
         <div class="form-group col">
-            <label for="${e}-office"></label>
-            <select id="${e}-office" class="custom-select" size="2" title="Office2016/Office2019/Office365">
-                <option value="Office2016">Office 2016</option>
-                <option value="Office2019">Office 2019</option>
-                <option value="Office365">Office 365</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-office">Versão do Office</label>
+                </div>
+                <select id="${e}-office" class="custom-select" size="2" title="Office2016/Office2019/Office365">
+                    <option value="Office2016">Office 2016</option>
+                    <option value="Office2019">Office 2019</option>
+                    <option value="Office365">Office 365</option>
+                </select>
+            </div>
         </div>`}static officeVersao(e){return`
         <div class="form-group col">
-            <label for="${e}-versao-office">Detalhes da versão</label>
-            <select id="${e}-versao-office" class="custom-select" size="2" title="H&amp;S/H&amp;B/365P/365H/PRO">
-                <option value="Office Home and Student">H&amp;S</option>
-                <option value="Office Home and Business">H&amp;B</option>
-                <option value="Office 365 Personal">365P</option>
-                <option value="Office 365 Home">365H</option>
-                <option value="Office Professional">PRO</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-versao-office">Detalhes da versão</label>
+                </div>
+                <select id="${e}-versao-office" class="custom-select" size="2" title="H&amp;S/H&amp;B/365P/365H/PRO">
+                    <option value="Office Home and Student">H&amp;S</option>
+                    <option value="Office Home and Business">H&amp;B</option>
+                    <option value="Office 365 Personal">365P</option>
+                    <option value="Office 365 Home">365H</option>
+                    <option value="Office Professional">PRO</option>
+                </select>
+            </div>
+        </div>`}static optSimNao(e,t,o){return`
+        <div class="form-group col">
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-opcao-${t}">${o}</label>
+                </div>
+                <select id="${e}-opcao-${t}" class="custom-select" size="2" required>
+                    <option value="Sim">Sim</option>
+                    <option value="Não">Não</option>
+                </select>
+            </div>
         </div>`}static problema(e){return`
         <div class="form-group col">
-            <label for="${e}-problema">Problema da máquina</label>
-            <select class="custom-select" size="2" id="${e}-problema" required>
-                <option value="3rd Party Hardware">3rd Party Hardware</option>
-                <option value="3rd Party Software">3rd Party Software</option>
-                <option value="Audio Issues">Audio Issues</option>
-                <option value="Battery Related">Battery Related</option>
-                <option value="BIOS Issues">BIOS Issues</option>
-                <option value="BIOS or HDD Passwords">BIOS or HDD Passwords</option>
-                <option value="Bluetooth">Bluetooth</option>
-                <option value="BSOD &amp; Random Shutdown">BSOD &amp; Random Shutdown</option>
-                <option value="Dell Applications">Dell Applications</option>
-                <option value="Dell Mobile Connect">Dell Mobile Connect</option>
-                <option value="Dell SupportAssist">Dell SupportAssist</option>
-                <option value="Dell SupportAssist / AWCC">Dell SupportAssist / AWCC</option>
-                <option value="Docking Stations">Docking Stations</option>
-                <option value="Driver Issues">Driver Issues</option>
-                <option value="Exception Request (TM &amp; Above)">Exception Request (TM &amp; Above)</option>
-                <option value="Gaming Related">Gaming Related</option>
-                <option value="HDD Issues">HDD Issues</option>
-                <option value="Input Devices">Input Devices</option>
-                <option value="Keyboard">Keyboard</option>
-                <option value="Monitor Issues">Monitor Issues</option>
-                <option value="MS Office Issues">MS Office Issues</option>
-                <option value="Networking Issues">Networking Issues</option>
-                <option value="No Boot">No Boot</option>
-                <option value="No Post">No Post</option>
-                <option value="No Power">No Power</option>
-                <option value="No Video">No Video</option>
-                <option value="Noise Issues">Noise Issues</option>
-                <option value="ODD Issues">ODD Issues</option>
-                <option value="OS Issues">OS Issues</option>
-                <option value="Other - General">Other - General</option>
-                <option value="Other - Dell Hardware">Other - Dell Hardware</option>
-                <option value="Other Dell Applications">Other Dell Applications</option>
-                <option value="Performance Issues">Performance Issues</option>
-                <option value="Sleep/Hibernation Issues">Sleep/Hibernation Issues</option>
-                <option value="Thermal Issues">Thermal Issues</option>
-                <option value="Touchpad">Touchpad</option>
-                <option value="Video Issues">Video Issues</option>
-                <option value="Webcam Related">Webcam Related</option>
-                <option value="Windows Hello">Windows Hello</option>
-                <option value="Windows Update">Windows Update</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">   
+                    <label class="input-group-text" for="${e}-problema">Problema da máquina</label>
+                </div>
+                <select class="custom-select" size="2" id="${e}-problema" required>
+                    <option value="3rd Party Hardware">3rd Party Hardware</option>
+                    <option value="3rd Party Software">3rd Party Software</option>
+                    <option value="Audio Issues">Audio Issues</option>
+                    <option value="Battery Related">Battery Related</option>
+                    <option value="BIOS Issues">BIOS Issues</option>
+                    <option value="BIOS or HDD Passwords">BIOS or HDD Passwords</option>
+                    <option value="Bluetooth">Bluetooth</option>
+                    <option value="BSOD &amp; Random Shutdown">BSOD &amp; Random Shutdown</option>
+                    <option value="Dell Applications">Dell Applications</option>
+                    <option value="Dell Mobile Connect">Dell Mobile Connect</option>
+                    <option value="Dell SupportAssist">Dell SupportAssist</option>
+                    <option value="Dell SupportAssist / AWCC">Dell SupportAssist / AWCC</option>
+                    <option value="Docking Stations">Docking Stations</option>
+                    <option value="Driver Issues">Driver Issues</option>
+                    <option value="Exception Request (TM &amp; Above)">Exception Request (TM &amp; Above)</option>
+                    <option value="Gaming Related">Gaming Related</option>
+                    <option value="HDD Issues">HDD Issues</option>
+                    <option value="Input Devices">Input Devices</option>
+                    <option value="Keyboard">Keyboard</option>
+                    <option value="Monitor Issues">Monitor Issues</option>
+                    <option value="MS Office Issues">MS Office Issues</option>
+                    <option value="Networking Issues">Networking Issues</option>
+                    <option value="No Boot">No Boot</option>
+                    <option value="No Post">No Post</option>
+                    <option value="No Power">No Power</option>
+                    <option value="No Video">No Video</option>
+                    <option value="Noise Issues">Noise Issues</option>
+                    <option value="ODD Issues">ODD Issues</option>
+                    <option value="OS Issues">OS Issues</option>
+                    <option value="Other - General">Other - General</option>
+                    <option value="Other - Dell Hardware">Other - Dell Hardware</option>
+                    <option value="Other Dell Applications">Other Dell Applications</option>
+                    <option value="Performance Issues">Performance Issues</option>
+                    <option value="Sleep/Hibernation Issues">Sleep/Hibernation Issues</option>
+                    <option value="Thermal Issues">Thermal Issues</option>
+                    <option value="Touchpad">Touchpad</option>
+                    <option value="Video Issues">Video Issues</option>
+                    <option value="Webcam Related">Webcam Related</option>
+                    <option value="Windows Hello">Windows Hello</option>
+                    <option value="Windows Update">Windows Update</option>
+                </select>
+            </div>
         </div>`}static trigger(e){return`
         <div class="form-group col">
-            <label for="${e}-trigger">Problema da máquina</label>
-            <select class="custom-select" size="2" id="${e}-trigger" required>
-                <option value="+ 3 DPS dentro de 30 dias">3 DPSs ou mais em 30 dias</option>
-                <option value="+ 4 DPS dentro de 1 ano">4 DPSs ou mais em um ano</option>
-                <option value="Captura de qualidade">Captura de qualidade</option>
-                <option value="Dano acidental">Dano acidental</option>
-                <option value="Exceção">Exceção</option>
-                <option value="Extravio">Extravio</option>
-                <option value="PNC">PNC</option>
-                <option value="Problema não solucionado em 30 dias">Problema não solucionado em 30 dias</option>
-                <option value="Problema técnico dentro dos 7 primeiros dias">Problema técnico dentro dos 7 primeiros dias</option>
-                <option value="Reembolso de Serviço de Reparo">Reembolso de Serviço de Reparo</option>
-            </select>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="${e}-trigger">Trigger</label>
+                </div>
+                <select class="custom-select" size="2" id="${e}-trigger" required>
+                    <option value="+ 3 DPS dentro de 30 dias">3 DPSs ou mais em 30 dias</option>
+                    <option value="+ 4 DPS dentro de 1 ano">4 DPSs ou mais em um ano</option>
+                    <option value="Captura de qualidade">Captura de qualidade</option>
+                    <option value="Dano acidental">Dano acidental</option>
+                    <option value="Exceção">Exceção</option>
+                    <option value="Extravio">Extravio</option>
+                    <option value="PNC">PNC</option>
+                    <option value="Problema não solucionado em 30 dias">Problema não solucionado em 30 dias</option>
+                    <option value="Problema técnico dentro dos 7 primeiros dias">Problema técnico dentro dos 7 primeiros dias</option>
+                    <option value="Reembolso de Serviço de Reparo">Reembolso de Serviço de Reparo</option>
+                </select>
+            </div>
         </div>`}static windows(e){return`
-        <div class="form-group col">            
-            <div class="input-group mb-3">
+        <div class="form-group col">
+            <div class="input-group input-group-sm mb-3">
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="${e}-windows">Sistema</label>
                 </div>
-                <select id="${e}-windows" class="custom-select" size="3" required title="Versão do Windows">
+                <select id="${e}-windows" class="custom-select" size="2" required title="Versão do Windows">
                     <option value="Windows 10 Home">Win 10 Home</option>
                     <option value="Windows 10 Home Single Language">Win 10 SingLang</option>
                     <option value="Windows 10 Professional">Win 10 Pro</option>
@@ -364,7 +562,7 @@
         <main class="view">
             <p class="container">&#11088; Bem vindo ao <strong>${this.nomePagina}</strong>! Espero que te traga produtividade</p>
         </main>
-        `}_ativo(){null!=this._id||null!=this._titulo?(document.querySelector('.'+this._id+'').classList.add('active'),document.querySelector('title').innerText=`${this.nomePagina} | ${this._titulo}`):document.querySelector('title').innerText=`${this.nomePagina}`}}t.a=n},function(e,t,o){'use strict';var r=o(9),n=o(10),a=o(2);t.a=class{constructor(){this.prefixo=localStorage.getItem('page-bateria')||'bateria';let e=document.querySelector.bind(document);this._bateriaView=new r.a(e('.view'),this.prefixo),this._bateriaView.update(),this.inputProjeto=e(`#${this.prefixo}-projeto`),this.inputAtual=e(`#${this.prefixo}-atual`),this.outputResultado=e(`#${this.prefixo}-resultado`),this.calcula(),this.inputs=[this.inputProjeto,this.inputAtual],this.inputs.forEach((e)=>{e.addEventListener('input',()=>{this.calcula()})})}calcula(){let e=new n.a(this.inputProjeto.value,this.inputAtual.value);localStorage.setItem(`${this.prefixo}-projeto`,e.total),localStorage.setItem(`${this.prefixo}-atual`,e.atual),a.a.estiloBorda(this.outputResultado,'red'),'Erro'==e.porcentagem?this.outputResultado.value='Tem algo errado com os valores':(this.outputResultado.value=`Saúde: ${e.obtemPorcentagem()}%\nDegradado: ${(100-e.obtemPorcentagem()).toFixed(2)}%\n\nResutado: Trocar a bateria se age menor do que 1 ano`,75<e.porcentagem&&(this.outputResultado.value=`Saúde: ${e.obtemPorcentagem()}%\nDegradado: ${(100-e.obtemPorcentagem()).toFixed(2)}%\n\nResutado: Dentro do esperado`,a.a.estiloBorda(this.outputResultado,'green')))}}},function(e,t,o){'use strict';var r=o(0),n=o(2);class a extends r.a{constructor(e,t){super(e),this.prefixo=t}template(){return`
+        `}_ativo(){null!=this._id||null!=this._titulo?(document.querySelector('.'+this._id+'').classList.add('active'),document.querySelector('title').innerText=`${this.nomePagina} | ${this._titulo}`):document.querySelector('title').innerText=`${this.nomePagina}`}}t.a=n},function(e,t,o){'use strict';var r=o(9),n=o(10),a=o(2);t.a=class{constructor(){this.prefixo=localStorage.getItem('page-bateria')||'bateria';let e=document.querySelector.bind(document);this._bateriaView=new r.a(e('.view'),this.prefixo),this._bateriaView.update(),this.inputProjeto=e(`#${this.prefixo}-projeto`),this.inputAtual=e(`#${this.prefixo}-atual`),this.outputResultado=e(`#${this.prefixo}-resultado`),this.inputProjeto.value=localStorage.getItem(`bateria-projeto`)||'',this.inputAtual.value=localStorage.getItem(`bateria-atual`)||'',this.calcula(),this.inputs=[this.inputProjeto,this.inputAtual],this.inputs.forEach((e)=>{e.addEventListener('input',()=>{this.calcula()})})}calcula(){let e=new n.a(this.inputProjeto.value,this.inputAtual.value);localStorage.setItem(`bateria-projeto`,e.total),localStorage.setItem(`bateria-atual`,e.atual),a.a.estiloBorda(this.outputResultado,'red'),'Erro'==e.porcentagem?this.outputResultado.value='Tem algo errado com os valores':(this.outputResultado.value=`Saúde: ${e.obtemPorcentagem()}%\nDegradado: ${(100-e.obtemPorcentagem()).toFixed(2)}%\n\nResutado: Trocar a bateria se age menor do que 1 ano`,75<e.porcentagem&&(this.outputResultado.value=`Saúde: ${e.obtemPorcentagem()}%\nDegradado: ${(100-e.obtemPorcentagem()).toFixed(2)}%\n\nResutado: Dentro do esperado`,a.a.estiloBorda(this.outputResultado,'green')))}}},function(e,t,o){'use strict';var r=o(0),n=o(2);class a extends r.a{constructor(e,t){super(e),this.prefixo=t}template(){return`
         <div class="dropdown-divider"></div>
         <div class="container">
             <div class="form-group col">
@@ -382,7 +580,7 @@
                 ${n.a.resultado(this.prefixo)}
             </div>
         </form>
-        `}}t.a=a},function(e,t){'use strict';t.a=class{constructor(e,t){this.total=e,this.atual=t,this.porcentagem,this.obtemPorcentagem()}obtemPorcentagem(){return this.porcentagem=parseFloat(100*this.atual/this.total).toFixed(2),(0>this.porcentagem||100<this.porcentagem)&&(this.porcentagem='Erro'),this.porcentagem}}},function(e,t,o){'use strict';var r=o(12),n=o(13),a=o(14),i=o(15),l=o(16),d=o(17);t.a=class{constructor(){this.prefixo=localStorage.getItem('page-sem-dps')||'sem-dps',this._listaSemDps=new n.a,this._semDpsView=new a.a(document.querySelector('.view'),this.prefixo),this._semDpsView.update(this._listaSemDps),this._inputLogin=document.querySelector(`#${this.prefixo}-citrix`),this._inputCaso=document.querySelector(`#${this.prefixo}-caso`),this._inputData=document.querySelector(`#${this.prefixo}-data-data`),this._inputArtigo=document.querySelector(`#${this.prefixo}-artigo`),this._inputMotivo=document.querySelector(`#${this.prefixo}-motivo`),this._inputProblema=document.querySelector(`#${this.prefixo}-problema`),this._limpaFormulario(),i.a.getConnection().then((e)=>new l.a(e)).then((e)=>e.listaTodos()).then((e)=>{e.forEach((e)=>this._listaSemDps.adiciona(e)),this._semDpsView.update(this._listaSemDps)}).catch((e)=>console.log(e)),setTimeout(()=>{console.log(document.querySelector('#sem-dps-form')),document.querySelector('#sem-dps-form').addEventListener('submit',(e)=>{e.preventDefault(),alert('ok')})},100)}adiciona(e){e.preventDefault(),console.log(this._listaSemDps)}limpa(){i.a.getConnection().then((e)=>{new l.a(e).apagaTodos().then((e)=>{console.log(e),this._listaSemDps.esvazia(),this._semDpsView.update(this._listaSemDps)}).catch((e)=>console.log(e))})}_criaRegistro(){return new r.a(this._inputLogin.value,parseInt(this._inputCaso.value),d.a.textoParaData(this._inputData.value),this._inputArtigo.value,this._inputMotivo.value,this._inputProblema.value)}_limpaFormulario(){this._inputLogin.focus(),this._inputLogin.value=localStorage.getItem('login'),this._inputCaso.value=localStorage.getItem('caso'),this._inputData.value=localStorage.getItem('hoje'),this._inputArtigo.value='',this._inputMotivo.value='',this._inputProblema.value=localStorage.getItem('problema')}}},function(e,t){'use strict';class o{constructor(e,t,o,r,n,a){this._login=e,this._caso=t,this._data=o,this._artigo=r,this._motivo=n,this._problema=a}get login(){return this._login}get caso(){return this._caso}get data(){return new Date(this._data.getTime())}get artigo(){return this._artigo}get motivo(){return this._motivo}get problema(){return this._problema}}t.a=o},function(e,t){'use strict';class o{constructor(){this._registrosSemDps=[]}adiciona(e){this._registrosSemDps.push(e)}esvazia(){this._registrosSemDps=[]}ordena(e){this._registrosSemDps.sort(e)}inverteOrdem(){this._registrosSemDps.reverse()}get registrosSemDps(){return[].concat(this._registrosSemDps)}}t.a=o},function(e,t,o){'use strict';var r=o(0),n=o(2);class a extends r.a{constructor(e,t){super(e),this.prefixo=t}template(e){return`
+        `}}t.a=a},function(e,t){'use strict';t.a=class{constructor(e,t){this.total=e,this.atual=t,this.porcentagem,this.obtemPorcentagem()}obtemPorcentagem(){return this.porcentagem=parseFloat(100*this.atual/this.total).toFixed(2),(0>this.porcentagem||100<this.porcentagem)&&(this.porcentagem='Erro'),this.porcentagem}}},function(e,t,o){'use strict';var r=o(12),n=o(13),a=o(14),i=o(15),l=o(16),d=o(17);t.a=class{constructor(){this.prefixo=localStorage.getItem('page-sem-dps')||'sem-dps',this._listaSemDps=new n.a,this._semDpsView=new a.a(document.querySelector('.view'),this.prefixo),this._semDpsView.update(this._listaSemDps),this._inputLogin=document.querySelector(`#${this.prefixo}-citrix`),this._inputCaso=document.querySelector(`#${this.prefixo}-caso`),this._inputData=document.querySelector(`#${this.prefixo}-data-data`),this._inputArtigo=document.querySelector(`#${this.prefixo}-artigo`),this._inputMotivo=document.querySelector(`#${this.prefixo}-motivo`),this._inputProblema=document.querySelector(`#${this.prefixo}-problema`),console.log(this._inputLogin),this._limpaFormulario(),i.a.getConnection().then((e)=>new l.a(e)).then((e)=>e.listaTodos()).then((e)=>{e.forEach((e)=>this._listaSemDps.adiciona(e)),this._semDpsView.update(this._listaSemDps)}).catch((e)=>console.log(e)),setTimeout(()=>{console.log(document.querySelector('#sem-dps-form')),document.querySelector('#sem-dps-form').addEventListener('submit',(e)=>{e.preventDefault(),alert('ok')})},100)}adiciona(e){e.preventDefault(),console.log(this._listaSemDps)}limpa(){i.a.getConnection().then((e)=>{new l.a(e).apagaTodos().then((e)=>{console.log(e),this._listaSemDps.esvazia(),this._semDpsView.update(this._listaSemDps)}).catch((e)=>console.log(e))})}_criaRegistro(){return new r.a(this._inputLogin.value,parseInt(this._inputCaso.value),d.a.textoParaData(this._inputData.value),this._inputArtigo.value,this._inputMotivo.value,this._inputProblema.value)}_limpaFormulario(){this._inputLogin.focus(),this._inputLogin.value=localStorage.getItem('login'),this._inputCaso.value='',this._inputData.value=localStorage.getItem('hoje'),this._inputArtigo.value=localStorage.getItem('artigo'),this._inputMotivo.value='',this._inputProblema.value=localStorage.getItem('problema')}}},function(e,t){'use strict';class o{constructor(e,t,o,r,n,a){this._login=e,this._caso=t,this._data=o,this._artigo=r,this._motivo=n,this._problema=a}get login(){return this._login}get caso(){return this._caso}get data(){return new Date(this._data.getTime())}get artigo(){return this._artigo}get motivo(){return this._motivo}get problema(){return this._problema}}t.a=o},function(e,t){'use strict';class o{constructor(){this._registrosSemDps=[]}adiciona(e){this._registrosSemDps.push(e)}esvazia(){this._registrosSemDps=[]}ordena(e){this._registrosSemDps.sort(e)}inverteOrdem(){this._registrosSemDps.reverse()}get registrosSemDps(){return[].concat(this._registrosSemDps)}}t.a=o},function(e,t,o){'use strict';var r=o(0),n=o(2);class a extends r.a{constructor(e,t){super(e),this.prefixo=t}template(e){return`
         <form class="container" id="${this.prefixo}-form">
             <div class="form-row">
                 ${n.a.citrix(this.prefixo)}
@@ -391,8 +589,10 @@
                 ${n.a.artigo(this.prefixo)}
             </div>
             <div class="form-row">
-                ${n.a.motivo(this.prefixo)}
                 ${n.a.problema(this.prefixo)}
+            </div>
+            <div class="form-row">
+                ${n.a.motivo(this.prefixo)}
             </div>
             <div class="form-row">
                 ${n.a.submit(this.prefixo)}
@@ -442,8 +642,8 @@
                 <div class='card-body'>
                     citrix${n.a.citrix(this.prefixo)}
                     badge${n.a.badge(this.prefixo)}
-                    horario, entrada${n.a.horario(this.prefixo,'entrada')}
-                    horario, saida${n.a.horario(this.prefixo,'saida')}
+                    horario, entrada, Horário de entrada${n.a.horario(this.prefixo,'entrada','Hor\xE1rio de entrada')}
+                    horario, saida, Horário de saída${n.a.horario(this.prefixo,'saida','Hor\xE1rio de sa\xEDda')}
                 </div>
             </div>
             <br>

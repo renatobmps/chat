@@ -19,8 +19,10 @@ export class SemDpsView extends View{
                 ${InputsView.artigo(this.prefixo)}
             </div>
             <div class="form-row">
-                ${InputsView.motivo(this.prefixo)}
                 ${InputsView.problema(this.prefixo)}
+            </div>
+            <div class="form-row">
+                ${InputsView.motivo(this.prefixo)}
             </div>
             <div class="form-row">
                 ${InputsView.submit(this.prefixo)}

@@ -22,7 +22,9 @@ export class SemDpsController{
         this._inputArtigo   = document.querySelector(`#${this.prefixo}-artigo`)
         this._inputMotivo   = document.querySelector(`#${this.prefixo}-motivo`)
         this._inputProblema = document.querySelector(`#${this.prefixo}-problema`)
-                
+        
+        console.log(this._inputLogin)
+
         this._limpaFormulario()
         
         ConnectionFactory.getConnection()
@@ -98,9 +100,9 @@ export class SemDpsController{
         
         this._inputLogin.focus();
         this._inputLogin.value = localStorage.getItem('login')
-        this._inputCaso.value = localStorage.getItem('caso')
-        this._inputData.value = localStorage.getItem('hoje') //new Date();
-        this._inputArtigo.value = '';
+        this._inputCaso.value = ''
+        this._inputData.value = localStorage.getItem('hoje')
+        this._inputArtigo.value = localStorage.getItem('artigo');
         this._inputMotivo.value = '';
         this._inputProblema.value = localStorage.getItem('problema');
     }
