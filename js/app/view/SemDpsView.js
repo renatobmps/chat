@@ -1,5 +1,6 @@
 import { View } from "./View";
 import { InputsView } from "./InputsView";
+import { DateHelper } from "../helpers/DateHelper";
 
 export class SemDpsView extends View{
     
@@ -10,22 +11,26 @@ export class SemDpsView extends View{
     }
     
     template(model){
+
+        console.log(model.registrosSemDps)
         return `
         <form class="container" id="${this.prefixo}-form">
             <div class="form-row">
-                ${InputsView.citrix(this.prefixo)}
-                ${InputsView.caso(this.prefixo)}
-                ${InputsView.data(this.prefixo, 'data', 'Data')}
-                ${InputsView.artigo(this.prefixo)}
+            ${InputsView.citrix(this.prefixo)}
+            ${InputsView.data(this.prefixo, 'data', 'Data')}
             </div>
             <div class="form-row">
-                ${InputsView.problema(this.prefixo)}
+            ${InputsView.caso(this.prefixo)}
+            ${InputsView.artigo(this.prefixo)}
             </div>
             <div class="form-row">
-                ${InputsView.motivo(this.prefixo)}
+            ${InputsView.problema(this.prefixo)}
             </div>
             <div class="form-row">
-                ${InputsView.submit(this.prefixo)}
+            ${InputsView.motivo(this.prefixo)}
+            </div>
+            <div class="form-row">
+            ${InputsView.submit(this.prefixo)}
             </div>
         </form>
         <div class="dropdown-divider"></div>

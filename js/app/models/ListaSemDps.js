@@ -1,6 +1,6 @@
 export class ListaSemDps{
 
-    constructor(){
+    constructor(armadilha){
 
         this._registrosSemDps = []
     }
@@ -8,6 +8,10 @@ export class ListaSemDps{
     adiciona(registro){
         
         this._registrosSemDps.push(registro)
+    }
+    get registrosSemDps(){
+
+        return [].concat(this._registrosSemDps)
     }
     esvazia(){
 

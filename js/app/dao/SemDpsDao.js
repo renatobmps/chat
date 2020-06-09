@@ -24,7 +24,7 @@ export class SemDpsDao{
                 
                 console.log(e.target.onerror);
                 reject('Não foi possível adicionar a registro')
-        }
+            }
         })
     }
     listaTodos(){

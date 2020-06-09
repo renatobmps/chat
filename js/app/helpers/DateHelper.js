@@ -16,4 +16,8 @@ export class DateHelper {
              
         return new Date(...texto.split('-').map((item, indice) => item - indice % 2));
     }
+
+    static dataParaString(data){
+        return `${data.getFullYear()}-${('00'+(data.getMonth()+1)).slice(-2)}-${('00'+data.getDate()).slice(-2)}`
+    }
 }
