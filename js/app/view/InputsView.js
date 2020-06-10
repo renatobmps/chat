@@ -28,6 +28,18 @@ export class InputsView{
             <textarea id="${prefixo}-analise" cols="30" rows="5" class="form-control" placeholder="Recomendo..." title="Oportunidades identificadas pelo L2, OKBs seguidos, versões de BIOS e drivers relevantes ao problema, além de toda e qualquer outra informação relevante. É necessário que o L2 faça uma recomendação ao final de qual seria sua recomendação."></textarea>
         </div>`
     }
+    static analista(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-analista">Nome</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#128100;</span>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="${prefixo}-analista" required placeholder="Seu nome" title="Seu nome" oninput="localStorage.setItem('analista', this.value)" value="${localStorage.getItem('analista') || ''}">
+            </div>
+        </div>`
+    }
     static artigo(prefixo){
         return `
         <div class="form-group col">
@@ -204,7 +216,7 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">&#9201;&#65039;</span>
                 </div>
-                <input type="time" id="${prefixo}-horario-${identificador}" class="form-control form-control-sm" required placeholder="00:00" title="Horário">
+                <input type="time" id="${prefixo}-horario-${identificador}" class="form-control form-control-sm" required placeholder="00:00" title="Horário" oninput="localStorage.setItem('${identificador}', this.value)" value="${localStorage.getItem(identificador) || ''}">
             </div>
         </div>`
     }
@@ -250,6 +262,14 @@ export class InputsView{
             <label for="${prefixo}-motivo">Motivo do NoDPS</label>
             <textarea id="${prefixo}-motivo" cols="30" rows="5" class="form-control" required placeholder="Cliente fazendo as atualizações pendentes do windows update" title="Descreva o motivo para ter ficado sem DPS"></textarea>
         </div>`
+    }
+    static nota(prefixo){
+        return `
+        <div class="">
+            <textarea class="form-control" id="${prefixo}-nota" style="width: 100%;" rows="10" oninput="console.log(localStorage.setItem('anotacao', this.value))">${localStorage.getItem('anotacao') || ''}</textarea>
+            <button class="btn btn-outline-primary btn-block btn-sm" onclick="document.querySelector('#${prefixo}-nota').select(); document.execCommand('copy')">Copiar tudo</button>
+        </div>
+        `
     }
     static ordem(prefixo){
         return `

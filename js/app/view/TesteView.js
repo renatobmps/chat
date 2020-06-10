@@ -19,6 +19,7 @@ export class TesteView extends View{
                     Analista
                 </div>
                 <div class='card-body'>
+                    analista${InputsView.analista(this.prefixo)}
                     citrix${InputsView.citrix(this.prefixo)}
                     badge${InputsView.badge(this.prefixo)}
                     horario, entrada, Horário de entrada${InputsView.horario(this.prefixo, 'entrada', 'Horário de entrada')}
@@ -56,6 +57,7 @@ export class TesteView extends View{
                     temperatura${InputsView.temperatura(this.prefixo)}
                     optSimNao, aceita-intervencao, Cliente aceita intenvenção${InputsView.optSimNao(this.prefixo, 'aceita-intervencao', 'Cliente aceita intenvenção')}
                     guidance${InputsView.guidance(this.prefixo)}
+                    nota${InputsView.nota(this.prefixo)}
                 </div>
             </div>
             <br>
