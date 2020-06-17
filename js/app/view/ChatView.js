@@ -26,7 +26,7 @@ export class ChatView extends View{
                 <div class="card-header" id="headingTwo">
                     ${this.titulo("collapseTwo", "Scripts padrão")}
                 </div>
-                <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionChat" style="">
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionChat" style="">
                     ${this.script(model)}
                 </div>
             </div>
@@ -40,6 +40,13 @@ export class ChatView extends View{
                 </div>
             </div>
         </div>
+        <button style="position: fixed; bottom: 1em; right: 1em; border-radius: 50px; background: transparent; border: 0" onclick="window.scrollTo(0, 0)">
+            <svg class="bi bi-arrow-up-circle" width="2em" height="2em" viewBox="0 0 16 16" fill="brown" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path fill-rule="evenodd" d="M4.646 8.354a.5.5 0 0 0 .708 0L8 5.707l2.646 2.647a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 0 0 0 .708z"/>
+                <path fill-rule="evenodd" d="M8 11.5a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 .5.5z"/>
+            </svg>
+        </button>
         `
     }
     
@@ -54,12 +61,12 @@ export class ChatView extends View{
         
         return `
         
-        <div class="accordion container" id="accordionScripts">
+        <div class="accordion container custom-collapse" id="accordionScripts">
             <div class="card">
                 <div class="card-header" id="headingFour">
                     ${this.titulo("collapseFour", "Analista")}
                 </div>
-                <div id="collapseFour" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionScripts" style="">
+                <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionScripts" style="">
                     <form id="form-analista">
                         ${InputsView.analista(this.prefixo)}
                         ${InputsView.horario(this.prefixo, 'entrada', "Horário de entrada")}
@@ -91,17 +98,19 @@ export class ChatView extends View{
                 <div id="collapseSix" class="collapse" aria-labelledby="headingThree" data-parent="#accordionScripts" style="">
                 <form id="form-atendimento">
                     ${InputsView.dps(this.prefixo)}
+                    ${InputsView.eticket(this.prefixo)}
+                    ${InputsView.cis(this.prefixo)}
                     ${InputsView.submit(this.prefixo+"atendimento")}
             </form>
                 </div>
             </div>
         </div>
         
-        <ul class="container">
+        <ul class="container list-scripts">
             ${model.scriptsChat.map(periodo => {
                 
                 return `
-                <fieldset>
+                <fieldset class="list-scripts-item">
                     <legend>${periodo.periodo}</legend>
                     <ul>${periodo.categoria.map(categoria => {
                         return `
@@ -112,7 +121,7 @@ export class ChatView extends View{
                             <li>
                                 <div class="card">
                                     <div class="card-header">${script.titulo}</div>
-                                    <div class="card-body">${script.texto}</div>
+                                    <div class="card-body script-texto">${script.texto}</div>
                                 </div>
                             </li>
                             <br>
@@ -129,8 +138,16 @@ export class ChatView extends View{
     adicionais(){
         
         return `
-        
-        Aqui vão os scripts adicionais
+        <div class="container">
+            <form>
+                ${InputsView.input(this.prefixo, "titulo-personalizado", "Título", "text", "required", "placeholder='Título do script'")}
+                ${InputsView.textarea(this.prefixo, "texto-personalizado", "Texto", "required", "title='Descreva aqui o texto para um novo script'")}
+                ${InputsView.submit(this.prefixo)}
+            </form>
+            <div id="scripts-personalizados">
+                
+            </div>
+        </div>
         `
     }
     

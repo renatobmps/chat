@@ -96,7 +96,7 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">&#128188;</span>
                 </div>
-                <input type="number" class="form-control form-control-sm" id="${prefixo}-caso" required="" placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
+                <input type="number" class="form-control form-control-sm" id="${prefixo}-caso" required placeholder="XXXXXXXX" pattern="[&quot;0-9&quot;]{8}" title="8 dígitos" maxlength="8">
             </div>
         </div>`
     }
@@ -108,7 +108,19 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">&#127380;</span>
                 </div>
-                <input type="text" class="form-control form-control-sm" id="${prefixo}-citrix" required="" placeholder="seu_login_de_citrix" pattern="[&quot;A-Za-z0-9_&quot;]{5,20}" title="login de Citrix">
+                <input type="text" class="form-control form-control-sm" id="${prefixo}-citrix" required placeholder="seu_login_de_citrix" pattern="[&quot;A-Za-z0-9_&quot;]{5,20}" title="login de Citrix" oninput="localStorage.setItem('login', this.value)" value="${localStorage.getItem('login') || ''}">
+            </div>
+        </div>`
+    }
+    static cis(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-cis">Endereço CIS</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">&#127971;</span>
+                </div>
+                <input type="text" class="form-control form-control-sm" id="${prefixo}-cis" placeholder="Rua ..." pattern="[&quot;A-Za-z0-9_&quot;]{5,50}" title="Endereço do DEPOT" oninput="localStorage.setItem('cis', this.value)" value="${localStorage.getItem('cis') || ''}">
             </div>
         </div>`
     }
@@ -120,7 +132,7 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">&#128100;</span>
                 </div>
-                <input type="text" id="${prefixo}-cliente" class="form-control form-control-sm" required placeholder="Fulano de tal" pattern="[az-AZ]" title="Entre com o nome do cliente">
+                <input type="text" id="${prefixo}-cliente" class="form-control form-control-sm" required placeholder="Fulano de tal" pattern="[az-AZ]" title="Entre com o nome do cliente" oninput="localStorage.setItem('cliente', this.value)" value="${localStorage.getItem('cliente') || ''}">
             </div>
         </div>`
     }
@@ -180,7 +192,7 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">Nº</span>
                 </div>
-                <input type="number" id="${prefixo}-dps" class="form-control form-control-sm" required placeholder="0000000000" title="Entre com o número de DPS">
+                <input type="number" id="${prefixo}-dps" class="form-control form-control-sm" placeholder="0000000000" title="Entre com o número de DPS" oninput="localStorage.setItem('dps', this.value)" value="${localStorage.getItem('dps') || ''}">
             </div>
         </div>`
     }
@@ -192,7 +204,19 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">@</span>
                 </div>
-                <input type="email" id="${prefixo}-email" class="form-control form-control-sm" required placeholder="cliente@email.com" title="Endereço  de e-mail do cliente">
+                <input type="email" id="${prefixo}-email" class="form-control form-control-sm" required placeholder="cliente@email.com" title="Endereço  de e-mail do cliente" oninput="localStorage.setItem('email', this.value)" value="${localStorage.getItem('email') || ''}">
+            </div>
+        </div>`
+    }
+    static eticket(prefixo){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-ticket">e-ticket</label>
+            <div class="input-group input-group-sm mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Nº</span>
+                </div>
+                <input type="number" id="${prefixo}-ticket" class="form-control form-control-sm" placeholder="Número de e-ticket" title="Entre com o número do e-ticket" oninput="localStorage.setItem('ticket', this.value)" value="${localStorage.getItem('ticket') || ''}">
             </div>
         </div>`
     }
@@ -229,6 +253,15 @@ export class InputsView{
                     <span class="input-group-text">Nº</span>
                 </div>
                 <input type="number" id="${prefixo}-inscricao-estadual" class="form-control form-control-sm" placeholder="Não preencher se isento" title="Entre com a numeração da inscrição estadual">
+            </div>
+        </div>`
+    }
+    static input(prefixo, identificacao, titulo, tipo, ...args){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-${identificacao}">${titulo}</label>
+            <div class="input-group input-group-sm mb-3">
+                <input type="${tipo}" id="${prefixo}-${identificacao}" class="form-control form-control-sm" oninput="localStorage.setItem('${identificacao}', this.value)" value="${localStorage.getItem(identificacao) || ''}" ${args.join(" ")}>
             </div>
         </div>`
     }
@@ -337,7 +370,7 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">&#128290;</span>
                 </div>
-                <input type="text" id="${prefixo}-tag" class="form-control form-control-sm" required placeholder="XXXXXX2" title="Entre com a TAG do equipamento" pattern="{8}">
+                <input type="text" id="${prefixo}-tag" class="form-control form-control-sm" required placeholder="XXXXXX2" title="Entre com a TAG do equipamento" pattern="{8}" oninput="localStorage.setItem('tag', this.value)" value="${localStorage.getItem('tag') || ''}">
             </div>
         </div>`
     }
@@ -388,7 +421,7 @@ export class InputsView{
                 <div class="input-group-prepend">
                     <span class="input-group-text">&#128241;</span>
                 </div>
-                <input type="tel" id="${prefixo}-telefone-principal" class="form-control form-control-sm" required placeholder="11988776655" title="Entre com o telefone de preferencia do cliente">
+                <input type="tel" id="${prefixo}-telefone-principal" class="form-control form-control-sm" required placeholder="11988776655" title="Entre com o telefone de preferencia do cliente" oninput="localStorage.setItem('telefone', this.value)" value="${localStorage.getItem('telefone') || ''}">
             </div>
         </div>`
     }
@@ -402,6 +435,13 @@ export class InputsView{
                 </div>
                 <input type="text" id="${prefixo}-temperatura" class="form-control form-control-sm" required placeholder="Impactado / Neutro" title="Descreva o humor do cliente">
             </div>
+        </div>`
+    }
+    static textarea(prefixo, identificacao, titulo, ...args){
+        return `
+        <div class="form-group col">
+            <label for="${prefixo}-${identificacao}">${titulo}</label>
+            <textarea id="${prefixo}-${identificacao}" cols="30" rows="5" class="form-control" ${args.join(" ")} oninput="localStorage.setItem('${identificacao}', this.value)">${localStorage.getItem(`${identificacao}`) || ''}</textarea>
         </div>`
     }
     static valor(prefixo){

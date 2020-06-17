@@ -9,3 +9,40 @@
 .navbar a {
     color: #efefef;
 }
+ul{
+    list-style: none;
+    padding: 0;
+    
+}
+.list-scripts{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.list-scripts-item{
+    width: 100%;
+}
+.list-scripts-item .card{
+    border-radius: 10px;
+}
+.btn-link{
+    width: 100%;
+}
+.custom-collapse{
+    display: flex;
+}
+.custom-collapse .card{
+    flex-grow: 1;
+}
+@media (min-width: 850px){
+
+    .list-scripts-item{
+        width: 32.5%;
+    }
+}
+@media (max-width: 850px){
+
+    .custom-collapse *, .custom-collapse input{
+        font-size: 10px !important;
+    }
+}

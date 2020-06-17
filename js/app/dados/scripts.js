@@ -20,7 +20,7 @@ export class Scripts{
             remoto: localStorage.getItem('remoto') || "PREENCHER",
             dps: localStorage.getItem('dps') || "PREENCHER",
             cis: localStorage.getItem('cis') || "PREENCHER",
-            eticket: localStorage.getItem('eticket') || "PREENCHER",
+            eticket: localStorage.getItem('ticket') || "PREENCHER",
         }
 
         this.scripts = [
@@ -136,17 +136,6 @@ export class Scripts{
             {
                 periodo: `Troubleshootings`,
                 categoria: [
-                    {
-                        nome: `Templates`,
-                        scripts: [
-                            {
-                                id: "",
-                                input: [],
-                                titulo: `Templates de escalações`,
-                                texto: `<a href="templates.html" target="_blank"><button><i class="material-icons">dashboard</i>Clique aqui</button></a>`
-                            }
-                        ]
-                    },
                     {
                         nome: `Acesso remoto`,
                         scripts: [
